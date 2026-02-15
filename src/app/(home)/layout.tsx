@@ -1,0 +1,16 @@
+import Footer from "../ui/Footer";
+import Header from "../ui/Header";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col min-h-screen items-center justify-center font-plus-jakarta-sans bg-linear-to-b from-primary via-secondary to-tertiary">
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
+}

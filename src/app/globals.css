@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0149a7;
+  --color-secondary: #008db1;
+  --color-tertiary: #00a385;
+  --color-accent: #00132c;
+  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
+}
+
+body {
+  font-family: var(--font-plus-jakarta-sans);
+}
+
+.btn-primary {
+  @apply bg-linear-to-r from-primary via-secondary to-tertiary text-white rounded-full flex items-center justify-center gap-2 cursor-pointer hover:from-primary/0 hover:via-secondary/0 hover:to-tertiary/0 hover:ring-2 hover:ring-primary transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply rounded-full hover:scale-105 text-white flex items-center justify-center gap-2 cursor-pointer from-primary/0 via-secondary/0 to-tertiary/0 ring-2 ring-primary transition-transform duration-300;
+}
