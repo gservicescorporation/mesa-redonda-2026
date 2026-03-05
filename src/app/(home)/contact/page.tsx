@@ -69,7 +69,7 @@ export default function Contact() {
                   className="flex flex-col gap-2 w-full">
                   <span className="text-white">E-mail</span>
                   <input
-                    type="text"
+                    type="email"
                     className="w-full px-4 py-2 rounded-2xl bg-primary/20 border border-primary/50 text-white outline-none"
                     placeholder="Insira o seu email"
                   />
