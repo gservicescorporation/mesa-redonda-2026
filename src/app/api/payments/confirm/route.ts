@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { resend } from "@/lib/resend"
-import { TicketEmail } from "@/src/emails/TicketEmails"
+import { TicketEmail } from "@/emails/TicketEmails"
 
 const sentEmails = new Set<string>()
 
