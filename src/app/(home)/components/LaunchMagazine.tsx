@@ -2,11 +2,17 @@ import Image from "next/image";
 
 export default function LaunchMagazine() {
   return (
-    <div className="w-full min-h-screen relative bg-[url(https://ik.imagekit.io/globalsc/conteudo-local-jul-2025/21.png)]">
-      <div className="flex items-center gap-24 p-24 absolute top-0 left-0 justify-center w-full h-full bg-linear-to-t from-accent/45 to-accent/95 z-10">
+    <div className="w-full bg-[url(/images/magazine.png)] bg-cover bg-center">
+      <div className="flex min-h-screen items-center gap-24 p-24 backdrop-blur-xs justify-center w-full bg-linear-to-b from-accent/50 to-accent/75 z-10">
         <div className="max-w-lg w-full flex flex-col gap-6">
           <h1 className="text-3xl font-bold text-white">
-            Lançamento da Revista LOCAL CONTENT MAGANIZE
+            Lançamento da Revista{" "}
+            <span
+              className="text-4xl font-extrabold 
+           bg-linear-to-r from-[#e3b82c] via-[#ffe44b] to-[#e3ae0f] 
+           bg-clip-text text-transparent">
+              LOCAL CONTENT MAGANIZE
+            </span>
           </h1>
 
           <p className="text-white text-lg">
@@ -24,7 +30,7 @@ export default function LaunchMagazine() {
         </div>
 
         <Image
-          src={"https://ik.imagekit.io/globalsc/conteudo-local-jul-2025/5.png"}
+          src={"/images/magazine.png"}
           alt={"About Us"}
           width={1920}
           height={1080}

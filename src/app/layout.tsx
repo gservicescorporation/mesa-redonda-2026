@@ -9,7 +9,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title:
-    "FÓRUM INTERNACIONAL: O Papel da Banca e de Outros Agentes do Sistema Financeiro na Mobilização de Financiamento",
+    "Mesa Redonda com CEOS 2026 - 5ª Edição: O Papel da Banca e de Outros Agentes do Sistema Financeiro na Mobilização de Financiamento",
   description:
     "O evento reúne decisores públicos, banca, operadores petrolíferos e empresas nacionais para transformar política económica em financiamento real, acelerar a industrialização e consolidar cadeias de valor nacionais.",
 };

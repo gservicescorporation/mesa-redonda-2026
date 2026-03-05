@@ -1,11 +1,66 @@
-import Image from "next/image";
+"use client";
 
-export default function Speakers() {
+import Image from "next/image";
+/* 
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Autoplay } from "swiper/modules"; */
+import "swiper/css";
+import "swiper/css/autoplay";
+
+export default function SpeakersList() {
+  const speakers = [
+    {
+      name: "Nardos Bekele Thomas",
+      title: "Directora Executiva do AUDA-NEPAD",
+      image: "/images/speakers/nardo-bekele.jpg",
+    },
+    {
+      name: "S.E. Dr. Pedro Passos Coelho",
+      title: "Ex-Primeiro-Ministro de Portugal",
+      image: "/images/speakers/pedro_coelho.png",
+    },
+    {
+      name: "S.E. Dr. Paulo Portas",
+      title: "Ex-Vice-Primeiro-Ministro de Portugal",
+      image: "/images/speakers/paulo_portas.jpg",
+    },
+    {
+      name: "Carlos Lopes",
+      title: " Ex-Secretário-Geral Adjunto das Nações Unidas",
+      image: "/images/speakers/carlos_lopes.jpg",
+    },
+    {
+      name: "Sidi Ould Tah",
+      title:
+        "Presidente do Banco Árabe para o Desenvolvimento Económico em África",
+      image: "/images/speakers/sidi_tah.png",
+    },
+    {
+      name: "George Elombi",
+      title: "Presidente do Afreximbank",
+      image: "/images/speakers/george-elombi.jpg",
+    },
+    {
+      name: "Dr. Armando Manuel",
+      title: "Presidente do Fundo Soberano de Angola",
+      image: "/images/speakers/armando_manuel.jpeg",
+    },
+    {
+      name: "Rui Miguêns de Oliveira",
+      title: "Ministro da Indústria e Comércio",
+      image: "/images/speakers/rui_miguens.jpg",
+    },
+    {
+      name: "Vera Daves de Sousa",
+      title: "Ministra Angolana das Finanças",
+      image: "/images/speakers/vera_daves.jpeg",
+    },
+  ];
   return (
-    <div className="w-full min-h-screen relative  bg-[url(https://ik.imagekit.io/globalsc/conteudo-local-jul-2025/12.png)]">
-      <div className="flex flex-col items-center gap-24 p-24 absolute top-0 left-0 justify-center w-full h-full bg-linear-to-b from-accent/85 to-accent/95 z-10">
-        <nav>
-          <div className="text-white">
+    <div className="w-full  relative bg-[url(/logo-white.png)]">
+      <div className="flex flex-col min-h-screen items-center gap-14 px-24 py-24 justify-center backdrop-blur-xs w-full h-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
+        <div className="max-w-7xl w-full flex flex-col gap-14">
+          <div className="text-white text-center">
             <h1 className="text-3xl font-bold ">Oradores e Convidados</h1>
 
             <p className="text-lg">
@@ -13,24 +68,66 @@ export default function Speakers() {
               dos nossos convidados.
             </p>
           </div>
-        </nav>
 
-        <ul className="w-full">
-          <li className="max-w-xs w-full text-white">
-            <Image
-              src={"/"}
-              alt={"Speaker picture"}
-              width={1920}
-              height={1080}
-              className="w-full h-64 rounded-t-2xl bg-white"
-            />
-
-            <div className="flex flex-col p-5">
-              <h2 className="text-2xl font-bold ">Nome do Orador</h2>
-              <p>Cargo do Orador</p>
-            </div>
-          </li>
-        </ul>
+          <ul className="flex flex-wrap w-full gap-12 items-center justify-center">
+            {speakers.map((speaker, index) => (
+              <li
+                key={index}
+                className="flex flex-col items-center gap-4 max-w-sm w-full ">
+                <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-full">
+                  <Image
+                    src={speaker.image}
+                    alt={speaker.name}
+                    width={300}
+                    height={300}
+                    className="rounded-full h-72 w-72 object-cover object-top m-4"
+                  />
+                </div>
+                <div className="text-center">
+                  <h2 className="text-2xl font-semibold text-white">
+                    {speaker.name}
+                  </h2>
+                  <p className="text-lg text-white">{speaker.title}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* 
+        <Swiper
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loop
+          speed={1000}
+          slidesPerView={3}
+          modules={[Autoplay]}
+          className="w-full">
+          {speakers.map((speaker, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center gap-4 max-w-sm w-full ">
+                <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-full">
+                  <Image
+                    src={speaker.image}
+                    alt={speaker.name}
+                    width={300}
+                    height={300}
+                    className="rounded-full h-72 w-72 object-cover object-top m-4"
+                  />
+                </div>
+                <div className="text-center">
+                  <h2 className="text-2xl font-semibold text-white">
+                    {speaker.name}
+                  </h2>
+                  <p className="text-lg text-white">{speaker.title}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))} 
+        </Swiper> */}
       </div>
     </div>
   );
