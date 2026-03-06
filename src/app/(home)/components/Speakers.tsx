@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-/* 
-import { SwiperSlide, Swiper } from "swiper/react";
-import { Autoplay } from "swiper/modules"; */
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -26,7 +26,7 @@ export default function SpeakersList() {
     },
     {
       name: "Carlos Lopes",
-      title: " Ex-Secretário-Geral Adjunto das Nações Unidas",
+      title: "Ex-Secretário-Geral Adjunto das Nações Unidas",
       image: "/images/speakers/carlos_lopes.jpg",
     },
     {
@@ -56,24 +56,28 @@ export default function SpeakersList() {
       image: "/images/speakers/vera_daves.jpeg",
     },
   ];
+
   return (
-    <div className="w-full  relative bg-[url(/logo-white.png)]">
-      <div className="flex flex-col min-h-screen items-center gap-14 px-24 py-24 justify-center backdrop-blur-xs w-full h-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
+    <div className="w-full relative bg-[url(/logo-white.png)]">
+      <div className="flex flex-col min-h-screen items-center gap-14 px-24 py-24 max-lg:px-6 max-lg:py-16 justify-center backdrop-blur-xs w-full h-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
         <div className="max-w-7xl w-full flex flex-col gap-14">
           <div className="text-white text-center">
-            <h1 className="text-3xl font-bold ">Oradores e Convidados</h1>
+            <h1 className="text-3xl font-bold max-lg:text-2xl">
+              Oradores e Convidados
+            </h1>
 
-            <p className="text-lg">
+            <p className="text-lg max-lg:text-base">
               Veja quem fará parte do nosso painel de oradores e grande parte
               dos nossos convidados.
             </p>
           </div>
 
-          <ul className="flex flex-wrap w-full gap-12 items-center justify-center">
+          {/* Desktop */}
+          <ul className="flex flex-wrap w-full gap-12 items-center justify-center max-lg:hidden">
             {speakers.map((speaker, index) => (
               <li
                 key={index}
-                className="flex flex-col items-center gap-4 max-w-sm w-full ">
+                className="flex flex-col items-center gap-4 max-w-sm w-full">
                 <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-full">
                   <Image
                     src={speaker.image}
@@ -83,6 +87,7 @@ export default function SpeakersList() {
                     className="rounded-full h-72 w-72 object-cover object-top m-4"
                   />
                 </div>
+
                 <div className="text-center">
                   <h2 className="text-2xl font-semibold text-white">
                     {speaker.name}
@@ -92,42 +97,48 @@ export default function SpeakersList() {
               </li>
             ))}
           </ul>
+
+          {/* Mobile */}
+          <div className="hidden max-lg:block w-full">
+            <Swiper
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop
+              speed={800}
+              spaceBetween={20}
+              slidesPerView={1.2}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+              }}
+              modules={[Autoplay]}
+              className="w-full">
+              {speakers.map((speaker, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex flex-col items-center gap-4">
+                    <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-full">
+                      <Image
+                        src={speaker.image}
+                        alt={speaker.name}
+                        width={300}
+                        height={300}
+                        className="rounded-full h-56 w-56 object-cover object-top"
+                      />
+                    </div>
+
+                    <div className="text-center px-4">
+                      <h2 className="text-lg font-semibold text-white">
+                        {speaker.name}
+                      </h2>
+                      <p className="text-sm text-white">{speaker.title}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-        {/* 
-        <Swiper
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          loop
-          speed={1000}
-          slidesPerView={3}
-          modules={[Autoplay]}
-          className="w-full">
-          {speakers.map((speaker, index) => (
-            <SwiperSlide
-              key={index}
-              className="flex flex-col items-center justify-center">
-              <div className="flex flex-col items-center gap-4 max-w-sm w-full ">
-                <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-full">
-                  <Image
-                    src={speaker.image}
-                    alt={speaker.name}
-                    width={300}
-                    height={300}
-                    className="rounded-full h-72 w-72 object-cover object-top m-4"
-                  />
-                </div>
-                <div className="text-center">
-                  <h2 className="text-2xl font-semibold text-white">
-                    {speaker.name}
-                  </h2>
-                  <p className="text-lg text-white">{speaker.title}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))} 
-        </Swiper> */}
       </div>
     </div>
   );

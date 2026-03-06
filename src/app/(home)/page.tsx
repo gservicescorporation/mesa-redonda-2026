@@ -2,7 +2,7 @@ import About from "./components/About";
 import CallToAction from "./components/CallToAction";
 import ContactUs from "./components/ContactUs";
 import FAQ from "./components/FAQ";
-import GetTickets from "./components/GetTickets"; /* 
+import Exhibition from "./components/Exhibition"; /* 
 import Hero from "./components/Hero"; */
 import JoinUs from "./components/JoinUs";
 import LaunchMagazine from "./components/LaunchMagazine";
@@ -23,7 +23,7 @@ export default function Home() {
       <CallToAction />
       <LaunchMagazine />
       <SpeakersList />
-      <GetTickets />
+      <Exhibition />
       <FAQ />
       <ContactUs />
     </div>

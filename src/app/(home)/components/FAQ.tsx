@@ -68,9 +68,11 @@ export default function FAQ() {
           transition: { duration: 0.8, staggerChildren: 0.3 },
         },
       }}
-      className="w-full bg-cover items-center max-lg:px-6 bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/33.jpg)]">
-      <div className="flex justify-center gap-14 p-24 w-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
-        <div className="max-w-7xl w-full h-full flex gap-12">
+      className="w-full bg-cover items-center bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/33.jpg)]">
+      
+      <div className="flex flex-col max-lg:px-6 max-lg:py-12 justify-center gap-14 p-24 w-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
+        <div className="flex flex-col max-lg:gap-8 w-full max-w-7xl mx-auto gap-12">
+          
           <div className="text-white flex flex-col gap-4 w-full max-w-lg max-lg:text-center max-lg:items-center">
             <p className="px-4 py-2 rounded-md text-white w-fit max-lg:text-sm">
               Tudo que precisa saber sobre o evento
@@ -82,18 +84,20 @@ export default function FAQ() {
           </div>
 
           <motion.div className="w-full max-lg:w-full">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 max-lg:gap-4">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
                 return (
                   <div
                     key={index}
                     className="flex flex-col gap-2 border-b border-white/20 pb-3">
+                    
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : index)}
-                      className="flex justify-between items-center cursor-pointer w-full text-left max-lg:gap-4">
+                      className="flex justify-between items-center cursor-pointer w-full max-lg:gap-4">
+                      
                       <span
-                        className={`text-lg font-medium transition-colors text-white max-lg:text-base`}>
+                        className="text-lg font-medium transition-colors text-white max-lg:text-base">
                         {faq.question.toUpperCase()}
                       </span>
 

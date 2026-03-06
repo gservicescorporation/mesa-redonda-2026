@@ -5,23 +5,39 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-center bg-cover">
-      <div className="flex items-center min-h-screen gap-24 p-24 justify-center w-full bg-linear-to-t from-accent/60 to-accent/75 z-10 backdrop-blur-xs ">
-        <div className="max-w-xl w-full flex items-center justify-center h-125 rounded-2xl p-8 bg-linear-to-b from-primary/5 via-secondary/10 to-accent/5 backdrop-blur-sm">
+      <div
+        className="flex items-center min-h-screen gap-24 p-24 justify-center w-full 
+        bg-linear-to-t from-accent/60 to-accent/75 backdrop-blur-xs
+        
+        max-lg:flex-col
+        max-lg:gap-10
+        max-lg:p-10
+        max-lg:text-center
+      "
+      >
+        <div
+          className="max-w-xl w-full flex items-center justify-center h-125 rounded-2xl p-8 
+          bg-linear-to-b from-primary/5 via-secondary/10 to-accent/5 backdrop-blur-sm
+
+          max-lg:h-80
+          max-lg:p-6
+        "
+        >
           <Image
             src={"/logo-white.png"}
             alt={"About Us"}
             width={1920}
             height={1080}
-            className="w-100 object-contain"
+            className="w-100 object-contain max-lg:w-56"
           />
         </div>
 
         <div className="max-w-xl w-full">
-          <h1 className="text-3xl font-bold text-white">
+          <h1 className="text-3xl font-bold text-white max-lg:text-2xl">
             Sobre o Mesa Redonda com CEOS - 5ª Edição
           </h1>
 
-          <p className="text-white text-lg mt-4">
+          <p className="text-white text-lg mt-4 max-lg:text-base">
             O Mesa Redonda com CEOS 2026 - 5ª Edição sobre o Papel da Banca e de
             Outros Agentes do Sistema Financeiro na Mobilização de Financiamento
             é um espaço estratégico de reflexão, diálogo e partilha de
