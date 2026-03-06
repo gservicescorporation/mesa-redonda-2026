@@ -61,10 +61,7 @@ export default function JoinUs() {
 
       <div className="flex min-h-screen absolute inset-0 flex-col items-center gap-12 px-24 py-44 justify-center w-full h-full bg-linear-to-b from-accent/75 to-accent/50 z-10">
         <div className="text-center items-center flex flex-col gap-2 max-w-225 w-full">
-        {/*   <Image src={"/logo-white.png"} alt={"Logotipo MR"} width={200} height={200} className="w-40 object-contain" /> 
-          <h2 className="text-lg uppercase text-white/80">
-            Junte-se a nós para este grande fórum!
-          </h2> */}
+        
           <h1 className="text-3xl text-white text-center font-semibold">
             <span className="text-4xl font-bold">MESA REDONDA COM CEOS 2026 - 5ª Edição:</span>
             <br />O Papel da Banca e de Outros Agentes do Sistema Financeiro na
