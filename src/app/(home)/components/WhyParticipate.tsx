@@ -1,11 +1,28 @@
 "use client";
 
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 export default function WhyParticipate() {
+  // Variants para container (staggered)
+  const containerVariants: Variants = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.3 } },
+  };
+
+  // Variants para cada item (fade + slide)
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring" as const, stiffness: 100, damping: 14 },
+    },
+  };
+
   return (
     <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/baw-fev-2024/7.jpg)] bg-center bg-cover">
-      <div
+      <motion.div
         className="
         flex items-center min-h-screen gap-24 p-24 justify-center w-full
         bg-linear-to-t from-accent/60 to-accent/75 backdrop-blur-xs
@@ -15,20 +32,27 @@ export default function WhyParticipate() {
         max-lg:p-10
         max-lg:min-h-auto
       "
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={containerVariants}
       >
-        <Image
-          src={"https://ik.imagekit.io/globalsc/baw-fev-2024/2.jpg"}
-          alt={"About Us"}
-          width={1920}
-          height={1080}
-          className="
-          max-w-xl w-full h-125 rounded-2xl object-cover
+        {/* Imagem */}
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.03 }}>
+          <Image
+            src={"https://ik.imagekit.io/globalsc/baw-fev-2024/2.jpg"}
+            alt={"About Us"}
+            width={1920}
+            height={1080}
+            className="
+            max-w-xl w-full h-125 rounded-2xl object-cover
+            max-lg:h-72
+          "
+          />
+        </motion.div>
 
-          max-lg:h-72
-        "
-        />
-
-        <div className="max-w-xl w-full">
+        {/* Texto */}
+        <motion.div className="max-w-xl w-full" variants={itemVariants}>
           <h1 className="text-3xl font-bold text-white max-lg:text-2xl">
             Por que participar do Mesa Redonda com CEOS - 5ª Edição?
           </h1>
@@ -40,7 +64,10 @@ export default function WhyParticipate() {
             financiamento. Ao participar, os participantes terão a chance de:
           </p>
 
-          <ul className="list-disc ml-6 mt-4 text-white text-lg max-lg:text-base">
+          <motion.ul
+            className="list-disc ml-6 mt-4 text-white text-lg max-lg:text-base flex flex-col gap-2"
+            variants={itemVariants}
+          >
             <li>
               Engajar-se com líderes e especialistas do setor financeiro
               nacional e internacional.
@@ -59,9 +86,9 @@ export default function WhyParticipate() {
               Contribuir para a construção de um sistema financeiro mais
               sustentável, inclusivo e inovador.
             </li>
-          </ul>
-        </div>
-      </div>
+          </motion.ul>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

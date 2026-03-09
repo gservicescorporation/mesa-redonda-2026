@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { motion, Variants } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -57,6 +58,20 @@ export default function SpeakersList() {
     },
   ];
 
+  const containerVariants: Variants = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.2 } },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring" as const, stiffness: 100, damping: 14 },
+    },
+  };
+
   return (
     <div className="w-full relative bg-[url(/logo-white.png)]">
       <div className="flex flex-col min-h-screen items-center gap-14 px-24 py-24 max-lg:px-6 max-lg:py-16 justify-center backdrop-blur-xs w-full h-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
@@ -72,12 +87,20 @@ export default function SpeakersList() {
             </p>
           </div>
 
-          {/* Desktop */}
-          <ul className="flex flex-wrap w-full gap-12 items-center justify-center max-lg:hidden">
+          <motion.ul
+            className="flex flex-wrap w-full gap-12 items-center justify-center max-lg:hidden"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
             {speakers.map((speaker, index) => (
-              <li
+              <motion.li
                 key={index}
-                className="flex flex-col items-center gap-4 max-w-sm w-full">
+                className="flex flex-col items-center gap-4 max-w-sm w-full"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+              >
                 <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-full">
                   <Image
                     src={speaker.image}
@@ -94,11 +117,10 @@ export default function SpeakersList() {
                   </h2>
                   <p className="text-lg text-white">{speaker.title}</p>
                 </div>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
 
-          {/* Mobile */}
           <div className="hidden max-lg:block w-full">
             <Swiper
               autoplay={{
@@ -113,10 +135,17 @@ export default function SpeakersList() {
                 0: { slidesPerView: 1 },
               }}
               modules={[Autoplay]}
-              className="w-full">
+              className="w-full"
+            >
               {speakers.map((speaker, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col items-center gap-4">
+                  <motion.div
+                    className="flex flex-col items-center gap-4"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ type: "spring", stiffness: 100, damping: 14 }}
+                  >
                     <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-full">
                       <Image
                         src={speaker.image}
@@ -133,7 +162,7 @@ export default function SpeakersList() {
                       </h2>
                       <p className="text-sm text-white">{speaker.title}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </SwiperSlide>
               ))}
             </Swiper>

@@ -1,27 +1,46 @@
 "use client";
 
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 export default function About() {
+  const containerVariants: Variants = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.3 } },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring" as const, stiffness: 100, damping: 14 },
+    },
+  };
+
   return (
     <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-center bg-cover">
-      <div
+      <motion.div
         className="flex items-center min-h-screen gap-24 p-24 justify-center w-full 
         bg-linear-to-t from-accent/60 to-accent/75 backdrop-blur-xs
         
         max-lg:flex-col
         max-lg:gap-10
         max-lg:p-10
-        max-lg:text-center
-      "
+        max-lg:text-center"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={containerVariants}
       >
-        <div
+        <motion.div
           className="max-w-xl w-full flex items-center justify-center h-125 rounded-2xl p-8 
           bg-linear-to-b from-primary/5 via-secondary/10 to-accent/5 backdrop-blur-sm
 
           max-lg:h-80
-          max-lg:p-6
-        "
+          max-lg:p-6"
+          variants={itemVariants}
+          whileHover={{ scale: 1.05, rotate: 1 }}
         >
           <Image
             src={"/logo-white.png"}
@@ -30,9 +49,10 @@ export default function About() {
             height={1080}
             className="w-100 object-contain max-lg:w-56"
           />
-        </div>
+        </motion.div>
 
-        <div className="max-w-xl w-full">
+        {/* Texto */}
+        <motion.div className="max-w-xl w-full" variants={itemVariants}>
           <h1 className="text-3xl font-bold text-white max-lg:text-2xl">
             Sobre o Mesa Redonda com CEOS - 5ª Edição
           </h1>
@@ -50,8 +70,8 @@ export default function About() {
             enfoque no crescimento sustentável, inclusão financeira, inovação e
             fortalecimento do setor produtivo.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
