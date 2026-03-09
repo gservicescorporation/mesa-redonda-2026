@@ -90,7 +90,7 @@ export default function GetTicket() {
   };
 
   return (
-    <div className="flex justify-center w-full text-white bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)]">
+    <div className="flex justify-center w-full text-white bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] relative">
       <div className="min-h-screen w-full py-38 px-24 justify-center flex max-lg:px-4 backdrop-blur-xs bg-linear-to-b from-primary/70 to-accent/90 bg-cover bg-center">
         <div className="flex items-start justify-start w-full max-w-7xl gap-12 max-lg:flex-col max-lg:gap-8 max-lg:items-center">
           <div className="w-full max-lg:text-center">
@@ -198,15 +198,14 @@ export default function GetTicket() {
               </motion.div>
             </div>
           )}
+       {/*    {cart.length > 0 && (
+            <button
+              onClick={handleScrollToResumo}
+              className="lg:hidden fixed flex gap-2 bottom-5 right-5 btn-primary px-5 py-2 ">
+              <TicketCheck /> Total
+            </button>
+          )} */}
         </div>
-
-        {cart.length > 0 && (
-          <button
-            onClick={handleScrollToResumo}
-            className="lg:hidden fixed flex gap-2 bottom-5 right-5 rounded-full bg-white text-primary p-4 border border-white hover:text-white hover:bg-transparent transition-colors duration-300 cursor-pointer font-medium shadow-lg">
-            <TicketCheck /> Resumo
-          </button>
-        )}
       </div>
     </div>
   );
