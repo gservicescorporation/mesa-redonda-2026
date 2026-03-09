@@ -1,6 +1,5 @@
 import About from "./components/About";
 import CallToAction from "./components/CallToAction";
-import ContactUs from "./components/ContactUs";
 import FAQ from "./components/FAQ";
 import Exhibition from "./components/Exhibition"; /* 
 import Hero from "./components/Hero"; */
@@ -10,6 +9,7 @@ import SpeakersList from "./components/Speakers";
 import SponsorsPartners from "./components/SponsorsPartners";
 import Statistics from "./components/Stats";
 import WhyParticipate from "./components/WhyParticipate";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
       <SpeakersList />
       <Exhibition />
       <FAQ />
-      <ContactUs />
+      <Contact />
     </div>
   );
 }
