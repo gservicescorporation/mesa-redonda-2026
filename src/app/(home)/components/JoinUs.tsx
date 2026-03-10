@@ -71,7 +71,7 @@ export default function JoinUs() {
         preload="metadata"
         className="w-full min-h-screen h-215 object-cover">
         <source
-          src="https://ik.imagekit.io/globalsc/mr-nov-2024/mr-2024.mp4"
+          src="https://ik.imagekit.io/globalsc/mr-jul-2026/INTRO%20LOGO%20MESA%20REDONDA%205%20EDI%C3%87%C3%83O.mp4"
           type="video/mp4"
         />
       </video>
@@ -89,11 +89,9 @@ export default function JoinUs() {
           viewport={{ once: true }}
           variants={fadeUpVariants}>
           <h1 className="text-3xl text-white text-center font-semibold max-lg:text-lg">
-            <span className="text-4xl font-bold max-lg:text-2xl">
-              MESA REDONDA COM CEOS 2026 - 5ª Edição:
+            <span className="text-9xl font-bold max-lg:text-2xl">
+              MESA REDONDA COM CEOS
             </span>
-            <br />O Papel da Banca e de Outros Agentes do Sistema Financeiro na
-            Mobilização de Financiamento
           </h1>
         </motion.div>
 
