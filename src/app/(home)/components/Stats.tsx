@@ -11,9 +11,9 @@ export default function Statistics() {
   };
 
   const stats: Stat[] = [
-    { value: 50, suffix: "+", label: "Oradores" },
-    { value: 200, suffix: "+", label: "Empresas" },
-    { value: 1000, suffix: "+", label: "Participantes" },
+    { value: 100, suffix: "+", label: "Entidades" },
+    { value: 500, suffix: "+", label: "Empresas" },
+    { value: 5000, suffix: "+", label: "Participantes" },
     { value: 200, suffix: "+", label: "Empresas apoiadas" },
   ];
 
@@ -39,7 +39,7 @@ export default function Statistics() {
   };
 
   return (
-    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/25.jpeg)] bg-cover bg-center">
+    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-cover bg-center">
       <motion.div
         className="text-white w-full p-24 flex justify-center bg-linear-to-r from-primary/80 to-accent/80 backdrop-blur-xs
         max-lg:p-10"
