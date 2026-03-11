@@ -88,15 +88,13 @@ export default function JoinUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeUpVariants}>
-          <h1 className="text-3xl text-white text-center font-semibold max-lg:text-lg">
-            <span className="text-9xl font-bold max-lg:text-2xl">
-              MESA REDONDA COM CEOS
-            </span>
+          <h1 className="text-white text-center text-4xl font-bold max-lg:text-2xl">
+            MESA REDONDA COM CEOS 5ª EDIÇÃO
           </h1>
         </motion.div>
 
         <motion.ul
-          className="flex gap-18 items-center max-lg:flex-wrap max-lg:gap-6 max-lg:justify-center"
+          className="flex gap-8 items-center max-lg:flex-wrap max-lg:gap-6 max-lg:justify-center"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -104,7 +102,7 @@ export default function JoinUs() {
           {eventTime.map((item, index) => (
             <motion.li
               key={index}
-              className="text-white text-center bg-white/20 px-6 py-5 border-2 backdrop-blur-xs border-primary rounded-md
+              className="text-white text-center bg-white/20 px-6 py-5 border-2 backdrop-blur-sm border-primary rounded-md
               max-lg:px-4 max-lg:py-3"
               whileHover={{ scale: 1.1, rotate: 2 }}
               variants={itemVariants}>
@@ -141,7 +139,7 @@ export default function JoinUs() {
           </div>
         </motion.div>
 
-        <motion.div
+     {/*    <motion.div
           className="flex gap-6 items-center
           max-lg:flex-col
           max-lg:w-full
@@ -163,7 +161,7 @@ export default function JoinUs() {
             transition={{ duration: 1.5, repeat: Infinity }}>
             Obter Ingressos
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
