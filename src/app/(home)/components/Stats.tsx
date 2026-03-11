@@ -89,7 +89,7 @@ export default function Statistics() {
                     start={0}
                     end={stat.value}
                     duration={4}
-                    suffix={stat.suffix}
+                    prefix={stat.suffix}
                     enableScrollSpy
                     scrollSpyOnce
                   />
