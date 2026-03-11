@@ -134,7 +134,7 @@ export default function JoinUs() {
           variants={fadeUpVariants}>
           <div className="flex gap-2 items-center">
             <Calendar size={24} />
-            08 e 09 de Julho de 2026
+            07 e 08 de Julho de 2026
           </div>
 
           <div className="flex gap-2 items-center">
