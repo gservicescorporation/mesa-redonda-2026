@@ -57,7 +57,7 @@ export default function LaunchMagazine() {
               max-lg:text-3xl
               "
             >
-              LOCAL CONTENT MAGANIZE
+              LOCAL CONTENT MAGAZINE
             </span>
           </motion.h1>
 

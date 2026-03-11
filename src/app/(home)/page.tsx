@@ -10,6 +10,7 @@ import SponsorsPartners from "./components/SponsorsPartners";
 import Statistics from "./components/Stats";
 import WhyParticipate from "./components/WhyParticipate";
 import Contact from "./contact/page";
+import TeaserPresentation from "./components/TeaserPresentation";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       {/*  <Hero /> */}
       <Statistics />
       <About />
+      <TeaserPresentation />
       <SponsorsPartners />
       <WhyParticipate />
       <CallToAction />
