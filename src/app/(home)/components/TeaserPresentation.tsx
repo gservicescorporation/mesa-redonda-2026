@@ -98,27 +98,13 @@ export default function TeaserPresentation() {
 
         <motion.div
           variants={videoVariant}
-          className="
-          max-w-300 w-full
-          
-          max-lg:max-w-full
-        "
-        >
+          className="max-w-300 w-full max-lg:max-w-full">
           <video
-            autoPlay
-            muted
-            loop
-            playsInline
             preload="metadata"
-            className="
-            w-full h-150 object-cover rounded-2xl shadow-2xl shadow-white/20
-            
-            max-lg:h-auto
-            max-lg:rounded-xl
-          "
-          >
+            controls
+            className="w-full h-150 object-cover rounded-2xl shadow-2xl shadow-white/20 max-lg:h-auto max-lg:rounded-xl">
             <source
-              src="https://ik.imagekit.io/globalsc/mr-jul-2026/INTRO%20LOGO%20MESA%20REDONDA%205%20EDI%C3%87%C3%83O.mp4"
+              src="https://gjdpj9hrfaimvxeh.public.blob.vercel-storage.com/teaser.mp4"
               type="video/mp4"
             />
           </video>

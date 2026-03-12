@@ -42,7 +42,7 @@ export default function Exhibition() {
               image: "https://ik.imagekit.io/globalsc/mr-nova-era-da-lideranca/20.jpg",
               description:
                 "Mostre sua marca! Escolha entre categorias: Startups, Empresas ou Instituições.",
-              price: "450.000,00 Kz",
+              price: "Sob consulta",
               button: "Explorar modalidade",
             },
             {
@@ -76,7 +76,7 @@ export default function Exhibition() {
 
                 <p className="text-2xl font-bold flex items-center max-lg:text-xl">
                   <span className="text-xs font-light mr-2 max-lg:text-[10px]">
-                    {item.title === "EXPOSITOR" ? "a partir de" : "valor"}
+                    {item.title === "EXPOSITOR" ? "valor" : "valor"}
                   </span>
                   {item.price}
                 </p>

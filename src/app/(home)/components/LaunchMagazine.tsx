@@ -25,7 +25,7 @@ export default function LaunchMagazine() {
         flex min-h-screen items-center gap-24 p-24 justify-center w-full
         backdrop-blur-xs bg-linear-to-b from-accent/50 to-accent/75 z-10
 
-        max-lg:flex-col
+        max-lg:flex-col-reverse
         max-lg:gap-10
         max-lg:p-10
       "
@@ -73,21 +73,31 @@ export default function LaunchMagazine() {
             identidade e desenvolvimento por meio de uma curadoria editorial
             criteriosa e atual.
           </motion.p>
+
+          <motion.button className="bg-linear-to-r from-[#e3b82c] via-[#ffe44b] to-[#e3ae0f] rounded-full text-lg font-semibold cursor-pointer hover:bg-none hover:text-yellow-300 border hover:border-yellow-500 px-12 py-3 max-lg:px-6 max-lg:py-2 transition-all duration-300 ease-in-out u">
+            Baixar revista
+          </motion.button>
         </motion.div>
 
         <motion.div variants={itemVariants} whileHover={{ scale: 1.03 }}>
-          <Image
-            src={"/images/magazine.png"}
-            alt={"Magazine"}
-            width={1920}
-            height={1080}
+           <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
             className="
-          max-w-xl w-full h-125 rounded-2xl object-cover
-
-          max-lg:h-80
-          max-lg:max-w-md
+            w-full h-125 max-w-xl object-contain rounded-2xl shadow-2xl shadow-white/20
+            backdrop-blur-sm
+            max-lg:h-auto
+            max-lg:rounded-xl
           "
-          />
+          >
+            <source
+              src="https://gjdpj9hrfaimvxeh.public.blob.vercel-storage.com/revista-teaser.mp4"
+              type="video/mp4"
+            />
+          </video>
         </motion.div>
       </motion.div>
     </div>
