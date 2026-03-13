@@ -10,7 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title:
-    "Mesa Redonda com CEOS 2026 - 5ª Edição: O Papel da Banca e de Outros Agentes do Sistema Financeiro na Mobilização de Financiamento",
+    "Mesa Redonda com CEO's 2026 - 5ª Edição: O Papel da Banca e de Outros Agentes do Sistema Financeiro na Mobilização de Financiamento",
   description:
     "O evento reúne decisores públicos, banca, operadores petrolíferos e empresas nacionais para transformar política económica em financiamento real, acelerar a industrialização e consolidar cadeias de valor nacionais.",
 
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Mesa Redonda com CEOS 2026 - 5ª Edição",
+    title: "Mesa Redonda com CEO's 2026 - 5ª Edição",
     description:
       "O evento reúne decisores públicos, banca, operadores petrolíferos e empresas nacionais para transformar política económica em financiamento real, acelerar a industrialização e consolidar cadeias de valor nacionais.",
     url: "https://mesaredonda.globalsc.ao",
-    siteName: "Mesa Redonda com CEOS 2026 - 5ª Edição",
+    siteName: "Mesa Redonda com CEO's 2026 - 5ª Edição",
     images: [
       {
         url: "https://mesaredonda.globalsc.ao/logo.jpeg",
         width: 1920,
         height: 1040,
-        alt: "Mesa Redonda com CEOS 2026 - 5ª Edição",
+        alt: "Mesa Redonda com CEO's 2026 - 5ª Edição",
       },
     ],
     locale: "pt-PT",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mesa Redonda com CEOS 2026 - 5ª Edição",
+    title: "Mesa Redonda com CEO's 2026 - 5ª Edição",
     description:
       "O evento reúne decisores públicos, banca, operadores petrolíferos e empresas nacionais para transformar política económica em financiamento real, acelerar a industrialização e consolidar cadeias de valor nacionais.",
     images: ["https://mesaredonda.globalsc.ao/logo.jpeg"],
@@ -44,12 +44,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mesaredonda.globalsc.ao"),
   authors: [
     {
-      name: "Mesa Redonda com CEOS 2026 - 5ª Edição",
+      name: "Mesa Redonda com CEO's 2026 - 5ª Edição",
       url: "https://mesaredonda.globalsc.ao",
     },
   ],
   keywords: [
-    "Mesa Redonda com CEOs 2026",
+    "Mesa Redonda com CEO's 2026",
     "Financiamento Bancário",
     "Sistema Financeiro Angola",
     "Mobilização de Financiamento",
@@ -90,7 +90,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Mesa Redonda com CEOS",
+              name: "Mesa Redonda com CEO's",
               url: "https://mesaredonda.globalsc.ao",
               logo: "https://mesaredonda.globalsc.ao/logo.jpeg",
               sameAs: [

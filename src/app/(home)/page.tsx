@@ -11,6 +11,7 @@ import Statistics from "./components/Stats";
 import WhyParticipate from "./components/WhyParticipate";
 import Contact from "./contact/page";
 import TeaserPresentation from "./components/TeaserPresentation";
+import TeaserMagazine from "./components/TeaserMagazine";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <WhyParticipate />
       <CallToAction />
       <LaunchMagazine />
+      <TeaserMagazine />
       <SpeakersList />
       <Exhibition />
       <FAQ />

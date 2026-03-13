@@ -89,7 +89,7 @@ export default function JoinUs() {
           viewport={{ once: true }}
           variants={fadeUpVariants}>
           <h1 className="text-white text-center text-4xl font-bold max-lg:text-2xl">
-            MESA REDONDA COM CEOS 5ª EDIÇÃO
+            MESA REDONDA COM  CEO's - 5ª EDIÇÃO
           </h1>
         </motion.div>
 

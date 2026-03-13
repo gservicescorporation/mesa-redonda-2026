@@ -98,7 +98,7 @@ export default function GetTicket() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-xl font-semibold mb-6 text-white max-lg:text-lg">
-              Tickets de Acesso - Mesa Redonda com CEOs
+              Tickets de Acesso - Mesa Redonda com CEO's
             </motion.h2>
 
             <div className="flex flex-wrap gap-4 justify-start max-lg:justify-center">

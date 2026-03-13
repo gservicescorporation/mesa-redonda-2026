@@ -21,17 +21,17 @@ export default function FAQ() {
     {
       question: "Quem são os palestrantes?",
       answer:
-        "O evento contará com um painel de oradores renomados, incluindo CEOs, líderes do setor financeiro, representantes governamentais e especialistas em desenvolvimento econômico.",
+        "O evento contará com um painel de oradores renomados, incluindo CEO's, líderes do setor financeiro, representantes governamentais e especialistas em desenvolvimento econômico.",
     },
     {
       question: "Onde e quando será realizado o evento?",
       answer:
-        "O evento será realizado no Hotel Epic Sana, em Luanda, Angola, no dia 29 de Janeiro de 2026.",
+        "O evento será realizado no Centro de Conferências de Talatona, em Luanda, Angola, no dia 7 e 8 de Julho de 2026.",
     },
     {
       question: "Como posso participar do evento?",
       answer:
-        "Você pode participar do evento adquirindo ingressos através do nosso site oficial. Oferecemos diferentes pacotes de ingressos, incluindo opções VIP e premium, para atender às suas necessidades.",
+        "Você pode participar do evento adquirindo ingressos através do nosso site oficial.",
     },
     {
       question: "Haverá oportunidades de networking?",
@@ -41,17 +41,13 @@ export default function FAQ() {
     {
       question: "O evento é presencial ou virtual?",
       answer:
-        "O evento será realizado presencialmente no Hotel Epic Sana, em Luanda, Angola. No entanto, também ofereceremos opções de participação virtual para aqueles que não puderem comparecer pessoalmente.",
+        "O evento será realizado presencialmente no Centro de Conferências de Talatona.",
     },
-    {
-      question: "Haverá tradução simultânea disponível?",
-      answer:
-        "Sim, para garantir que todos os participantes possam acompanhar as discussões, haverá tradução simultânea disponível durante o evento.",
-    },
+
     {
       question: "Posso obter um certificado de participação?",
       answer:
-        "Sim, os participantes que comparecerem ao evento receberão um certificado de participação como reconhecimento de sua presença e envolvimento.",
+        "Sim, os participantes que comparecerem ao evento receberão um certificado de premiação.",
     },
   ];
 
@@ -69,10 +65,8 @@ export default function FAQ() {
         },
       }}
       className="w-full bg-cover items-center bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/33.jpg)]">
-      
       <div className="flex flex-col max-lg:px-6 max-lg:py-12 justify-center gap-14 p-24 w-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
         <div className="flex flex-col max-lg:gap-8 w-full max-w-7xl mx-auto gap-12">
-          
           <div className="text-white flex flex-col gap-4 w-full max-w-lg max-lg:text-center max-lg:items-center">
             <p className="px-4 py-2 rounded-md text-white w-fit max-lg:text-sm">
               Tudo que precisa saber sobre o evento
@@ -91,13 +85,10 @@ export default function FAQ() {
                   <div
                     key={index}
                     className="flex flex-col gap-2 border-b border-white/20 pb-3">
-                    
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className="flex justify-between items-center cursor-pointer w-full max-lg:gap-4">
-                      
-                      <span
-                        className="text-lg font-medium transition-colors text-white max-lg:text-base">
+                      <span className="text-lg font-medium transition-colors text-white max-lg:text-base text-start">
                         {faq.question.toUpperCase()}
                       </span>
 

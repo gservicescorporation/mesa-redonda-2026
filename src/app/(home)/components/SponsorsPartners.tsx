@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 interface Partner {
   id: number;
@@ -10,19 +12,21 @@ interface Partner {
 }
 
 const partners: Partner[] = [
-  { id: 1, name: "AECIPA", logo: "/images/partners/aecipa.png" },
-  { id: 2, name: "AEC", logo: "/images/partners/aec.png" },
-  { id: 3, name: "AES", logo: "/images/partners/aes.png" },
+  { id: 1, name: "abanc", logo: "/images/partners/abanc.png" },
+  { id: 2, name: "anpg", logo: "/images/partners/anpg.png" },
+  { id: 3, name: "arseg", logo: "/images/partners/arseg.png" },
+  { id: 4, name: "bna", logo: "/images/partners/bna.png" },
+  { id: 5, name: "bodiva", logo: "/images/partners/bodiva.png" },
+  { id: 6, name: "cmc", logo: "/images/partners/cmc.png" },
+  { id: 7, name: "mindcom", logo: "/images/partners/mindcom.png" },
 ];
 
 export default function SponsorsPartners() {
-  // Variants para container (staggered logos)
   const containerVariants: Variants = {
     hidden: {},
     show: { transition: { staggerChildren: 0.2 } },
   };
 
-  // Variants para cada item (logo)
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: {
@@ -32,72 +36,81 @@ export default function SponsorsPartners() {
     },
   };
 
-  // Variants para o título e descrição
   const fadeUpVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
   return (
-    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/6.jpeg)] bg-cover bg-center">
+    <div className="w-full bg-[url(/bg-oficial.jpeg)] bg-bottom bg-cover">
       <motion.div
         className="text-white w-full p-24 flex justify-center 
-        bg-linear-to-r from-primary/80 to-accent/80 backdrop-blur-xs
+        bg-linear-to-r from-primary/50 to-accent/40 backdrop-blur-xs
         max-lg:p-10"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        variants={containerVariants}
-      >
+        variants={containerVariants}>
         <div
           className="flex gap-8 justify-around max-w-7xl w-full
           max-lg:flex-col
-          max-lg:items-center
+        items-center
           max-lg:text-center
-          max-lg:gap-10"
-        >
-          {/* Texto */}
+          max-lg:gap-10">
           <motion.div
-            className="max-w-sm w-full flex flex-col gap-2 max-lg:items-center"
-            variants={fadeUpVariants}
-          >
+            className="max-w-lg w-full flex flex-col gap-2 max-lg:items-center"
+            variants={fadeUpVariants}>
             <h1 className="text-3xl font-bold text-white max-lg:text-2xl">
               Patrocinadores e Parceiros
             </h1>
-            <p className="text-lg max-lg:text-base">
-              Este evento será viabilizado pelo apoio estratégico dos nossos
-              parceiros e patrocinadores.
-            </p>
           </motion.div>
 
-          {/* Logos */}
           <motion.ul
             className="flex flex-wrap w-full max-w-2xl justify-center gap-8
             max-lg:gap-6"
-            variants={containerVariants}
-          >
-            {partners.map((partner) => (
-              <motion.li
-                key={partner.id}
-                className="bg-clip-padding pb-4 border border-transparent 
+            variants={containerVariants}>
+            <Swiper
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop
+              speed={800}
+              spaceBetween={20}
+              slidesPerView={3}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                1048: {
+                  slidesPerView: 3,
+                },
+              }}
+              modules={[Autoplay]}
+              className="w-full">
+              {partners.map((partner, index) => (
+                <SwiperSlide key={index}>
+                  <motion.li
+                    className="bg-clip-padding pb-4 border border-transparent 
                 bg-linear-to-r from-primary to-secondary rounded-3xl
                 max-lg:w-[45%]"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, rotate: 1 }}
-              >
-                <div className="rounded-2xl p-4 bg-white max-lg:p-3 flex items-center justify-center">
-                  <Image
-                    src={partner.logo}
-                    alt={`Logo ${partner.name}`}
-                    width={300}
-                    height={300}
-                    className="h-38 w-38 object-contain object-center
-                    max-lg:h-24
-                    max-lg:w-24"
-                  />
-                </div>
-              </motion.li>
-            ))}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05, rotate: 1 }}>
+                    <div className="rounded-2xl  bg-white max-lg:p-3 flex items-center justify-center">
+                      <Image
+                        src={partner.logo}
+                        alt={`Logo ${partner.name}`}
+                        width={300}
+                        height={300}
+                        className="h-48 w-48 object-contain object-center
+                    max-lg:h-32
+                    max-lg:w-32"
+                      />
+                    </div>
+                  </motion.li>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </motion.ul>
         </div>
       </motion.div>

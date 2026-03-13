@@ -49,12 +49,10 @@ export default function TeaserPresentation() {
         max-lg:p-8
         max-lg:min-h-auto
         max-lg:py-16
-      "
-      >
+      ">
         <motion.div
           variants={container}
-          className="flex flex-col gap-4 items-center max-w-7xl w-full"
-        >
+          className="flex flex-col gap-4 items-center max-w-7xl w-full">
           <motion.span
             variants={item}
             className="
@@ -64,8 +62,7 @@ export default function TeaserPresentation() {
             max-lg:text-xs
             max-lg:px-3
             max-lg:py-1.5
-          "
-          >
+          ">
             <Play className="max-lg:w-4 max-lg:h-4" /> Assista ao Teaser Oficial
           </motion.span>
 
@@ -76,8 +73,7 @@ export default function TeaserPresentation() {
             
             max-lg:text-2xl
             max-lg:leading-tight
-          "
-          >
+          ">
             Papel da Banca e de Outros Agentes do Sistema Financeiro na
             Mobilização de Financiamento
           </motion.h1>
@@ -89,10 +85,8 @@ export default function TeaserPresentation() {
             
             max-lg:text-sm
             max-lg:max-w-xl
-          "
-          >
-            Veja como as edições anteriores da Mesa Redonda com CEOs marcaram o
-            debate empresarial e prepare-se para a 5ª edição.
+          ">
+            Confira as edições anteriores da Mesa Redonda.
           </motion.p>
         </motion.div>
 

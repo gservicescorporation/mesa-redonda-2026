@@ -74,7 +74,7 @@ export default function Contact() {
                   Ligue para nós:
                 </h1>
                 <p className="text-white text-xl max-lg:text-sm">
-                  +244 941 064 919 / +244 222 731 031
+                  +244 941 064 919 / +244 925 835 848
                 </p>
               </div>
             </motion.li>

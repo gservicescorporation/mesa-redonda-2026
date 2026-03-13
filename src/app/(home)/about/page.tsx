@@ -79,13 +79,13 @@ export default function About() {
             <motion.h1
               variants={textItem}
               className="text-3xl max-lg:text-2xl font-bold text-white">
-              O que é a Mesa Redonda com CEOS?
+              O que é a Mesa Redonda com CEO's?
             </motion.h1>
 
             <motion.p
               variants={textItem}
               className="text-white text-lg max-lg:text-base mt-4">
-              O Mesa Redonda com CEOS 2026 - 5ª Edição sobre o Papel da Banca e
+              O Mesa Redonda com CEO's - 5ª Edição com o tema o Papel da Banca e
               de Outros Agentes do Sistema Financeiro na Mobilização de
               Financiamento é um espaço estratégico de reflexão, diálogo e
               partilha de experiências entre decisores públicos, instituições

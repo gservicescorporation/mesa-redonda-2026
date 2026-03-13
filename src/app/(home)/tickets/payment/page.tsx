@@ -95,7 +95,7 @@ export default function Payment() {
         chargeId,
         fullname: watch("fullname"),
         email: watch("email"),
-        eventName: "Mesa Redonda com CEOS - 5ª Edição",
+        eventName: "Mesa Redonda com CEO's - 5ª Edição",
         eventDate: "2026-06-29",
         ticketCode: `TCK-${chargeId.slice(0, 8).toUpperCase()}`,
       });
