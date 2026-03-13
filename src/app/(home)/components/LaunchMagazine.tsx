@@ -32,8 +32,7 @@ export default function LaunchMagazine() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        variants={containerVariants}
-      >
+        variants={containerVariants}>
         <motion.div
           className="
           max-w-lg w-full flex flex-col gap-6
@@ -41,32 +40,34 @@ export default function LaunchMagazine() {
           max-lg:text-center
           max-lg:items-center
         "
-          variants={containerVariants}
-        >
+          variants={containerVariants}>
           <motion.h1
             className="text-3xl font-bold text-white max-lg:text-2xl"
-            variants={itemVariants}
-          >
+            variants={itemVariants}>
             Lançamento da Revista{" "}
-            <span
-              className="
+          </motion.h1>
+          <motion.p
+            className="
               text-4xl font-extrabold
               bg-linear-to-r from-[#e3b82c] via-[#ffe44b] to-[#e3ae0f]
               bg-clip-text text-transparent
 
               max-lg:text-3xl
               "
-            >
-              LOCAL CONTENT MAGAZINE
-            </span>
-          </motion.h1>
+            variants={itemVariants}>
+            LOCAL CONTENT MAGAZINE
+          </motion.p>
 
-          <motion.p className="text-white text-lg max-lg:text-base" variants={itemVariants}>
+          <motion.p
+            className="text-white text-lg max-lg:text-base"
+            variants={itemVariants}>
             A revista que destaca o valor, a inovação e o impacto do conteúdo
             local.
           </motion.p>
 
-          <motion.p className="text-white text-lg max-lg:text-base" variants={itemVariants}>
+          <motion.p
+            className="text-white text-lg max-lg:text-base"
+            variants={itemVariants}>
             A LOCAL CONTENT MAGAZINE é uma revista criada para dar visibilidade
             a histórias, iniciativas e profissionais que contribuem para o
             fortalecimento do ecossistema local, promovendo conhecimento,
@@ -79,8 +80,10 @@ export default function LaunchMagazine() {
           </motion.button>
         </motion.div>
 
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.03 }}>
-           <video
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.03 }}>
+          <video
             autoPlay
             muted
             loop
@@ -91,8 +94,7 @@ export default function LaunchMagazine() {
             backdrop-blur-sm
             max-lg:h-auto
             max-lg:rounded-xl
-          "
-          >
+          ">
             <source
               src="https://gjdpj9hrfaimvxeh.public.blob.vercel-storage.com/revista-teaser.mp4"
               type="video/mp4"
