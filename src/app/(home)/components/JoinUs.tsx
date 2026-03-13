@@ -62,7 +62,7 @@ export default function JoinUs() {
   };
 
   return (
-    <div className="w-full relative bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/18.jpg)] bg-cover bg-center">
+    <div className="w-full relative">
       <video
         autoPlay
         muted
@@ -71,7 +71,7 @@ export default function JoinUs() {
         preload="metadata"
         className="w-full min-h-screen h-215 object-cover">
         <source
-          src="https://ik.imagekit.io/globalsc/mr-jul-2026/INTRO%20LOGO%20MESA%20REDONDA%205%20EDI%C3%87%C3%83O.mp4"
+          src="https://gjdpj9hrfaimvxeh.public.blob.vercel-storage.com/intro-teaser.mp4"
           type="video/mp4"
         />
       </video>
