@@ -82,16 +82,7 @@ export default function JoinUs() {
         max-lg:py-44
         max-lg:gap-8
       ">
-        <motion.div
-          className="text-center items-center flex flex-col gap-2 max-w-225 w-full"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeUpVariants}>
-          <h1 className="text-white text-center text-4xl font-bold max-lg:text-2xl">
-            MESA REDONDA COM  CEO's - 5ª EDIÇÃO
-          </h1>
-        </motion.div>
+        
 
         <motion.ul
           className="flex gap-8 items-center max-lg:flex-wrap max-lg:gap-6 max-lg:justify-center"

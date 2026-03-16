@@ -53,7 +53,7 @@ export default function About() {
       <motion.div
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ amount: 0.5 }}
         variants={container}
         className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-center bg-cover">
         <div className="flex items-center max-lg:flex-col max-lg:gap-10 min-h-screen max-lg:min-h-fit gap-24 p-24 max-lg:p-6 justify-center w-full bg-linear-to-t from-accent/90 to-accent/75 backdrop-blur-xs">
@@ -90,11 +90,7 @@ export default function About() {
               Financiamento é um espaço estratégico de reflexão, diálogo e
               partilha de experiências entre decisores públicos, instituições
               financeiras, investidores, reguladores e especialistas nacionais e
-              internacionais. O evento tem como objetivo analisar o papel da
-              banca comercial, bancos de desenvolvimento, fundos de
-              investimento, seguradoras, fintechs e outros agentes do sistema
-              financeiro na mobilização de recursos para o financiamento da
-              economia real.
+              internacionais.
             </motion.p>
           </motion.div>
         </div>
@@ -105,7 +101,7 @@ export default function About() {
       <motion.div
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ amount: 0.5 }}
         variants={container}
         className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-center bg-cover">
         <div className="flex flex-row-reverse max-lg:flex-col items-center max-lg:gap-10 min-h-screen max-lg:min-h-fit gap-24 p-24 max-lg:p-6 justify-center w-full bg-linear-to-t from-accent/90 to-accent/75 backdrop-blur-xs">

@@ -29,7 +29,7 @@ export default function CallToAction() {
       "
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once:true, amount: 0.5 }}
         variants={containerVariants}>
         <motion.div
           className="

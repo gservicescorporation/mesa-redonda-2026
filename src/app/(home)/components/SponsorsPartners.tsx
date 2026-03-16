@@ -49,7 +49,7 @@ export default function SponsorsPartners() {
         max-lg:p-10"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.4 }}
         variants={containerVariants}>
         <div
           className="flex gap-8 justify-around max-w-7xl w-full
@@ -89,11 +89,11 @@ export default function SponsorsPartners() {
               modules={[Autoplay]}
               className="w-full">
               {partners.map((partner, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="w-full">
                   <motion.li
                     className="bg-clip-padding pb-4 border border-transparent 
                 bg-linear-to-r from-primary to-secondary rounded-3xl
-                max-lg:w-[45%]"
+                "
                     variants={itemVariants}
                     whileHover={{ scale: 1.05, rotate: 1 }}>
                     <div className="rounded-2xl  bg-white max-lg:p-3 flex items-center justify-center">

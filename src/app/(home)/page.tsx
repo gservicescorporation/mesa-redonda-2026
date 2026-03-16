@@ -1,8 +1,8 @@
 import About from "./components/About";
 import CallToAction from "./components/CallToAction";
 import FAQ from "./components/FAQ";
-import Exhibition from "./components/Exhibition"; /* 
-import Hero from "./components/Hero"; */
+import Exhibition from "./components/Exhibition";
+/*  import Hero from "./components/Hero"; */
 import JoinUs from "./components/JoinUs";
 import LaunchMagazine from "./components/LaunchMagazine";
 import SpeakersList from "./components/Speakers";
@@ -11,11 +11,12 @@ import Statistics from "./components/Stats";
 import WhyParticipate from "./components/WhyParticipate";
 import Contact from "./contact/page";
 import TeaserPresentation from "./components/TeaserPresentation";
-import TeaserMagazine from "./components/TeaserMagazine";
 
+import TeaserMagazine from "./components/TeaserMagazine";
+import MagazineDownloadModal from "./components/MagazineDownloadModal";
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center w-full">
+    <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-cover bg-center w-full relative">
       <JoinUs />
       {/*  <Hero /> */}
       <Statistics />
@@ -30,6 +31,7 @@ export default function Home() {
       <Exhibition />
       <FAQ />
       <Contact />
+      <MagazineDownloadModal />
     </div>
   );
 }

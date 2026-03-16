@@ -25,7 +25,7 @@ export default function Exhibition() {
         className="flex flex-col items-center gap-14 p-24 max-lg:p-12 justify-center w-full h-full bg-linear-to-b from-accent/65 to-accent/95 z-10"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ amount: 0.5}}
         variants={containerVariants}
       >
         <motion.div className="text-white text-center max-lg:px-4" variants={itemVariants}>

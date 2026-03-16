@@ -39,7 +39,7 @@ export default function TeaserPresentation() {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.1 }}
         className="
         flex items-center min-h-screen gap-14 p-24 justify-center w-full
         bg-linear-to-b from-accent/85 to-accent/95 backdrop-blur-xs

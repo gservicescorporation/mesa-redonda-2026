@@ -29,7 +29,7 @@ export default function About() {
         max-lg:text-center"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ amount: 0.3 }}
         variants={containerVariants}>
         <motion.div
           className="max-w-xl w-full flex items-center justify-center h-125 rounded-2xl p-8 
@@ -59,7 +59,8 @@ export default function About() {
             <b>
               Papel da Banca e de Outros Agentes do Sistema Financeiro na
               Mobilização de Financiamento
-            </b> é um espaço estratégico de reflexão, diálogo e partilha de
+            </b>{" "}
+            é um espaço estratégico de reflexão, diálogo e partilha de
             experiências entre decisores públicos, instituições financeiras,
             investidores, reguladores e especialistas nacionais e
             internacionais. O evento tem como objetivo analisar o papel da banca

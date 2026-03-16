@@ -112,7 +112,7 @@ export default function GetTicket() {
                     {formatPrice(ticket.price)} AOA
                   </p>
                   <p className="text-sm mt-1">
-                    {new Date("2026-06-29").toLocaleDateString("pt-BR", {
+                    {new Date("2026-07-07").toLocaleDateString("pt-BR", {
                       day: "numeric",
                       month: "long",
                       year: "numeric",

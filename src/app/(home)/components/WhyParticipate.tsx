@@ -4,13 +4,11 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 export default function WhyParticipate() {
-  // Variants para container (staggered)
   const containerVariants: Variants = {
     hidden: {},
     show: { transition: { staggerChildren: 0.3 } },
   };
 
-  // Variants para cada item (fade + slide)
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: {
@@ -34,10 +32,11 @@ export default function WhyParticipate() {
       "
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.03 }}>
+        viewport={{ amount: 0.4 }}
+        variants={containerVariants}>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.03 }}>
           <Image
             src={"/banner-participate.png"}
             alt={"About Us"}
@@ -50,7 +49,9 @@ export default function WhyParticipate() {
           />
         </motion.div>
 
-        <motion.div className="max-w-xl w-full" variants={itemVariants}>
+        <motion.div
+          className="max-w-xl w-full"
+          variants={itemVariants}>
           <h1 className="text-3xl font-bold text-white max-lg:text-2xl">
             Por que participar da Mesa Redonda?
           </h1>
@@ -64,8 +65,7 @@ export default function WhyParticipate() {
 
           <motion.ul
             className="list-disc ml-6 mt-4 text-white text-lg max-lg:text-base flex flex-col gap-2"
-            variants={itemVariants}
-          >
+            variants={itemVariants}>
             <li>
               Engajar-se com líderes e especialistas do setor financeiro
               nacional e internacional.

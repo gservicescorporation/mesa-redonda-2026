@@ -24,14 +24,14 @@ export default function LaunchMagazine() {
         className="
         flex min-h-screen items-center gap-24 p-24 justify-center w-full
         backdrop-blur-xs bg-linear-to-b from-primary/20 to-accent/75 z-10
-
+flex-row-reverse
         max-lg:flex-col-reverse
         max-lg:gap-10
         max-lg:p-10
       "
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ amount: 0.5 }}
         variants={containerVariants}>
         <motion.div
           className="
@@ -70,18 +70,28 @@ export default function LaunchMagazine() {
             criteriosa e atual.
           </motion.p>
 
-          <motion.button className=" bg-linear-to-r from-[#e3b82c] via-[#ffe44b] to-[#e3ae0f] rounded-full font-semibold px-12 py-3 max-lg:px-6 max-lg:py-2 transition-all duration-300 ease-in-out w-fit">
+          <motion.a
+            variants={itemVariants}
+            href="/magazine/local-content-magazine.pdf"
+            download="LOCAL-CONTENT-MAGAZINE.pdf"
+            className="bg-white text-black border border-white hover:bg-transparent hover:text-white cursor-pointer rounded-full font-semibold px-18 py-3 max-lg:px-6 max-lg:py-2 transition-all duration-300 ease-in-out w-fit">
             Baixar revista
-          </motion.button>
+          </motion.a>
         </motion.div>
 
-        <Image
-          src={"/banner-revista.jpeg"}
-          alt={"About Us"}
-          width={1920}
-          height={1080}
-          className="w-full max-w-xl object-cover rounded-2xl "
-        />
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ amount: 0.5 }}
+          variants={itemVariants}>
+          <Image
+            src={"/banner-revista.jpeg"}
+            alt={"About Us"}
+            width={1920}
+            height={1080}
+            className="w-full max-w-xl object-cover rounded-2xl "
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
