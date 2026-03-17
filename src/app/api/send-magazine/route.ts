@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 <!-- HERO HEADER -->
 <tr>
 <td 
-background="https://mesaredonda.globalsc.ao/banner-revista.jpeg"
+background="https://www.mesaredonda.globalsc.ao/banner-revista.jpeg"
 style="
 background-size:cover;
 background-position:center;
@@ -91,7 +91,7 @@ Clique no botão abaixo para baixar a revista:
 <tr>
 <td align="center" bgcolor="#1e40af" style="border-radius:8px;">
 <a 
-href="https://mesaredonda.globalsc.ao/magazine/local-content-magazine.pdf"
+href="https://www.mesaredonda.globalsc.ao/magazine/local-content-magazine.pdf"
 style="
 display:inline-block;
 padding:16px 32px;
@@ -120,7 +120,7 @@ font-size:13px;
 color:#1e40af;
 word-break:break-all;
 ">
-https://mesaredonda.globalsc.ao/magazine/local-content-magazine.pdf
+https://www.mesaredonda.globalsc.ao/magazine/local-content-magazine.pdf
 </p>
 
 </td>
@@ -157,7 +157,7 @@ Global Services Corporation
 `,
     });
 
-    return Response.json({ success: true });
+    return Response.json({ success: 200 });
   } catch (error) {
     return Response.json({ success: false });
   }

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Script from "next/script"
+import Script from "next/script";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: "Mesa Redonda com CEO's 2026 - 5ª Edição",
     description:
       "O evento reúne decisores públicos, banca, operadores petrolíferos e empresas nacionais para transformar política económica em financiamento real, acelerar a industrialização e consolidar cadeias de valor nacionais.",
-    url: "https://mesaredonda.globalsc.ao",
+    url: "https://www.mesaredonda.globalsc.ao",
     siteName: "Mesa Redonda com CEO's 2026 - 5ª Edição",
     images: [
       {
-        url: "https://mesaredonda.globalsc.ao/logo.jpeg",
+        url: "https://www.mesaredonda.globalsc.ao/logo.jpeg",
         width: 1920,
         height: 1040,
         alt: "Mesa Redonda com CEO's 2026 - 5ª Edição",
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     title: "Mesa Redonda com CEO's 2026 - 5ª Edição",
     description:
       "O evento reúne decisores públicos, banca, operadores petrolíferos e empresas nacionais para transformar política económica em financiamento real, acelerar a industrialização e consolidar cadeias de valor nacionais.",
-    images: ["https://mesaredonda.globalsc.ao/logo.jpeg"],
+    images: ["https://www.mesaredonda.globalsc.ao/logo.jpeg"],
   },
-  metadataBase: new URL("https://mesaredonda.globalsc.ao"),
+  metadataBase: new URL("https://www.mesaredonda.globalsc.ao"),
   authors: [
     {
       name: "Mesa Redonda com CEO's 2026 - 5ª Edição",
-      url: "https://mesaredonda.globalsc.ao",
+      url: "https://www.mesaredonda.globalsc.ao",
     },
   ],
   keywords: [
@@ -91,8 +91,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Mesa Redonda com CEO's",
-              url: "https://mesaredonda.globalsc.ao",
-              logo: "https://mesaredonda.globalsc.ao/logo.jpeg",
+              url: "https://www.mesaredonda.globalsc.ao",
+              logo: "https://www.mesaredonda.globalsc.ao/logo.jpeg",
               sameAs: [
                 "https://www.facebook.com/p/Global-Services-Corporation-100094301594638/",
                 "https://www.instagram.com/globalservicescorporation/",
@@ -111,27 +111,27 @@ export default function RootLayout({
                 {
                   "@type": "Organization",
                   name: "Início",
-                  url: "https://mesaredonda.globalsc.ao",
+                  url: "https://www.mesaredonda.globalsc.ao",
                 },
                 {
                   "@type": "Organization",
                   name: "Sobre",
-                  url: "https://mesaredonda.globalsc.ao/about",
+                  url: "https://www.mesaredonda.globalsc.ao/about",
                 },
                 {
                   "@type": "Organization",
                   name: "Oradores",
-                  url: "https://mesaredonda.globalsc.ao/speakers",
+                  url: "https://www.mesaredonda.globalsc.ao/speakers",
                 },
                 {
                   "@type": "Organization",
                   name: "Ingressos",
-                  url: "https://mesaredonda.globalsc.ao/tickets",
+                  url: "https://www.mesaredonda.globalsc.ao/tickets",
                 },
                 {
                   "@type": "Organization",
                   name: "Entrar em contacto",
-                  url: "https://mesaredonda.globalsc.ao/contact",
+                  url: "https://www.mesaredonda.globalsc.ao/contact",
                 },
               ],
             }),

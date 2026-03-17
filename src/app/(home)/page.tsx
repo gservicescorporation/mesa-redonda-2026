@@ -3,9 +3,9 @@ import CallToAction from "./components/CallToAction";
 import FAQ from "./components/FAQ";
 import Exhibition from "./components/Exhibition";
 /*  import Hero from "./components/Hero"; */
-import JoinUs from "./components/JoinUs";
+import MainHero from "./components/MainHero";
 import LaunchMagazine from "./components/LaunchMagazine";
-import SpeakersList from "./components/Speakers";
+import SpeakersList from "./speakers/components/Speakers";
 import SponsorsPartners from "./components/SponsorsPartners";
 import Statistics from "./components/Stats";
 import WhyParticipate from "./components/WhyParticipate";
@@ -17,7 +17,7 @@ import MagazineDownloadModal from "./components/MagazineDownloadModal";
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-cover bg-center w-full relative">
-      <JoinUs />
+      <MainHero />
       {/*  <Hero /> */}
       <Statistics />
       <About />

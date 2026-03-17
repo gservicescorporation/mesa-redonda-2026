@@ -4,43 +4,37 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, X } from "lucide-react";
 import { useState } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import axios from "axios";
 
 export default function MagazineDownloadModal() {
   const [isOpen, setModalOpen] = useState(true);
-  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm<{ email: string }>();
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-
-    if (!email) return;
-
+  const onSubmit: SubmitHandler<{ email: string }> = async (data) => {
     setLoading(true);
 
     try {
-      await fetch("/api/send-magazine", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
+      const response = await axios.post("/api/send-magazine", {
+        email: data.email,
       });
-
-      setModalOpen(!isOpen)
+      
+      if (response.status === 200) {
+        setModalOpen(!isOpen);
+        reset();
+      }
     } catch (error) {
       console.error(error);
     } finally {
       setLoading(false);
-/* 
-      const link = document.createElement("a");
-      link.href = "/magazine/local-content-magazine.pdf";
-      link.download = "LOCAL-CONTENT-MAGAZINE.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link); */
     }
-
-  }
+  };
 
   return (
     <AnimatePresence>
@@ -94,24 +88,27 @@ relative
               <div className="flex flex-col gap-4 w-full">
                 <div className="gap-2 flex flex-col text-white">
                   <h1 className="text-2xl font-extrabold max-lg:text-lg">
-                    Obtenha a revista LOCAL CONTENT MAGAZINE
+                    Faça download da LOCAL CONTENT MAGAZINE
                   </h1>
 
                   <p className="text-sm max-lg:text-xs">
-                    Tenha acesso à nossa revista num instante, basta inserir o
-                    seu e-mail e verificar a sua caixa de entrada.
+                    Para fazer download basta inserir o seu e-mail e verificar a
+                    sua caixa de entrada.
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="w-full flex">
-                    <input
-                      type="email"
-                      placeholder="Endereço de e-mail"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full rounded-l-md bg-white px-4 py-2 outline-none text-sm"
-                    />
+                    <label className="flex flex-col gap-1 w-full h-full ">
+                      <input
+                        type="email"
+                        {...register("email", {
+                          required: "E-mail é obrigatório",
+                        })}
+                        placeholder="Endereço de e-mail"
+                        className="w-full rounded-l-md items-center bg-white px-4 py-2 outline-none text-sm"
+                      />
+                    </label>
 
                     <button
                       type="submit"
@@ -124,6 +121,9 @@ relative
                       )}
                     </button>
                   </div>
+                  <span className="text-sm text-red-500">
+                    {errors.email && errors.email.message}
+                  </span>
                 </form>
               </div>
             </div>

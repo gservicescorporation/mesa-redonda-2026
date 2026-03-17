@@ -24,6 +24,7 @@ export default function Header() {
   const navItems = [
     { label: "Início", href: "/" },
     { label: "Sobre", href: "/about" },
+    { label: "Revista", href: "/magazine" },
     { label: "Oradores", href: "/speakers" },
     { label: "Ingressos", href: "/tickets" },
     { label: "Contactos", href: "/contact" },
