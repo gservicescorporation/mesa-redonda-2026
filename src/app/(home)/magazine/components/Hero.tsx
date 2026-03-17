@@ -22,7 +22,7 @@ export default function Hero() {
       </video>
 
       <div
-        className="flex absolute inset-0 items-center gap-12 px-24 py-44 h-full justify-center w-full bg-linear-to-r from-accent/95 via-primary/90 to-accent/90 z-10
+        className="flex absolute inset-0 items-center gap-24 px-24 py-44 h-full justify-center w-full bg-linear-to-r from-primary/95 via-accent/90 to-accent/90 z-10
         max-lg:px-6
         max-lg:py-44
         max-lg:gap-8
