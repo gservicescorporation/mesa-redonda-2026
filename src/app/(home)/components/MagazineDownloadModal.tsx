@@ -31,13 +31,13 @@ export default function MagazineDownloadModal() {
       console.error(error);
     } finally {
       setLoading(false);
-
+/* 
       const link = document.createElement("a");
       link.href = "/magazine/local-content-magazine.pdf";
       link.download = "LOCAL-CONTENT-MAGAZINE.pdf";
       document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link);
+      document.body.removeChild(link); */
     }
 
   }
