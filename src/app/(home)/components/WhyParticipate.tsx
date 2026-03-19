@@ -56,18 +56,11 @@ export default function WhyParticipate() {
             Por que participar da Mesa Redonda?
           </h1>
 
-          <p className="text-white text-lg mt-4 max-lg:text-base">
-            A Mesa Redonda com CEO's é uma oportunidade única para os
-            participantes se envolverem em discussões estratégicas sobre o papel
-            da banca e de outros agentes do sistema financeiro na mobilização de
-            financiamento. Os participantes terão a chance de:
-          </p>
-
           <motion.ul
             className="list-disc ml-6 mt-4 text-white text-lg max-lg:text-base flex flex-col gap-2"
             variants={itemVariants}>
             <li>
-              Engajar-se com líderes e especialistas do setor financeiro
+              Engajar-se com líderes e especialistas do sector financeiro
               nacional e internacional.
             </li>
 

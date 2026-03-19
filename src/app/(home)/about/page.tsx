@@ -133,12 +133,12 @@ export default function About() {
             <motion.p
               variants={textItem}
               className="text-white text-lg max-lg:text-base mt-4">
-              O evento tem como objetivo analisar o papel da banca comercial,
+              O evento tem como objectivo analisar o papel da banca comercial,
               bancos de desenvolvimento, fundos de investimento, seguradoras,
               fintechs e outros agentes do sistema financeiro na mobilização de
               recursos para o financiamento da economia real, com enfoque no
               crescimento sustentável, inclusão financeira, inovação e
-              fortalecimento do setor produtivo.
+              fortalecimento do sector produtivo.
             </motion.p>
           </motion.div>
         </div>

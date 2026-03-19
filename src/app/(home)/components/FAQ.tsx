@@ -14,14 +14,14 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Qual é o objetivo do evento?",
+      question: "Qual é o objectivo do evento?",
       answer:
         "O evento visa reunir decisores públicos, banca, operadores petrolíferos e empresas nacionais para discutir o papel da banca e de outros agentes do sistema financeiro na mobilização de financiamento, acelerando a industrialização e consolidando cadeias de valor nacionais.",
     },
     {
       question: "Quem são os palestrantes?",
       answer:
-        "O evento contará com um painel de oradores renomados, incluindo CEO's, líderes do setor financeiro, representantes governamentais e especialistas em desenvolvimento econômico.",
+        "O evento contará com um painel de oradores renomados, incluindo CEO's, líderes do sector financeiro, representantes governamentais e especialistas em desenvolvimento econômico.",
     },
     {
       question: "Onde e quando será realizado o evento?",
@@ -36,7 +36,7 @@ export default function FAQ() {
     {
       question: "Haverá oportunidades de networking?",
       answer:
-        "Sim, o evento proporcionará amplas oportunidades de networking, permitindo que os participantes se conectem com líderes do setor, decisores públicos e outros profissionais influentes.",
+        "Sim, o evento proporcionará amplas oportunidades de networking, permitindo que os participantes se conectem com líderes do sector, decisores públicos e outros profissionais influentes.",
     },
     {
       question: "O evento é presencial ou virtual?",
@@ -89,7 +89,7 @@ export default function FAQ() {
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className="flex justify-between items-center cursor-pointer w-full max-lg:gap-4">
                       <span className="text-lg font-medium transition-colors text-white max-lg:text-base text-start">
-                        {faq.question.toUpperCase()}
+                        {faq.question}
                       </span>
 
                       <motion.div

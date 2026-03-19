@@ -63,12 +63,12 @@ export default function About() {
             é um espaço estratégico de reflexão, diálogo e partilha de
             experiências entre decisores públicos, instituições financeiras,
             investidores, reguladores e especialistas nacionais e
-            internacionais. O evento tem como objetivo analisar o papel da banca
+            internacionais. O evento tem como objectivo analisar o papel da banca
             comercial, bancos de desenvolvimento, fundos de investimento,
             seguradoras, fintechs e outros agentes do sistema financeiro na
             mobilização de recursos para o financiamento da economia real, com
             enfoque no crescimento sustentável, inclusão financeira, inovação e
-            fortalecimento do setor produtivo.
+            fortalecimento do sector produtivo.
           </p>
         </motion.div>
       </motion.div>
