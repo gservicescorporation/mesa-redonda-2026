@@ -43,7 +43,7 @@ export default function Exhibition() {
               description:
                 "Mostre sua marca! Escolha entre categorias: Startups, Empresas ou Instituições.",
               price: "Sob consulta",
-              button: "Explorar modalidade",
+              button: "Brevemente...",
             },
             {
               title: "PATROCINADOR",
@@ -51,7 +51,7 @@ export default function Exhibition() {
               description:
                 "Aumente a visibilidade da sua marca e associe-se a um evento de impacto nacional.",
               price: "Sob consulta",
-              button: "Explorar modalidade",
+              button: "Brevemente...",
             },
           ].map((item, index) => (
             <motion.li
@@ -83,7 +83,7 @@ export default function Exhibition() {
               </div>
 
               <button className="btn-primary px-12 py-3 max-lg:px-6 max-lg:py-2 w-full text-base max-lg:text-sm flex justify-center items-center gap-2">
-                {item.button} <ArrowRight size={18} />
+                {item.button} {/* <ArrowRight size={18} /> */}
               </button>
             </motion.li>
           ))}

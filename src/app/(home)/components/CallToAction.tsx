@@ -49,7 +49,7 @@ export default function CallToAction() {
             max-lg:max-w-none
           "
             variants={itemVariants}>
-            Posicione sua marca em um ambiente exclusivo!
+            Posicione a sua marca em um ambiente exclusivo!
           </motion.h1>
 
           <motion.div

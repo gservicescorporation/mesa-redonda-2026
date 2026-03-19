@@ -86,7 +86,7 @@ export default function TeaserMagazine() {
             max-lg:text-sm
             max-lg:max-w-xl
           ">
-            Confira como a nossa revista foi preparada para si.
+            Confira como a revista foi confeccionada para si.
           </motion.p>
         </motion.div>
 

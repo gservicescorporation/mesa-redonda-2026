@@ -67,15 +67,14 @@ flex-row-reverse
             a histórias, iniciativas e profissionais que contribuem para o
             fortalecimento do ecossistema local, promovendo conhecimento,
             identidade e desenvolvimento por meio de uma curadoria editorial
-            criteriosa e atual.
+            criteriosa e actual.
           </motion.p>
 
           <motion.a
             variants={itemVariants}
-            href="/magazine/local-content-magazine.pdf"
-            download="LOCAL-CONTENT-MAGAZINE.pdf"
+            href="/magazine"
             className="bg-white text-black border border-white hover:bg-transparent hover:text-white cursor-pointer rounded-full font-semibold px-18 py-3 max-lg:px-6 max-lg:py-2 transition-all duration-300 ease-in-out w-fit">
-            Baixar revista
+            Ver mais
           </motion.a>
         </motion.div>
 

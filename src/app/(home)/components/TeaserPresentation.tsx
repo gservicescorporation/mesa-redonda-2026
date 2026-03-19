@@ -86,7 +86,7 @@ export default function TeaserPresentation() {
             max-lg:text-sm
             max-lg:max-w-xl
           ">
-            Confira as edições anteriores da Mesa Redonda.
+            Confira as atracções dessa edição.
           </motion.p>
         </motion.div>
 
