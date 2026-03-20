@@ -70,7 +70,7 @@ export default function MainHero() {
         preload="metadata"
         className="w-full min-h-screen h-215 object-cover">
         <source
-          src="https://gjdpj9hrfaimvxeh.public.blob.vercel-storage.com/intro-teaser.mp4"
+          src="/intro-teaser.mp4"
           type="video/mp4"
         />
       </video>

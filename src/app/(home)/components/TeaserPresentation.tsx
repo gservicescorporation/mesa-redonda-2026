@@ -98,7 +98,7 @@ export default function TeaserPresentation() {
             controls
             className="w-full h-150 object-cover rounded-2xl shadow-2xl shadow-white/20 max-lg:h-auto max-lg:rounded-xl">
             <source
-              src="https://gjdpj9hrfaimvxeh.public.blob.vercel-storage.com/teaser.mp4"
+              src="/teaser.mp4"
               type="video/mp4"
             />
           </video>
