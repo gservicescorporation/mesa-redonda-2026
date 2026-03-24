@@ -72,9 +72,7 @@ line-height:1.6;
 color:#374151;
 ">
 
-A <strong>LOCAL CONTENT MAGAZINE</strong> apresenta histórias,
-iniciativas e profissionais que contribuem para o fortalecimento
-do ecossistema local e para o desenvolvimento sustentável.
+A Revista <strong>LOCAL CONTENT MAGAZINE</strong> foi preparada para lhe trazer insights e oportunidades sobre o desenvolvimento do conteúdo local.
 
 </p>
 
