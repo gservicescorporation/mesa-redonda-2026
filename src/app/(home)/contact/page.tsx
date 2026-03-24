@@ -34,7 +34,7 @@ const formVariant = {
 
 export default function Contact() {
   return (
-    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/53.jpeg)]">
+    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/52.jpeg)]">
       <motion.div
         variants={container}
         initial="hidden"
@@ -42,7 +42,7 @@ export default function Contact() {
         viewport={{ once: true, margin: "-100px" }}
         className="flex items-center gap-24 px-24 py-32 max-lg:px-0 max-lg:py-16 max-lg:gap-12 justify-center w-full bg-linear-to-b from-accent/90 to-accent/75 backdrop-blur-xs">
         <div className="max-w-7xl w-full flex items-center justify-around gap-16 max-lg:flex-col max-lg:gap-12">
-          {/* CONTACT INFO */}
+ 
           <motion.ul
             variants={container}
             className="flex flex-col gap-12 w-full max-w-xl max-lg:px-8 max-lg:py-12">
