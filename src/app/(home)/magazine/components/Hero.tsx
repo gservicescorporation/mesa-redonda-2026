@@ -53,7 +53,7 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ amount: 0.4 }}
+        viewport={{ amount: 0.4, once: true }}
         className="
         flex absolute inset-0 items-center justify-center w-full h-full z-10
         gap-24 px-24 py-44

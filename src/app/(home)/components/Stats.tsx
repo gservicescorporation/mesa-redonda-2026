@@ -68,7 +68,7 @@ export default function Statistics() {
                   whileHover={{ scale: 1.05 }}
                   className="relative flex flex-col items-center justify-center rounded-full h-44 w-44"
                   style={{
-                    background: `conic-gradient(#fb923c ${stat.percentage}%, #e5e7eb 0)`,
+                    background: `conic-gradient(#b48a2c ${stat.percentage}%, #e5e7eb 0)`,
                   }}>
                   <div className="absolute inset-2 bg-accent rounded-full flex flex-col items-center justify-center border-none">
                     <div className="text-4xl font-bold text-white max-lg:text-xl">

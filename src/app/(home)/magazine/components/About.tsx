@@ -11,15 +11,13 @@ export default function About() {
         p-24 flex items-center justify-center h-full w-full
         bg-linear-to-l from-primary/95 via-accent/90 to-accent/90
         max-lg:p-10
-      "
-      >
+      ">
         <div
           className="
           max-w-7xl w-full flex flex-row-reverse gap-24 items-center justify-center
           max-lg:flex-col-reverse
           max-lg:gap-10
-        "
-        >
+        ">
           {/* TEXTO */}
           <motion.div
             className="
@@ -30,8 +28,7 @@ export default function About() {
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
+            viewport={{ once: true, amount: 0.3 }}>
             <span className="bg-primary/30 px-3 py-1 rounded-full w-fit">
               Sobre a revista
             </span>
@@ -63,10 +60,9 @@ export default function About() {
             initial={{ opacity: 0, x: -80, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
+            viewport={{ once: true, amount: 0.3 }}>
             <Image
-              src={"/magazine/banner.jpeg"}
+              src={"/magazine/banner-2.jpeg"}
               alt="Banner da revista"
               width={1920}
               height={1080}

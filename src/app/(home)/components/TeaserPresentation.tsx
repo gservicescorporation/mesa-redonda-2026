@@ -96,6 +96,8 @@ export default function TeaserPresentation() {
           <video
             preload="metadata"
             controls
+            autoPlay
+            muted
             className="w-full h-150 object-cover rounded-2xl shadow-2xl shadow-white/20 max-lg:h-auto max-lg:rounded-xl">
             <source
               src="/teaser.mp4"

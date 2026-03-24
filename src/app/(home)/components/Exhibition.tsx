@@ -20,7 +20,7 @@ export default function Exhibition() {
   };
 
   return (
-    <div className="w-full relative bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/6.jpeg)]">
+    <div className="w-full relative bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/bg-sponsor.png)]">
       <motion.div
         className="flex flex-col items-center gap-14 p-24 max-lg:p-12 justify-center w-full h-full bg-linear-to-b from-accent/65 to-accent/95 z-10"
         initial="hidden"
@@ -39,11 +39,11 @@ export default function Exhibition() {
           {[
             {
               title: "EXPOSITOR",
-              image: "https://ik.imagekit.io/globalsc/mr-nova-era-da-lideranca/20.jpg",
+              image: "https://ik.imagekit.io/globalsc/mr-nov-2024/bg-sponsor.png",
               description:
                 "Mostre sua marca! Escolha entre categorias: Startups, Empresas ou Instituições.",
               price: "Sob consulta",
-              button: "Brevemente...",
+              button: "Brevemente",
             },
             {
               title: "PATROCINADOR",
@@ -51,7 +51,7 @@ export default function Exhibition() {
               description:
                 "Aumente a visibilidade da sua marca e associe-se a um evento de impacto nacional.",
               price: "Sob consulta",
-              button: "Brevemente...",
+              button: "Brevemente",
             },
           ].map((item, index) => (
             <motion.li

@@ -54,7 +54,7 @@ export default function Newsletter() {
               outline-none w-full px-6 py-3
               max-lg:text-sm
             "
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
               viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function Newsletter() {
               max-lg:rounded-none
               max-lg:rounded-b-2xl
             "
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 0 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
               viewport={{ once: true }}

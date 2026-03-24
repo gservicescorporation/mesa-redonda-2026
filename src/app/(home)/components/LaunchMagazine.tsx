@@ -63,11 +63,8 @@ flex-row-reverse
           <motion.p
             className="text-white text-lg max-lg:text-base"
             variants={itemVariants}>
-            A LOCAL CONTENT MAGAZINE é uma revista criada para dar visibilidade
-            a histórias, iniciativas e profissionais que contribuem para o
-            fortalecimento do ecossistema local, promovendo conhecimento,
-            identidade e desenvolvimento por meio de uma curadoria editorial
-            criteriosa e actual.
+            A Local Content Magazine é uma iniciativa editorial da Global Services Corporation, concebida
+para afirmar o conteúdo local como um instrumento estratégico de soberania económica, industrialização e inclusão produtiva. A revista nasce da convicção de que o debate sobre conteúdo local deve evoluir do plano normativo para o da execução efectiva, com foco em competitividade, financiamento e criação de valor nacional.
           </motion.p>
 
           <motion.a
