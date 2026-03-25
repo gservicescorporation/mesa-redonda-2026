@@ -67,8 +67,8 @@ export default function Header() {
             ))}
           </ul>
 
-          <Link href="/tickets" className="px-6 py-3 btn-primary w-fit">
-            Comprar Ingressos
+          <Link href="/contact" className="px-6 py-3 btn-primary w-fit">
+            Entrar em contacto
           </Link>
         </nav>
 
@@ -101,11 +101,11 @@ export default function Header() {
           ))}
 
           <Link
-            href="/tickets"
+            href="/contact"
             className="btn-primary px-8 py-3"
             onClick={() => setMobileOpen(false)}
           >
-            Comprar Ingressos
+            Entrar em contacto
           </Link>
         </div>
       )}

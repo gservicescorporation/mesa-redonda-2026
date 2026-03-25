@@ -3,6 +3,7 @@ import About from "./components/About";
 import DownloadMagazine from "./components/DownloadMagazine";
 import Hero from "./components/Hero";
 import Newsletter from "./components/Newsletter";
+import Partners from "./components/Partners";
 import WhatExpect from "./components/WhatExpect";
 
 export default function Magazine() {
@@ -11,6 +12,7 @@ export default function Magazine() {
       <Hero />
       <About />
       <WhatExpect />
+      <Partners />
       <TeaserMagazine />
       <DownloadMagazine />
       <Newsletter />
