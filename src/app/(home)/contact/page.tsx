@@ -2,16 +2,25 @@
 
 import { Mail, MapPin, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+
+// Tipagem baseada no esquema
+interface ContactFormData {
+  fullName: string;
+  email: string;
+  phone: string;
+  company: string;
+  subject: string;
+  message: string;
+}
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.25,
-    },
-  } as const,
-};
+    transition: { staggerChildren: 0.25 },
+  },
+} as const;
 
 const item = {
   hidden: { opacity: 0, y: 40 },
@@ -19,8 +28,8 @@ const item = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.6, ease: "easeOut" },
-  } as const,
-};
+  },
+} as const;
 
 const formVariant = {
   hidden: { opacity: 0, y: 80, scale: 0.95 },
@@ -29,10 +38,26 @@ const formVariant = {
     y: 0,
     scale: 1,
     transition: { duration: 0.8, ease: "easeOut" },
-  } as const,
-};
+  },
+} as const;
 
 export default function Contact() {
+  // 2. Inicialização do Hook Form
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormData>();
+
+  const onSubmit = async (data: ContactFormData) => {
+    // Simulação de envio
+    console.log("Dados do formulário:", data);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    alert("Mensagem enviada com sucesso!");
+    reset();
+  };
+
   return (
     <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/52.jpeg)]">
       <motion.div
@@ -42,7 +67,7 @@ export default function Contact() {
         viewport={{ once: true, margin: "-100px" }}
         className="flex items-center gap-24 px-24 py-32 max-lg:px-0 max-lg:py-16 max-lg:gap-12 justify-center w-full bg-linear-to-b from-accent/90 to-accent/75 backdrop-blur-xs">
         <div className="max-w-7xl w-full flex items-center justify-around gap-16 max-lg:flex-col max-lg:gap-12">
- 
+          {/* ... Lista de contatos (seção esquerda) permanece igual ... */}
           <motion.ul
             variants={container}
             className="flex flex-col gap-12 w-full max-w-xl max-lg:px-8 max-lg:py-12">
@@ -60,6 +85,7 @@ export default function Contact() {
                 <h1 className="text-2xl max-lg:text-lg font-bold text-white">
                   Localização:
                 </h1>
+
                 <p className="text-white text-xl max-lg:text-sm">
                   Centro de Conferências de Talatona, Luanda, Angola
                 </p>
@@ -80,6 +106,7 @@ export default function Contact() {
                 <h1 className="text-2xl max-lg:text-lg font-bold text-white">
                   Contactos:
                 </h1>
+
                 <p className="text-white text-xl max-lg:text-sm">
                   +244 941 064 919 / +244 925 835 848
                 </p>
@@ -100,6 +127,7 @@ export default function Contact() {
                 <h1 className="text-2xl max-lg:text-lg font-bold text-white">
                   Email:
                 </h1>
+
                 <p className="text-white text-xl max-lg:text-sm">
                   mesaredondacomceos@globalsc.ao
                 </p>
@@ -120,88 +148,139 @@ export default function Contact() {
               </p>
             </div>
 
-            <form className="flex flex-col gap-8">
-              {" "}
-              <label className="flex flex-col gap-2">
+            {/* 3. Aplicação do handleSubmit */}
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex flex-col gap-6">
+              <div className="flex flex-col gap-1">
                 <input
+                  {...register("fullName", {
+                    required: "Nome é obrigatório",
+                  })}
                   type="text"
-                  className="w-full px-4 py-2 rounded-2xl bg-primary/20 border border-primary/50 text-white outline-none"
+                  className={`w-full px-4 py-2 rounded-2xl bg-primary/20 border ${errors.fullName ? "border-red-500" : "border-primary/50"} text-white outline-none`}
                   placeholder="Nome completo"
-                />{" "}
-              </label>{" "}
+                />
+                {errors.fullName && (
+                  <span className="text-red-400 text-xs ml-2">
+                    {errors.fullName.message}
+                  </span>
+                )}
+              </div>
+
               <div className="flex gap-4 max-lg:flex-col">
-                {" "}
-                <label className="flex flex-col gap-2 w-full">
+                <div className="flex flex-col gap-1 w-full">
                   <input
+                    {...register("email", {
+                      required: "E-mail é obrigatório",
+                    })}
                     type="email"
-                    className="w-full px-4 py-2 rounded-2xl bg-primary/20 border border-primary/50 text-white outline-none"
+                    className={`w-full px-4 py-2 rounded-2xl bg-primary/20 border ${errors.email ? "border-red-500" : "border-primary/50"} text-white outline-none`}
                     placeholder="Endereço de email"
-                  />{" "}
-                </label>{" "}
-                <label className="flex flex-col gap-2 w-full">
+                  />
+                  {errors.email && (
+                    <span className="text-red-400 text-xs ml-2">
+                      {errors.email.message}
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex flex-col gap-1 w-full">
                   <input
+                    {...register("phone", {
+                      required: "O contacto é obrigatório",
+                    })}
                     type="tel"
-                    className="w-full px-4 py-2 rounded-2xl bg-primary/20 border border-primary/50 text-white outline-none"
+                    className={`w-full px-4 py-2 rounded-2xl bg-primary/20 border ${errors.phone ? "border-red-500" : "border-primary/50"} text-white outline-none`}
                     placeholder="Contacto telefónico"
-                  />{" "}
-                </label>{" "}
-              </div>{" "}
+                  />
+                  {errors.phone && (
+                    <span className="text-red-400 text-xs ml-2">
+                      {errors.phone.message}
+                    </span>
+                  )}
+                </div>
+              </div>
+
               <div className="flex gap-4 max-lg:flex-col">
-                {" "}
-                <label className="flex flex-col gap-2 w-full">
+                <div className="flex flex-col gap-1 w-full">
                   <input
+                    {...register("company")}
                     type="text"
-                    className="w-full px-4 py-2 rounded-2xl bg-primary/20 border border-primary/50 text-white outline-none"
-                    placeholder="Nome da empresa"
-                  />{" "}
-                </label>{" "}
-                <label className="flex flex-col gap-2 w-full">
-                  <div className="w-full px-4 py-2 rounded-2xl bg-primary/20 border border-primary/50">
-                    {" "}
-                    <select className="w-full bg-transparent outline-none text-white cursor-pointer">
-                      {" "}
+                    className={`w-full px-4 py-2 rounded-2xl bg-primary/20 border ${errors.company ? "border-red-500" : "border-primary/50"} text-white outline-none`}
+                    placeholder="Empresa (Opcional)"
+                  />
+                  {errors.company && (
+                    <span className="text-red-400 text-xs ml-2">
+                      {errors.company.message}
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex flex-col gap-1 w-full">
+                  <div
+                    className={`w-full px-4 py-2 rounded-2xl bg-primary/20 border ${errors.subject ? "border-red-500" : "border-primary/50"}`}>
+                    <select
+                      {...register("subject", {
+                        required: "O tema é obrigatório",
+                      })}
+                      className="w-full bg-transparent outline-none text-white cursor-pointer">
                       <option
                         value=""
                         className="text-black">
-                        {" "}
-                        Selecione o assunto{" "}
-                      </option>{" "}
+                        Selecione o assunto
+                      </option>
                       <option
                         value="patrocinio"
                         className="text-black">
-                        {" "}
-                        Patrocínio{" "}
-                      </option>{" "}
+                        Patrocínio
+                      </option>
                       <option
                         value="parceria"
                         className="text-black">
-                        {" "}
-                        Parceria{" "}
-                      </option>{" "}
+                        Parceria
+                      </option>
                       <option
                         value="exposicao"
                         className="text-black">
-                        {" "}
-                        Exposição{" "}
-                      </option>{" "}
+                        Exposição
+                      </option>
                       <option
                         value="outros"
                         className="text-black">
-                        {" "}
-                        Outros{" "}
-                      </option>{" "}
-                    </select>{" "}
-                  </div>{" "}
-                </label>{" "}
-              </div>{" "}
-              <label className="flex flex-col gap-2">
+                        Outros
+                      </option>
+                    </select>
+                  </div>
+                  {errors.subject && (
+                    <span className="text-red-400 text-xs ml-2">
+                      {errors.subject.message}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1">
                 <textarea
+                  {...register("message", {
+                    required: "A mensagem é obrigatória",
+                  })}
                   rows={4}
-                  className="w-full px-4 py-2 rounded-2xl bg-primary/20 border border-primary/50 text-white outline-none resize-none"
+                  className={`w-full px-4 py-2 rounded-2xl bg-primary/20 border ${errors.message ? "border-red-500" : "border-primary/50"} text-white outline-none resize-none`}
                   placeholder="Deixa a sua mensagem aqui"
-                />{" "}
-              </label>{" "}
-              <button className="btn-primary py-3">Enviar mensagem</button>{" "}
+                />
+                {errors.message && (
+                  <span className="text-red-400 text-xs ml-2">
+                    {errors.message.message}
+                  </span>
+                )}
+              </div>
+
+              <button
+                disabled={isSubmitting}
+                className="btn-primary py-3 disabled:opacity-50 disabled:cursor-not-allowed">
+                {isSubmitting ? "Enviando..." : "Enviar mensagem"}
+              </button>
             </form>
           </motion.div>
         </div>
