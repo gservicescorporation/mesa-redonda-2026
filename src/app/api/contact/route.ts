@@ -199,10 +199,9 @@ export async function POST(req: Request) {
 
                 <table width="100%" cellpadding="8" cellspacing="0" style="margin-top:20px;">
                   <tr>
-                    <td><strong>Assunto:</strong></td>
-                    <td style="color:#b48a2c;font-weight:bold;">
+                    <td><strong>Assunto:</strong> <span style="color:#b48a2c;font-weight:bold;">
                       ${subject.toUpperCase()}
-                    </td>
+                    </span></td>
                   </tr>
                 </table>
 
