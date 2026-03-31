@@ -1,4 +1,4 @@
-import TeaserMagazine from "../components/TeaserMagazine";
+import TeaserMagazine from "./components/TeaserMagazine";
 import About from "./components/About";
 import DownloadMagazine from "./components/DownloadMagazine";
 import Hero from "./components/Hero";

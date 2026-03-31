@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 interface Partner {
   id: number;
@@ -76,6 +78,7 @@ export default function SponsorsPartners() {
               }}
               loop
               speed={800}
+              navigation={true}
               spaceBetween={20}
               slidesPerView={3}
               breakpoints={{
@@ -86,10 +89,12 @@ export default function SponsorsPartners() {
                   slidesPerView: 3,
                 },
               }}
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
               className="w-full">
               {partners.map((partner, index) => (
-                <SwiperSlide key={index} className="w-full">
+                <SwiperSlide
+                  key={index}
+                  className="w-full">
                   <motion.li
                     className="bg-clip-padding pb-4 border border-transparent 
                 bg-linear-to-r from-primary to-secondary rounded-3xl
