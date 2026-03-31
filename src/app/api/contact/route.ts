@@ -219,7 +219,7 @@ export async function POST(req: Request) {
 
                 <!-- CTA -->
                 <div style="text-align:center;margin-top:30px;">
-                  <a href="https://www.mesaredondacomceos.globalsc.ao"
+                  <a href="https://www.mesaredonda.globalsc.ao"
                     style="
                       display:inline-block;
                       padding:12px 25px;
