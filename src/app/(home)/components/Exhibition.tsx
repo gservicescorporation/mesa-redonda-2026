@@ -47,7 +47,7 @@ export default function Exhibition() {
             },
             {
               title: "PATROCINADOR",
-              image: "https://ik.imagekit.io/globalsc/responsabilidade-social-viana/36.jpg",
+              image: "https://ik.imagekit.io/globalsc/mr-nov-2024/28.jpeg",
               description:
                 "Aumente a visibilidade da sua marca e associe-se a um evento de impacto nacional.",
               price: "Sob consulta",
