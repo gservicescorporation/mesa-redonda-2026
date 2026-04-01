@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -68,9 +69,13 @@ export default function SponsorsPartners() {
           </motion.div>
 
           <motion.ul
-            className="flex flex-wrap w-full max-w-2xl justify-center gap-8
-            max-lg:gap-6"
+            className="flex w-full max-w-3xl items-center justify-center gap-8
+            max-lg:gap-6 relative"
             variants={containerVariants}>
+            <button className="custom-prev z-20 cursor-pointer bg-secondary! rounded-full min-h-12 min-w-12 flex justify-center items-center text-white!">
+              <ChevronLeft className="w-5" />
+            </button>
+
             <Swiper
               autoplay={{
                 delay: 3000,
@@ -78,7 +83,10 @@ export default function SponsorsPartners() {
               }}
               loop
               speed={800}
-              navigation={true}
+              navigation={{
+                nextEl: ".custom-next",
+                prevEl: ".custom-prev",
+              }}
               spaceBetween={20}
               slidesPerView={3}
               breakpoints={{
@@ -116,6 +124,10 @@ export default function SponsorsPartners() {
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            <button className="custom-next z-20 cursor-pointer bg-secondary!  rounded-full min-h-12 min-w-12 flex justify-center items-center text-white!">
+              <ChevronRight className="w-5" />
+            </button>
           </motion.ul>
         </div>
       </motion.div>
