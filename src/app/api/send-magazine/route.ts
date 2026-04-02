@@ -1,3 +1,4 @@
+import { initDB } from "@/lib/init-db";
 import { MagazineService } from "@/services/magazine.service";
 import { Resend } from "resend";
 
@@ -7,7 +8,16 @@ const magazineService = new MagazineService();
 export async function POST(req: Request) {
   const { email } = await req.json();
 
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return Response.json(
+      { success: false, error: "Email inválido" },
+      { status: 400 },
+    );
+  }
+
   try {
+    await initDB();
+
     await magazineService.saveDownload(email);
 
     await resend.emails.send({
@@ -161,6 +171,11 @@ Global Services Corporation
 
     return Response.json({ success: 200 });
   } catch (error) {
-    return Response.json({ success: false });
+    console.error("ERROR REAL:", error);
+
+    return Response.json(
+      { success: false, error: String(error) },
+      { status: 500 },
+    );
   }
 }
