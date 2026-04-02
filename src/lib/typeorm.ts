@@ -2,6 +2,7 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import dotenv from "dotenv";
 import { Payment } from "@/entities/Payment";
+import { MagazineDownload } from "@/entities/MagazineDownload";
 
 dotenv.config();
 
@@ -9,7 +10,7 @@ const dataSource = new DataSource({
   type: "postgres",
   url: process.env.DATABASE_URL,
   // ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
-  entities: [Payment],
+  entities: [Payment, MagazineDownload],
   migrations: [],
   synchronize: true,
   logging: true,

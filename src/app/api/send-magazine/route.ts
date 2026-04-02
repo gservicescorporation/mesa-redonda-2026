@@ -1,11 +1,15 @@
+import { MagazineService } from "@/services/magazine.service";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const magazineService = new MagazineService();
 
 export async function POST(req: Request) {
   const { email } = await req.json();
 
   try {
+    await magazineService.saveDownload(email);
+
     await resend.emails.send({
       from: "Mesa Redonda com CEOs <mesaredondacomceos@globalsc.ao>",
       to: email,
