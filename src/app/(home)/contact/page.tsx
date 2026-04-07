@@ -71,7 +71,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/52.jpeg)]">
+    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-jul-2026/main-banner.png)]">
       <ToastContainer />
       <motion.div
         variants={container}

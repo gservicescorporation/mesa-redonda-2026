@@ -20,7 +20,7 @@ export default function Exhibition() {
   };
 
   return (
-    <div className="w-full relative bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2024/bg-sponsor.png)]">
+    <div className="w-full relative bg-[url(https://ik.imagekit.io/globalsc/mr-jul-2026/main-banner.png)]">
       <motion.div
         className="flex flex-col items-center gap-14 p-24 max-lg:p-12 justify-center w-full h-full bg-linear-to-b from-accent/65 to-accent/95 z-10"
         initial="hidden"

@@ -19,7 +19,7 @@ export default function About() {
   };
 
   return (
-    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-center bg-cover">
+    <div className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-jul-2026/main-banner.png)] bg-center bg-cover">
       <motion.div
         className="flex items-center min-h-screen gap-24 p-24 justify-center w-full 
         bg-linear-to-t from-accent/60 to-accent/75 backdrop-blur-xs
@@ -32,18 +32,15 @@ export default function About() {
         viewport={{ amount: 0.3 }}
         variants={containerVariants}>
         <motion.div
-          className="max-w-xl w-full flex items-center justify-center h-125 rounded-2xl p-8 
-          bg-linear-to-b from-primary/5 via-secondary/10 to-accent/5 backdrop-blur-sm
-          max-lg:h-80
-          max-lg:p-6"
+          className="flex items-center justify-center"
           variants={itemVariants}
           whileHover={{ scale: 1.05, rotate: 1 }}>
           <Image
-            src={"/logo-white.png"}
+            src={"https://ik.imagekit.io/globalsc/mr-jul-2026/third-banner.png"}
             alt={"About Us"}
             width={1920}
             height={1080}
-            className="w-100 object-contain max-lg:w-56"
+            className="max-w-xl w-full object-contain max-lg:w-56 h-125 rounded-2xl"
           />
         </motion.div>
 
@@ -63,8 +60,8 @@ export default function About() {
             é um espaço estratégico de reflexão, diálogo e partilha de
             experiências entre decisores públicos, instituições financeiras,
             investidores, reguladores e especialistas nacionais e
-            internacionais. O evento tem como objectivo analisar o papel da banca
-            comercial, bancos de desenvolvimento, fundos de investimento,
+            internacionais. O evento tem como objectivo analisar o papel da
+            banca comercial, bancos de desenvolvimento, fundos de investimento,
             seguradoras, fintechs e outros agentes do sistema financeiro na
             mobilização de recursos para o financiamento da economia real, com
             enfoque no crescimento sustentável, inclusão financeira, inovação e
