@@ -62,11 +62,11 @@ export default function About() {
             transition={{ duration: 0.9, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}>
             <Image
-              src={"/magazine/banner-2.jpeg"}
+              src={"https://ik.imagekit.io/globalsc/mr-jul-2026/banner-lcm.png"}
               alt="Banner da revista"
               width={1920}
               height={1080}
-              className="w-full object-cover rounded-2xl"
+              className="w-full object-cover rounded-2xl h-125"
             />
           </motion.div>
         </div>

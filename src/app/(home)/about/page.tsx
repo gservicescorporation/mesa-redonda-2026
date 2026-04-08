@@ -57,21 +57,18 @@ export default function About() {
         variants={container}
         className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-center bg-cover">
         <div className="flex items-center max-lg:flex-col max-lg:gap-10 min-h-screen max-lg:min-h-fit gap-24 p-24 max-lg:p-6 justify-center w-full bg-linear-to-t from-accent/90 to-accent/75 backdrop-blur-xs">
-          <motion.div
-            variants={imageLeft}
-            className="max-w-xl w-full flex items-center justify-center h-125 max-lg:h-auto rounded-2xl p-8 max-lg:p-6 bg-linear-to-b from-primary/5 via-secondary/10 to-accent/5 backdrop-blur-sm">
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}>
-              <Image
-                src={"/logo-white.png"}
-                alt={"About Us"}
-                width={1920}
-                height={1080}
-                className="w-100 max-lg:w-56 object-contain"
-              />
-            </motion.div>
-          </motion.div>
+           <motion.div
+                    className="flex items-center justify-center"
+                    variants={imageLeft}
+                    whileHover={{ scale: 1.05, rotate: 1 }}>
+                    <Image
+                      src={"https://ik.imagekit.io/globalsc/mr-jul-2026/third-banner.png"}
+                      alt={"About Us"}
+                      width={1920}
+                      height={1080}
+                      className="max-w-xl w-full object-contain max-lg:w-56 h-125 rounded-2xl"
+                    />
+                  </motion.div>
 
           <motion.div
             variants={container}
@@ -105,21 +102,18 @@ export default function About() {
         variants={container}
         className="w-full bg-[url(https://ik.imagekit.io/globalsc/mr-nov-2023/38.jpg)] bg-center bg-cover">
         <div className="flex flex-row-reverse max-lg:flex-col items-center max-lg:gap-10 min-h-screen max-lg:min-h-fit gap-24 p-24 max-lg:p-6 justify-center w-full bg-linear-to-t from-accent/90 to-accent/75 backdrop-blur-xs">
-          <motion.div
-            variants={imageRight}
-            className="max-w-xl w-full flex items-center justify-center h-125 max-lg:h-auto rounded-2xl p-8 max-lg:p-6 bg-linear-to-b from-primary/5 via-secondary/10 to-accent/5 backdrop-blur-sm">
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}>
-              <Image
-                src={"/logo-white.png"}
-                alt={"About Us"}
-                width={1920}
-                height={1080}
-                className="w-100 max-lg:w-56 object-contain"
-              />
-            </motion.div>
-          </motion.div>
+         <motion.div
+                    className="flex items-center justify-center"
+                    variants={imageRight}
+                    whileHover={{ scale: 1.05, rotate: 1 }}>
+                    <Image
+                      src={"https://ik.imagekit.io/globalsc/mr-jul-2026/third-banner.png"}
+                      alt={"About Us"}
+                      width={1920}
+                      height={1080}
+                      className="max-w-xl w-full object-contain max-lg:w-56 h-125 rounded-2xl"
+                    />
+                  </motion.div>
 
           <motion.div
             variants={container}
