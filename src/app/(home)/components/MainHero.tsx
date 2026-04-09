@@ -123,7 +123,7 @@ export default function MainHero() {
 
           <div className="flex gap-2 items-center">
             <MapPin size={24} />
-            Centro de Conferências de Talatona
+            Centro de Convenções de Talatona
           </div>
         </motion.div>
 
