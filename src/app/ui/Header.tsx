@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,21 +26,18 @@ export default function Header() {
     { label: "Início", href: "/" },
     { label: "Sobre", href: "/about" },
     { label: "Revista", href: "/magazine" },
-    { label: "Oradores", href: "/speakers" },/* 
-    { label: "Ingressos", href: "/tickets" }, */
+    { label: "Oradores", href: "/speakers" } /* 
+    { label: "Ingressos", href: "/tickets" }, */,
     { label: "Contactos", href: "/contact" },
   ];
 
   return (
-    <header
-      className="w-full fixed top-0 left-0 z-50 flex items-center justify-center transition-all duration-300"
-    >
+    <header className="w-full fixed top-0 left-0 z-50 flex items-center justify-center transition-all duration-300">
       <div
         className={`flex items-center rounded-full px-8 mt-4 justify-between py-2 max-w-7xl w-full
         max-lg:px-4
         ${scrolled ? "backdrop-blur-md bg-black/40 shadow-lg" : "bg-transparent"}
-        `}
-      >
+        `}>
         <Link href={"/"}>
           <Image
             src="/logo-white.png"
@@ -56,56 +54,65 @@ export default function Header() {
               <li
                 key={index}
                 className={`hover:scale-105 transition-all cursor-pointer duration-200 ${
-                  pathname === item.href ||
-                  pathname.startsWith(item.href + "/")
+                  pathname === item.href || pathname.startsWith(item.href + "/")
                     ? "text-white font-extrabold text-lg"
                     : "text-white/80"
-                }`}
-              >
+                }`}>
                 <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
           </ul>
 
-          <Link href="/contact" className="px-6 py-3 btn-primary w-fit">
-            Entrar em contacto
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/contact"
+              className="px-6 py-3 btn-primary w-fit">
+              Comprar Ticket
+            </Link>
+
+            <Link
+              href="#"
+              className="text-white hover:text-green-500 hover:scale-125 transition-all duration-200">
+              <FaWhatsapp size="32" />
+            </Link>
+          </div>
         </nav>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden max-lg:flex text-white"
-        >
-         <Menu size={28} />
+          className="lg:hidden max-lg:flex text-white">
+          <Menu size={28} />
         </button>
       </div>
 
       {mobileOpen && (
         <div className="hidden max-lg:flex fixed top-0 left-0 w-full h-screen bg-black/90 backdrop-blur-md flex-col items-center justify-center gap-10 text-white text-xl z-40">
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="absolute top-12 right-8 max-lg:flex text-white cursor-pointer hover:scale-105 transition-all duration-200"
-        >
-         <X size={28} />
-        </button>
-          
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="absolute top-12 right-8 max-lg:flex text-white cursor-pointer hover:scale-105 transition-all duration-200">
+            <X size={28} />
+          </button>
+
           {navItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className="hover:opacity-70"
-            >
+              className="hover:opacity-70">
               {item.label}
             </Link>
           ))}
 
           <Link
+            href="#"
+            className="text-white hover:text-green-500 hover:scale-125 transition-all duration-200">
+            <FaWhatsapp size="32" />
+          </Link>
+          <Link
             href="/contact"
             className="btn-primary px-8 py-3"
-            onClick={() => setMobileOpen(false)}
-          >
-            Entrar em contacto
+            onClick={() => setMobileOpen(false)}>
+            Comprar Ticket
           </Link>
         </div>
       )}
