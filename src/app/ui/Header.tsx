@@ -71,7 +71,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="#"
+              href="https://api.whatsapp.com/send?phone=244941064919"
               className="text-white hover:text-green-500 hover:scale-125 transition-all duration-200">
               <FaWhatsapp size="32" />
             </Link>
@@ -104,7 +104,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="#"
+            href="https://api.whatsapp.com/send?phone=244941064919"
             className="text-white hover:text-green-500 hover:scale-125 transition-all duration-200">
             <FaWhatsapp size="32" />
           </Link>
