@@ -1,6 +1,7 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import dotenv from "dotenv";
+import { Contact } from "@/entities/Contact";
 import { Payment } from "@/entities/Payment";
 import { MagazineDownload } from "@/entities/MagazineDownload";
 
@@ -12,7 +13,7 @@ const dataSource = new DataSource({
   ssl: {
     rejectUnauthorized: false,
   },
-  entities: [Payment, MagazineDownload],
+  entities: [Payment, MagazineDownload, Contact],
   migrations: [],
   synchronize: true,
   logging: true,

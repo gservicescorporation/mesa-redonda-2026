@@ -1,7 +1,10 @@
+import { initDB } from "@/lib/init-db";
+import { ContactService } from "@/services/contact.service";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const contactService = new ContactService();
 
 export async function POST(req: Request) {
   try {
@@ -22,6 +25,17 @@ export async function POST(req: Request) {
       subject: string;
       message: string;
     } = body;
+
+    await initDB();
+
+    await contactService.create({
+      fullName,
+      email,
+      phone,
+      company,
+      subject,
+      message,
+    });
 
     await resend.emails.send({
       from: "Mesa Redonda <mesaredondacomceos@globalsc.ao>",
