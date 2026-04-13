@@ -65,7 +65,8 @@ export default function Header() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="/contact"
+              href="https://ticket.ao/event/mesa-redonda-dos-ceos-5a-edicao/"
+              target="_blank"
               className="px-6 py-3 btn-primary w-fit">
               Comprar Ticket
             </Link>
@@ -109,7 +110,8 @@ export default function Header() {
             <FaWhatsapp size="32" />
           </Link>
           <Link
-            href="/contact"
+            href="https://ticket.ao/event/mesa-redonda-dos-ceos-5a-edicao/"
+            target="_blank"
             className="btn-primary px-8 py-3"
             onClick={() => setMobileOpen(false)}>
             Comprar Ticket
