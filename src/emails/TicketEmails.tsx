@@ -4,14 +4,12 @@ interface TicketEmailProps {
 	fullname: string
 	eventName: string
 	eventDate: string
-	ticketCode: string
 }
 
 export const TicketEmail = ({
 	fullname,
 	eventName,
 	eventDate,
-	ticketCode,
 }: TicketEmailProps) => {
 	return (
 		<div
@@ -30,10 +28,8 @@ export const TicketEmail = ({
 			<p>
 				<strong>Data do Evento:</strong> {eventDate}
 			</p>
-			<p>
-				<strong>Código do Ticket:</strong> {ticketCode}
-			</p>
-			<p>Por favor, apresente este código no dia do evento para entrada.</p>
+	
+			<p>Por favor, apresente este e-mail no dia do evento para entrada.</p>
 			<p>Até breve!</p>
 			<hr />
 			<p style={{ fontSize: "12px", color: "#999" }}>

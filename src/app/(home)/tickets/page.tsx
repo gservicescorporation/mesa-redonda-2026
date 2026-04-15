@@ -21,22 +21,22 @@ export default function GetTicket() {
   const tickets = [
     {
       id: "1",
-      ticketName: "Acesso Completo",
+      ticketName: "Ingressos Individual",
       benefits: [
         "Acesso a todas as palestras e workshops",
         "Material exclusivo do evento",
         "Certificado de participação",
       ],
-      price: 5000,
+      price: 700000,
     },
     {
       id: "2",
-      ticketName: "Acesso Parcial",
+      ticketName: "Ingressos 3 Pax",
       benefits: [
         "Acesso a palestras selecionadas",
         "Material digital do evento",
       ],
-      price: 3000,
+      price: 1500000,
     },
     {
       id: "3",
@@ -45,7 +45,7 @@ export default function GetTicket() {
         "Acesso a palestras via streaming",
         "Material digital do evento",
       ],
-      price: 1500,
+      price: 50,
     },
   ];
 
@@ -198,7 +198,7 @@ export default function GetTicket() {
               </motion.div>
             </div>
           )}
-       {/*    {cart.length > 0 && (
+          {/*    {cart.length > 0 && (
             <button
               onClick={handleScrollToResumo}
               className="lg:hidden fixed flex gap-2 bottom-5 right-5 btn-primary px-5 py-2 ">

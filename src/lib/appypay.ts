@@ -3,7 +3,7 @@ import { getAppyPayToken } from "./appypay-token.client"
 
 export const appypayClient = axios.create({
 	baseURL: process.env.GATEWAY_API_URL,
-	timeout: 50000,
+	timeout: 500000,
 	headers: {
 		"Content-Type": "application/json",
 	},

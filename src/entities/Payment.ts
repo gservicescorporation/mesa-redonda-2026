@@ -1,77 +1,48 @@
-
-import { Entity, PrimaryColumn, BeforeInsert, Index, Column, CreateDateColumn, UpdateDateColumn } from "typeorm"
-import { v4 as uuidv4 } from "uuid"
-
-export enum PaymentStatus {
-	PENDING = "PENDING",
-	SUCCESS = "SUCCESS",
-	FAILED = "FAILED",
-	CANCELLED = "CANCELLED",
-	ERROR = "ERROR",
-}
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+} from "typeorm";
 
 @Entity("payments")
 export class Payment {
-	@PrimaryColumn("uuid")
-	id!: string
+  @PrimaryGeneratedColumn("uuid")
+  id!: string;
 
-	@BeforeInsert()
-	generateId() {
-		if (!this.id) {
-			this.id = uuidv4()
-		}
-	}
+  @Column()
+  chargeId!: string;
 
-	@Index({ unique: true })
-	@Column()
-	merchantTransactionId!: string
+  @Column()
+  fullname!: string;
 
-	@Column("decimal", { precision: 12, scale: 2 })
-	amount!: number
+  @Column()
+  email!: string;
 
-	@Column({ length: 3 })
-	currency!: string
+  @Column()
+  phoneNumber!: string;
 
-	@Column()
-	paymentMethod!: string
+  @Column({ nullable: true })
+  enterprise?: string;
 
-	@Column({
-		type: "enum",
-		enum: PaymentStatus,
-		default: PaymentStatus.PENDING,
-	})
-	status!: PaymentStatus
+  @Column({ nullable: true })
+  position?: string;
 
-	@Column({ nullable: true })
-	ekwanzaTransactionId?: string
+  @Column()
+  paymentMethod!: string;
 
-	@Column("decimal", { precision: 12, scale: 2, nullable: true })
-	paidAmount?: number
+  @Column()
+  eventName!: string;
 
-	@Column({ nullable: true })
-	referenceType?: "GPO" | "REF"
+  @Column()
+  eventDate!: string;
 
-	@Column({ nullable: true })
-	referenceNumber?: string
+  @Column("decimal")
+  cartTotal!: number;
 
-	@Column({ nullable: true })
-	entity?: string
+  @Column("jsonb")
+  cartData: any;
 
-	@Column({ type: "timestamp", nullable: true })
-	dueDate?: Date
-
-	@Column({ nullable: true })
-	eventId?: string
-
-	@Column({ nullable: true })
-	failureReason?: string
-
-	@Column({ nullable: true })
-	providerCode?: string
-
-	@CreateDateColumn()
-	createdAt!: Date
-
-	@UpdateDateColumn()
-	updatedAt!: Date
+  @CreateDateColumn()
+  createdAt!: Date;
 }

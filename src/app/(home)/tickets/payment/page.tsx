@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, VerifiedIcon } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -11,14 +11,14 @@ import { usePaymentStatus } from "@/app/api/hook/usePaymentStatus";
 import { formatDateExtenso } from "@/app/utils/formatDate";
 import { formatPrice } from "@/app/utils/formatPrice";
 
-interface Ticket {
+export interface Ticket {
   id: string;
   price: number;
   ticketName: string;
   benefits: string[];
 }
 
-type CartDataInterface = {
+export type CartDataInterface = {
   ticket: Ticket;
   qty: number;
 }[];
@@ -60,6 +60,7 @@ export default function Payment() {
     watch,
     setValue,
     formState: { errors },
+    reset,
   } = useForm<PaymentFormInputs>();
 
   const paymentMethod = watch("paymentMethod");
@@ -95,9 +96,14 @@ export default function Payment() {
         chargeId,
         fullname: watch("fullname"),
         email: watch("email"),
+        phoneNumber: watch("phoneNumber"),
+        enterprise: watch("enterprise"),
+        position: watch("position"),
+        paymentMethod,
+        cartData,
         eventName: "Mesa Redonda com CEO's - 5ª Edição",
-        eventDate: "2026-06-29",
-        ticketCode: `TCK-${chargeId.slice(0, 8).toUpperCase()}`,
+        eventDate: "2026-07-07",
+        cartTotal: cartTotal,
       });
 
       setIsModalOpen(true);
@@ -120,6 +126,8 @@ export default function Payment() {
   const handleCloseModal = () => {
     clearStorage();
     setIsModalOpen(false);
+    reset();
+    router.push("/tickets");
   };
 
   useEffect(() => {
@@ -490,19 +498,13 @@ export default function Payment() {
                 </>
               )}
 
-            {status === "Success" && (
+            {status === "Success" && paymentMethod === "mcx" && (
               <div className="flex items-center flex-col gap-4 justify-center">
                 {statusLoading ? (
                   <div className="border border-t-2 rounded-full w-10 h-10 animate-spin border-white"></div>
                 ) : (
                   <>
-                    <Image
-                      alt="Success"
-                      src="/icons/success.png"
-                      width={125}
-                      height={100}
-                      className="w-24 h-24 object-contain"
-                    />
+                    <VerifiedIcon size={75} />
 
                     <h2 className="text-2xl font-semibold text-center">
                       Pagamento confirmado!
