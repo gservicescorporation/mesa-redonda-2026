@@ -106,7 +106,7 @@ export default function GetTicket() {
                 <motion.div
                   key={ticket.id}
                   whileHover={{ scale: 1.05 }}
-                  className="rounded-2xl w-full sm:w-[45%] backdrop-blur-sm bg-white/10 p-6 text-white shadow-lg max-lg:w-full">
+                  className="rounded-2xl w-full sm:w-[45%] backdrop-blur-sm bg-white/10 p-6 text-white shadow-lg max-lg:w-full max-w-sm">
                   <h3 className="text-lg font-bold">{ticket.ticketName}</h3>
                   <p className="text-lg font-semibold mt-2">
                     {formatPrice(ticket.price)} AOA

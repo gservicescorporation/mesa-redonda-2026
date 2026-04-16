@@ -471,7 +471,7 @@ export default function Payment() {
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur flex items-center justify-center z-50">
-          <div className="bg-black/80 text-white p-8 rounded-xl max-w-md w-full flex flex-col gap-4">
+          <div className="bg-black/80 text-white p-8 rounded-xl max-w-md w-full flex flex-col justify-center items-center gap-4">
             {status === "Pending" &&
               paymentMethod === "referencia" &&
               referenceData && (
@@ -498,25 +498,23 @@ export default function Payment() {
                 </>
               )}
 
-            {status === "Success" && paymentMethod === "mcx" && (
+            {status === "Success" ? (
               <div className="flex items-center flex-col gap-4 justify-center">
-                {statusLoading ? (
-                  <div className="border border-t-2 rounded-full w-10 h-10 animate-spin border-white"></div>
-                ) : (
-                  <>
-                    <VerifiedIcon size={75} />
+                <VerifiedIcon size={75} />
 
-                    <h2 className="text-2xl font-semibold text-center">
-                      Pagamento confirmado!
-                    </h2>
+                <h2 className="text-2xl font-semibold text-center">
+                  Pagamento confirmado!
+                </h2>
 
-                    <p className="text-center">
-                      Obrigado por adquirir seu ingresso. Enviaremos um email de
-                      confirmação em breve.
-                    </p>
-                  </>
-                )}
+                <p className="text-center">
+                  Obrigado por adquirir seu ingresso. Enviaremos um email de
+                  confirmação em breve.
+                </p>
               </div>
+            ) : (
+              status === "Pending" && (
+                <div className="border border-t-4 rounded-full border-white w-16 h-16 animate-spin"></div>
+              )
             )}
 
             <button
