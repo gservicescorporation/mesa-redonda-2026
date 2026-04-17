@@ -28,7 +28,6 @@ export default function Header() {
     { label: "Início", href: "/" },
     { label: "Sobre", href: "/about" },
     { label: "Revista", href: "/magazine" },
-    { label: "Oradores", href: "/speakers" }, 
     { label: "Ingressos", href: "/tickets" },
     { label: "Contactos", href: "/contact" },
   ];
