@@ -28,8 +28,8 @@ export default function Header() {
     { label: "Início", href: "/" },
     { label: "Sobre", href: "/about" },
     { label: "Revista", href: "/magazine" },
-    { label: "Oradores", href: "/speakers" } /* 
-    { label: "Ingressos", href: "/tickets" }, */,
+    { label: "Oradores", href: "/speakers" }, 
+    { label: "Ingressos", href: "/tickets" },
     { label: "Contactos", href: "/contact" },
   ];
 
@@ -190,7 +190,6 @@ export default function Header() {
                   />
                 </button>
 
-                {/* BOTÃO 2 */}
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
