@@ -167,6 +167,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
+                    setMobileOpen(false)
                     router.push("/tickets");
                   }}
                   className="
@@ -193,6 +194,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
+                    setMobileOpen(false)
                     router.push(
                       "https://ticket.ao/event/mesa-redonda-dos-ceos-5a-edicao/",
                     );
