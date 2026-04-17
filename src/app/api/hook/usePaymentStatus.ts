@@ -27,8 +27,8 @@ export const usePaymentStatus = ({
 				const paymentStatus = response.data?.payment?.status
 
 				if (paymentStatus) {
-					setStatus(paymentStatus)
 					setLoading(false)
+					setStatus(paymentStatus)
 
 					console.log("Status do pagamento atualizado:", paymentStatus)
 

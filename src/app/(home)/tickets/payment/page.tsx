@@ -490,7 +490,7 @@ export default function Payment() {
                     </span>
                   </p>
                   <p className="text-2xl">Total: {formatPrice(cartTotal)} Kz</p>
-                  <p>
+                  <p className="text-center">
                     Vencimento:{" "}
                     {referenceData.dueDate &&
                       formatDateExtenso(referenceData.dueDate)}
@@ -498,7 +498,7 @@ export default function Payment() {
                 </>
               )}
 
-            {status === "Success" ? (
+            {status === "Success" && (
               <div className="flex items-center flex-col gap-4 justify-center">
                 <VerifiedIcon size={75} />
 
@@ -511,11 +511,13 @@ export default function Payment() {
                   confirmação em breve.
                 </p>
               </div>
-            ) : (
-              status === "Pending" && (
+            )}
+
+            {
+               statusLoading && (
                 <div className="border border-t-4 rounded-full border-white w-16 h-16 animate-spin"></div>
               )
-            )}
+            }
 
             <button
               onClick={handleCloseModal}
