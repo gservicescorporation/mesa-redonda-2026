@@ -128,55 +128,92 @@ export default function Header() {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            className="h-screen w-full fixed top-0 left-0 z-50 bg-primary/50 backdrop-blur-xs flex items-center justify-center px-4"
+            className="
+      h-screen w-full fixed top-0 left-0 z-50
+      bg-primary/50 backdrop-blur-xs
+      flex items-center justify-center px-4
+    "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsModalOpen(false)}>
             <motion.div
-              className="rounded-2xl
-              bg-linear-to-r from-primary via-blue-900 to-primary
-              max-w-2xl w-full h-80
-relative py-8 px-16 text-white"
+              className="
+        rounded-2xl
+        bg-linear-to-r from-primary via-blue-900 to-primary
+        max-w-2xl w-full
+        py-8 px-16 text-white
+        
+        max-lg:px-6
+        max-lg:py-6
+      "
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}>
-              <h2 className="text-xl font-bold text-center mb-6">
+              <h2 className="text-xl font-bold text-center mb-6 max-lg:text-lg max-lg:mb-4">
                 Escolha onde quer comprar
               </h2>
 
-              <div className="flex justify-center items-center gap-4">
+              <div
+                className="
+          flex justify-center items-center gap-4
+          
+          max-lg:flex-col
+          max-lg:gap-4
+        ">
+                {/* BOTÃO 1 */}
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
-                    router.push("/tickets"); // rota interna
+                    router.push("/tickets");
                   }}
-                  className="flex flex-col items-center justify-center gap-2 border rounded-xl p-2 hover:scale-105 transition bg-white cursor-pointer">
+                  className="
+            flex flex-col items-center justify-center gap-2
+            border rounded-xl p-2 bg-white cursor-pointer
+            transition-all duration-300 hover:scale-105
+            
+            max-lg:w-full
+          ">
                   <Image
                     src="/logo.jpeg"
                     alt="Mesa Redonda"
                     width={600}
                     height={600}
-                    className="object-cover w-42 h-42"
+                    className="
+              object-cover w-42 h-42
+              
+              max-lg:w-28 max-lg:h-28
+            "
                   />
                 </button>
 
+                {/* BOTÃO 2 */}
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
                     router.push(
                       "https://ticket.ao/event/mesa-redonda-dos-ceos-5a-edicao/",
-                    )
+                    );
                   }}
-                  className="flex flex-col items-center justify-center gap-2 border rounded-xl p-2 hover:scale-105 transition bg-white cursor-pointer">
+                  className="
+            flex flex-col items-center justify-center gap-2
+            border rounded-xl p-2 bg-white cursor-pointer
+            transition-all duration-300 hover:scale-105
+            
+            max-lg:w-full
+          ">
                   <Image
                     src="/images/ticketao.png"
                     alt="Ticket.ao"
                     width={600}
                     height={600}
-                    className="object-cover w-42 h-42"
+                    className="
+              object-cover w-42 h-42
+              
+              max-lg:w-28 max-lg:h-28
+            "
                   />
                 </button>
               </div>

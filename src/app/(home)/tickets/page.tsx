@@ -40,12 +40,12 @@ export default function GetTicket() {
     },
     {
       id: "3",
-      ticketName: "Acesso Online",
+      ticketName: "Ingressos 5 Pax",
       benefits: [
         "Acesso a palestras via streaming",
         "Material digital do evento",
       ],
-      price: 50,
+      price: 2250000,
     },
   ];
 
@@ -109,7 +109,7 @@ export default function GetTicket() {
                   className="rounded-2xl w-full sm:w-[45%] backdrop-blur-sm bg-white/10 p-6 text-white shadow-lg max-lg:w-full max-w-sm">
                   <h3 className="text-lg font-bold">{ticket.ticketName}</h3>
                   <p className="text-lg font-semibold mt-2">
-                    {formatPrice(ticket.price)} AOA
+                    {formatPrice(ticket.price)} Kz
                   </p>
                   <p className="text-sm mt-1">
                     {new Date("2026-07-07").toLocaleDateString("pt-BR", {
@@ -153,7 +153,7 @@ export default function GetTicket() {
                     <div>
                       <h3 className="font-bold">{item.ticket.ticketName}</h3>
                       <p className="text-sm text-white/80">
-                        {formatPrice(item.ticket.price)} AOA
+                        {formatPrice(item.ticket.price)} Kz
                       </p>
                     </div>
 
@@ -184,7 +184,7 @@ export default function GetTicket() {
                 <div className="flex justify-between items-center border-t pt-4 mt-4 max-lg:flex-col max-lg:gap-2 max-lg:text-center">
                   <p className="font-semibold">Valor estimado</p>
                   <p className="text-lg font-bold text-white">
-                    {formatPrice(total)} AOA
+                    {formatPrice(total)} Kz
                   </p>
                 </div>
 

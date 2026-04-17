@@ -448,7 +448,7 @@ export default function Payment() {
                         {item.ticket.ticketName}
                       </p>
                       <p className="text-white/80">
-                        {formatPrice(item.ticket.price)}
+                        {formatPrice(item.ticket.price)} Kz
                       </p>
                     </span>
 
@@ -462,7 +462,7 @@ export default function Payment() {
 
               <div className="flex w-full items-center font-semibold justify-between border-t border-white/20 pt-4 mt-4">
                 <p className="text-lg">Total</p>
-                <p className="text-lg">{formatPrice(cartTotal)}</p>
+                <p className="text-lg">{formatPrice(cartTotal)} Kz</p>
               </div>
             </div>
           </div>
