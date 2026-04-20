@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Newsletter from "./components/Newsletter";
 import Partners from "./components/Partners";
 import WhatExpect from "./components/WhatExpect";
+import MagazineDownloadModal from "../../ui/MagazineDownloadModal";
 
 export default function Magazine() {
   return (

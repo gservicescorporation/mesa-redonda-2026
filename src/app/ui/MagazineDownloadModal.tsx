@@ -7,8 +7,13 @@ import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
 
-export default function MagazineDownloadModal() {
-  const [isOpen, setModalOpen] = useState(true);
+export default function MagazineDownloadModal({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
   const [loading, setLoading] = useState(false);
   const {
     register,
@@ -24,9 +29,9 @@ export default function MagazineDownloadModal() {
       const response = await axios.post("/api/send-magazine", {
         email: data.email,
       });
-      
+
       if (response.status === 200) {
-        setModalOpen(!isOpen);
+        onClose();
         reset();
       }
     } catch (error) {
@@ -75,7 +80,9 @@ relative
               "
             />
             <button
-              onClick={() => setModalOpen(false)}
+              onClick={() => {
+                onClose();
+              }}
               className="absolute right-3 top-3 p-2 rounded-sm hover:bg-white/10 cursor-pointer transition-all duration-300">
               <X className="text-white max-lg:w-5 max-lg:h-5" />
             </button>
@@ -88,11 +95,11 @@ relative
               <div className="flex flex-col gap-4 w-full">
                 <div className="gap-2 flex flex-col text-white">
                   <h1 className="text-2xl font-extrabold max-lg:text-lg">
-                    Faça download da LOCAL CONTENT MAGAZINE
+                    Receba a sua revista da LOCAL CONTENT MAGAZINE
                   </h1>
 
                   <p className="text-sm max-lg:text-xs">
-                    Para fazer download basta inserir o seu e-mail e verificar a
+                    Para receber a sua revista, basta inserir o seu e-mail e verificar a
                     sua caixa de entrada.
                   </p>
                 </div>

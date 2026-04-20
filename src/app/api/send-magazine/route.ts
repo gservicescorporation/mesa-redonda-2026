@@ -77,7 +77,7 @@ margin-top:0;
 font-size:22px;
 color:#0f172a;
 ">
-Obrigado pelo seu interesse
+Recebemos o seu pedido
 </h2>
 
 <p style="
@@ -85,55 +85,38 @@ font-size:15px;
 line-height:1.6;
 color:#374151;
 ">
-
-A Revista <strong>LOCAL CONTENT MAGAZINE</strong> foi preparada para lhe trazer insights e oportunidades sobre o desenvolvimento do conteúdo local.
-
+Obrigado pelo seu interesse na <strong>LOCAL CONTENT MAGAZINE</strong>.
 </p>
 
 <p style="
 font-size:15px;
+line-height:1.6;
 color:#374151;
-margin-top:20px;
+margin-top:15px;
 ">
-Clique no botão abaixo para baixar a revista:
+A nossa equipa irá entrar em contacto consigo brevemente para garantir o envio da sua revista.
 </p>
 
-<!-- BUTTON -->
-<table align="center" cellpadding="0" cellspacing="0" style="margin-top:30px;">
-<tr>
-<td align="center" bgcolor="#1e40af" style="border-radius:8px;">
-<a 
-href="https://www.mesaredonda.globalsc.ao/magazine/local-content-magazine.pdf"
-style="
-display:inline-block;
-padding:16px 32px;
+<p style="
 font-size:15px;
-color:#ffffff;
-text-decoration:none;
-font-weight:bold;
-letter-spacing:0.5px;
+line-height:1.6;
+color:#374151;
+margin-top:15px;
 ">
-Baixar a Revista • PDF 14MB
-</a>
-</td>
-</tr>
-</table>
+Fique atento ao seu email e telefone.
+</p>
 
-<p style="
-font-size:13px;
-color:#6b7280;
+<!-- INFO BOX -->
+<div style="
 margin-top:30px;
+padding:20px;
+background:#f1f5f9;
+border-radius:8px;
+font-size:14px;
+color:#334155;
 ">
-Caso o botão não funcione, utilize o link abaixo:
-</p>
-
-<p style="
-font-size:13px;
-color:#1e40af;
-word-break:break-all;
-">
-https://www.mesaredonda.globalsc.ao/magazine/local-content-magazine.pdf
-</p>
+Este processo permite-nos garantir uma melhor experiência e acompanhamento personalizado.
+</div>
 
 </td>
 </tr>
