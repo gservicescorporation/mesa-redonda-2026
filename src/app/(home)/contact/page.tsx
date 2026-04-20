@@ -4,6 +4,7 @@ import { Mail, MapPin, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
+import Link from "next/link";
 
 // Tipagem baseada no esquema
 interface ContactFormData {
@@ -100,7 +101,7 @@ export default function Contact() {
                 </h1>
 
                 <p className="text-white text-xl max-lg:text-sm">
-                  Centro de Conferências de Talatona, Luanda, Angola
+                  Centro de Convenções de Talatona, Luanda, Angola
                 </p>
               </div>
             </motion.li>
@@ -120,9 +121,10 @@ export default function Contact() {
                   Contactos:
                 </h1>
 
-                <p className="text-white text-xl max-lg:text-sm">
-                  +244 941 064 919 / +244 925 835 848
-                </p>
+                <div className="text-white text-xl max-lg:text-sm">
+                  <Link href="tel:+244941064919">+244 941 064 919</Link> /{" "}
+                  <Link href="tel:+244925835848">+244 925 835 848</Link>
+                </div>
               </div>
             </motion.li>
 
@@ -141,9 +143,9 @@ export default function Contact() {
                   Email:
                 </h1>
 
-                <p className="text-white text-xl max-lg:text-sm">
+                <Link href="mailto:mesaredondacomceos@globalsc.ao" className="text-white text-xl max-lg:text-sm">
                   mesaredondacomceos@globalsc.ao
-                </p>
+                </Link>
               </div>
             </motion.li>
           </motion.ul>
