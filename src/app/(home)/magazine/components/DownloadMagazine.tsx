@@ -8,6 +8,7 @@ import MagazineDownloadModal from "../../../ui/MagazineDownloadModal";
 
 export default function DownloadMagazine() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       <div className="min-h-125 flex items-center bg-[url('/magazine/bg-revista.png')] w-full">
