@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -82,6 +84,8 @@ export default function RootLayout({
     <html lang="pt-PT">
       <body className={`${plusJakartaSans.variable} antialiased`}>
         {children}
+
+        <Analytics/>
 
         <Script
           id="structured-data"
