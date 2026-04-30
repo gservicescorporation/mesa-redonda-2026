@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-cover bg-center w-full relative">
       <MainHero />
-      {/*  <Hero /> */}
       <Statistics />
       <About />
       <TeaserPresentation />
