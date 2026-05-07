@@ -19,17 +19,17 @@ export default function SpeakersList() {
       name: "S.E. Dr. Pedro Passos Coelho",
       title: "Ex-Primeiro-Ministro de Portugal",
       image: "/images/speakers/pedro_coelho.png",
+    },{
+      name: "Hariana Verás",
+      title: "Jornalista, Apresentador de TV, Produtor/Correspondente Permanente da Casa Branca, Senado dos EUA, Pentágono e Departamento de Estado para a África",
+      image: "/images/speakers/hariana-veras.png",
     },
     {
       name: "S.E. Dr. Paulo Portas",
       title: "Ex-Vice-Primeiro-Ministro de Portugal",
       image: "/images/speakers/paulo_portas.jpg",
     },
-    /*  {
-      name: "Carlos Lopes",
-      title: "Ex-Secretário-Geral Adjunto das Nações Unidas",
-      image: "/images/speakers/carlos_lopes.jpg",
-    },
+    /*  
     {
       name: "Sidi Ould Tah",
       title:
