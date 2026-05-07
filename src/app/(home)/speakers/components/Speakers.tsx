@@ -21,7 +21,7 @@ export default function SpeakersList() {
       image: "/images/speakers/pedro_coelho.png",
     },{
       name: "Hariana Verás",
-      title: "Jornalista, Apresentador de TV, Produtor/Correspondente Permanente da Casa Branca, Senado dos EUA, Pentágono e Departamento de Estado para a África",
+      title: "Jornalista, Apresentadora de TV, Produtora/Correspondente Permanente da Casa Branca, Senado dos EUA, Pentágono e Departamento de Estado para a África",
       image: "/images/speakers/hariana-veras.png",
     },
     {
