@@ -36,7 +36,7 @@ export default function About() {
           variants={itemVariants}
           whileHover={{ scale: 1.05, rotate: 1 }}>
           <Image
-            src={"https://ik.imagekit.io/globalsc/mr-jul-2026/third-banner.png"}
+            src={"https://ik.imagekit.io/globalsc/mr-jul-2026/third-banner.png?updatedAt=1778682904988"}
             alt={"About Us"}
             width={1920}
             height={1080}
