@@ -13,6 +13,7 @@ import TeaserPresentation from "./components/TeaserPresentation";
 
 import TeaserMagazine from "./components/TeaserMagazine";
 import MagazineDownloadModal from "../ui/MagazineDownloadModal";
+import SponsorsVideos from "./components/SponsorsVideos";
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-cover bg-center w-full relative">
@@ -23,6 +24,7 @@ export default function Home() {
       <SponsorsPartners />
       <WhyParticipate />
       <CallToAction />
+      <SponsorsVideos />
       <LaunchMagazine />
       <TeaserMagazine />
       <SpeakersList />
