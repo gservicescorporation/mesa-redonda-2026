@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { motion, Variants } from "framer-motion";
-
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -16,12 +15,25 @@ export default function SpeakersList() {
       image: "/images/speakers/nardo-bekele.jpg",
     }, */
     {
+      name: "H.E. Gabriel Mbaga Obiang Lima",
+      title:
+        " H.E Former Minister of Mines and Hydrocarbons of the Republic of Equatorial Guinea",
+      image: "/images/speakers/gabriel_mbaga.jpeg",
+    },
+    {
+      name: "Dr. James Shindi",
+      title: "Lawyer, Businessman, Advisor and Serial Entrepreneur of British/Nigerian Heritage",
+      image: "/images/speakers/james_shindi.jpeg",
+    },
+    {
       name: "S.E. Dr. Pedro Passos Coelho",
       title: "Ex-Primeiro-Ministro de Portugal",
       image: "/images/speakers/pedro_coelho.png",
-    },{
+    },
+    {
       name: "Hariana Verás",
-      title: "Jornalista, Apresentadora de TV, Produtora/Correspondente Permanente da Casa Branca, Senado dos EUA, Pentágono e Departamento de Estado para a África",
+      title:
+        "Jornalista, Apresentadora de TV, Produtora/Correspondente Permanente da Casa Branca, Senado dos EUA, Pentágono e Departamento de Estado para a África",
       image: "/images/speakers/hariana-veras.png",
     },
     {
