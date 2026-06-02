@@ -162,7 +162,6 @@ export default function Header() {
           max-lg:flex-col
           max-lg:gap-4
         ">
-                {/* BOTÃO 1 */}
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
