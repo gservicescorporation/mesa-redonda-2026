@@ -28,7 +28,7 @@ export default function Header() {
     { label: "Início", href: "/" },
     { label: "Sobre", href: "/about" },
     { label: "Revista", href: "/magazine" },
-    /* { label: "Ingressos", href: "/tickets" }, */
+    { label: "Ingressos", href: "/tickets" },
     { label: "Contactos", href: "/contact" },
   ];
 
@@ -163,7 +163,7 @@ export default function Header() {
           max-lg:gap-4
         ">
                 {/* BOTÃO 1 */}
-                {/* <button
+                <button
                   onClick={() => {
                     setIsModalOpen(false);
                     setMobileOpen(false)
@@ -187,12 +187,12 @@ export default function Header() {
               max-lg:w-28 max-lg:h-28
             "
                   />
-                </button> */}
+                </button> 
 
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
-                    setMobileOpen(false)
+                    setMobileOpen(false);
                     router.push(
                       "https://ticket.ao/event/mesa-redonda-dos-ceos-5a-edicao/",
                     );
