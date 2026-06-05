@@ -22,13 +22,42 @@ export default function SpeakersList() {
     },
     {
       name: "Dr. James Shindi",
-      title: "Lawyer, Businessman, Advisor and Serial Entrepreneur of British/Nigerian Heritage",
+      title:
+        "Lawyer, Businessman, Advisor and Serial Entrepreneur of British/Nigerian Heritage",
       image: "/images/speakers/james_shindi.jpeg",
+    },
+    {
+      name: "Noorali Manji",
+      title:
+        "Presidente MMD Steel Group, Fundador Furniture Palace e Fundador Reliance Hotels",
+      image: "/images/speakers/noorali-manji.png",
+    },
+    {
+      name: "Dr. NJ Ayuk",
+      title:
+        "Presidente Executivo da African Energy Chamber, Advogado e Autor de Best-Sellers",
+      image: "/images/speakers/nj-ayuk.png",
     },
     {
       name: "S.E. Dr. Pedro Passos Coelho",
       title: "Ex-Primeiro-Ministro de Portugal",
       image: "/images/speakers/pedro_coelho.png",
+    },
+    {
+      name: "S.E. Dr. Paulo Portas",
+      title: "Ex-Vice-Primeiro-Ministro de Portugal",
+      image: "/images/speakers/paulo_portas.jpg",
+    },
+    {
+      name: "Dr. Armando Manuel",
+      title: "Presidente do Fundo Soberano de Angola",
+      image: "/images/speakers/armando_manuel.jpeg",
+    },
+    {
+      name: "Dr. Aguinaldo Jaime",
+      title:
+        "PCA da UNITEL, Economista e antigo Ministro das Finanças de Angola",
+      image: "/images/speakers/aguinaldo-jaime.png",
     },
     {
       name: "Hariana Verás",
@@ -37,9 +66,70 @@ export default function SpeakersList() {
       image: "/images/speakers/hariana-veras.png",
     },
     {
-      name: "S.E. Dr. Paulo Portas",
-      title: "Ex-Vice-Primeiro-Ministro de Portugal",
-      image: "/images/speakers/paulo_portas.jpg",
+      name: "Dr. José Figueiredo",
+      title: "PCA da TELESERVICES",
+      image: "/images/speakers/jose-figueiredo.png",
+    },
+    {
+      name: "Dr. Edson dos Santos",
+      title: "PCA da Etu Energias",
+      image: "/images/speakers/edson-dos-santos.png",
+    },
+    {
+      name: "Osvaldo Macaia",
+      title: "CEO do Banco Sol",
+      image: "/images/speakers/osvaldo-macaia.png",
+    },
+    {
+      name: "Adilson Nelumba",
+      title: "PCA na Cópia Group Of",
+      image: "/images/speakers/adilson-nelumba.png",
+    },
+    {
+      name: "Adilson Dala",
+      title: "Coordenador do Planeamento e Finanças",
+      image: "/images/speakers/adilson-dala.jpeg",
+    },
+    {
+      name: "Edvânia do Carmo",
+      title: "Apresentadora de TV",
+      image: "/images/speakers/edvania-do-carmo.png",
+    },
+    {
+      name: "Filipe de Almeida",
+      title: "Presidente do Conselho de Administração da Vecauto",
+      image: "/images/speakers/filipe-de-almeida.png",
+    },
+    {
+      name: "José de Nascimento",
+      title: "Administrador BFA",
+      image: "/images/speakers/jose-nascimento.png",
+    },
+    {
+      name: "Jorge Morais",
+      title: "Director Geral Kaeso Energy Services",
+      image: "/images/speakers/jorge-morais.png",
+    },
+    {
+      name: "Luís Diogo",
+      title: "Director Geral Fabrimental",
+      image: "/images/speakers/luis-diogo.png",
+    },
+    {
+      name: "Ulanga Martins",
+      title: "PCA Poliedro Energy",
+      image: "/images/speakers/ulanga-martins.png",
+    },
+    {
+      name: "José Faria",
+      title:
+        "Advogado, Patrono da Sociedade de Advogados Fundador da JFaria-Advogado",
+      image: "/images/speakers/jose-faria.png",
+    },
+    {
+      name: "Liudmila Valente Lemos",
+      title: "Directora de Comunicação e Marca do Banco Sol",
+      image: "/images/speakers/liudmila-valente.jpg",
     },
     /*  
     {
@@ -53,11 +143,7 @@ export default function SpeakersList() {
       title: "Presidente do Afreximbank",
       image: "/images/speakers/george-elombi.jpg",
     },
-    {
-      name: "Dr. Armando Manuel",
-      title: "Presidente do Fundo Soberano de Angola",
-      image: "/images/speakers/armando_manuel.jpeg",
-    },
+    
     {
       name: "Rui Miguêns de Oliveira",
       title: "Ministro da Indústria e Comércio",
@@ -117,7 +203,7 @@ export default function SpeakersList() {
                     alt={speaker.name}
                     width={300}
                     height={300}
-                    className="rounded-full h-72 w-72 object-cover object-top m-4"
+                    className="rounded-full h-72 w-72 object-cover object-top m-4  bg-linear-to-r from-gray-400 to-white rounded-full"
                   />
                 </div>
 

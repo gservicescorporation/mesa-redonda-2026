@@ -158,7 +158,6 @@ export default function Header() {
               <div
                 className="
           flex justify-center items-center gap-4
-          
           max-lg:flex-col
           max-lg:gap-4
         ">
@@ -172,7 +171,6 @@ export default function Header() {
             flex flex-col items-center justify-center gap-2
             border rounded-xl p-2 bg-white cursor-pointer
             transition-all duration-300 hover:scale-105
-            
             max-lg:w-full
           ">
                   <Image
@@ -208,11 +206,7 @@ export default function Header() {
                     alt="Ticket.ao"
                     width={600}
                     height={600}
-                    className="
-              object-cover w-42 h-42
-              
-              max-lg:w-28 max-lg:h-28
-            "
+                    className="object-cover w-42 h-42 max-lg:w-28 max-lg:h-28"
                   />
                 </button>
               </div>

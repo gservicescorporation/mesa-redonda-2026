@@ -14,9 +14,7 @@ interface SponsorVideo {
 }
 
 const sponsorVideos: SponsorVideo[] = [
-  { id: 1, sponsorName: "ABANC", videoUrl: "/videos/partners/abanc-promo.mp4" },
-  { id: 2, sponsorName: "ANPG", videoUrl: "/videos/partners/anpg-promo.mp4" },
-  { id: 3, sponsorName: "BODIVA", videoUrl: "/videos/partners/bodiva-promo.mp4" },
+  { id: 1, sponsorName: "", videoUrl: "/patrocinadores.mp4" },
 ];
 
 export default function SponsorsVideos() {
