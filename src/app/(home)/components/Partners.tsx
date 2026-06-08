@@ -24,7 +24,7 @@ const partners: Partner[] = [
   { id: 7, name: "mindcom", logo: "/images/partners/mindcom.png" },
 ];
 
-export default function SponsorsPartners() {
+export default function Partners() {
   const containerVariants: Variants = {
     hidden: {},
     show: { transition: { staggerChildren: 0.2 } },
@@ -64,7 +64,7 @@ export default function SponsorsPartners() {
             className="max-w-lg w-full flex flex-col gap-2 max-lg:items-center"
             variants={fadeUpVariants}>
             <h1 className="text-3xl font-bold text-white max-lg:text-2xl">
-              Patrocinadores e Parceiros
+              Parceiros e Parceiros de Mídia
             </h1>
           </motion.div>
 

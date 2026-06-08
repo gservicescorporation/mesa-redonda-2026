@@ -203,7 +203,7 @@ export default function SpeakersList() {
                     alt={speaker.name}
                     width={300}
                     height={300}
-                    className="rounded-full h-72 w-72 object-cover object-top m-4  bg-linear-to-r from-gray-400 to-white rounded-full"
+                    className="rounded-full h-72 w-72 object-cover object-top m-4  bg-linear-to-r from-gray-400 to-white"
                   />
                 </div>
 

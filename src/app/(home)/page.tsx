@@ -5,15 +5,15 @@ import Exhibition from "./components/Exhibition";
 import MainHero from "./components/MainHero";
 import LaunchMagazine from "./components/LaunchMagazine";
 import SpeakersList from "./speakers/components/Speakers";
-import SponsorsPartners from "./components/SponsorsPartners";
 import Statistics from "./components/Stats";
 import WhyParticipate from "./components/WhyParticipate";
 import Contact from "./contact/page";
 import TeaserPresentation from "./components/TeaserPresentation";
-
 import TeaserMagazine from "./components/TeaserMagazine";
-import MagazineDownloadModal from "../ui/MagazineDownloadModal";
 import SponsorsVideos from "./components/SponsorsVideos";
+import Sponsors from "./components/Sponsors";
+import Partners from "./components/Partners";
+
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-cover bg-center w-full relative">
@@ -21,7 +21,7 @@ export default function Home() {
       <Statistics />
       <About />
       <TeaserPresentation />
-      <SponsorsPartners />
+      <Sponsors />
       <WhyParticipate />
       <CallToAction />
       <SponsorsVideos />
@@ -29,6 +29,7 @@ export default function Home() {
       <TeaserMagazine />
       <SpeakersList />
       <Exhibition />
+      <Partners />
       <FAQ />
       <Contact />
     </div>
