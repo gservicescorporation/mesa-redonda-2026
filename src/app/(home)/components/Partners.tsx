@@ -16,12 +16,10 @@ interface Partner {
 
 const partners: Partner[] = [
   { id: 1, name: "abanc", logo: "/images/partners/abanc.png" },
-  { id: 2, name: "anpg", logo: "/images/partners/anpg.png" },
-  { id: 3, name: "arseg", logo: "/images/partners/arseg.png" },
-  { id: 4, name: "bna", logo: "/images/partners/bna.png" },
-  { id: 5, name: "bodiva", logo: "/images/partners/bodiva.png" },
-  { id: 6, name: "cmc", logo: "/images/partners/cmc.png" },
-  { id: 7, name: "mindcom", logo: "/images/partners/mindcom.png" },
+  { id: 2, name: "assea", logo: "/images/partners/assea.png" },
+  { id: 3, name: "lideranca-feminina", logo: "/images/partners/lideranca-feminina.png" },
+  { id: 4, name: "promomedia", logo: "/images/partners/promomedia.png" },
+  { id: 5, name: "ccigpma", logo: "/images/partners/ccigpma.png" },
 ];
 
 export default function Partners() {
@@ -109,13 +107,13 @@ export default function Partners() {
                 "
                     variants={itemVariants}
                     whileHover={{ scale: 1.05, rotate: 1 }}>
-                    <div className="rounded-2xl  bg-white max-lg:p-3 flex items-center justify-center">
+                    <div className="rounded-2xl  bg-white max-lg:p-3 p-3 flex items-center justify-center">
                       <Image
                         src={partner.logo}
                         alt={`Logo ${partner.name}`}
                         width={300}
                         height={300}
-                        className="h-48 w-48 object-contain object-center
+                        className="h-48 w-48 object-contain rounded-2xl object-center
                     max-lg:h-32
                     max-lg:w-32"
                       />

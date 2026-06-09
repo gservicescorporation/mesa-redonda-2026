@@ -81,7 +81,7 @@ export default function Sponsors() {
             className="max-w-lg w-full flex flex-col gap-2 max-lg:items-center"
             variants={fadeUpVariants}>
             <h1 className="text-3xl font-bold text-white max-lg:text-2xl">
-              Patrocinadores
+              Patrocinadores da 5ª Edição da Mesa Redonda com CEO's
             </h1>
           </motion.div>
 
