@@ -1,5 +1,6 @@
 import Hero from "@/app/ui/Hero";
 import SpeakersList from "./components/Speakers";
+import SpeakerConfirmation from "./components/Confirmed";
 
 export default function Speakers() {
   return (
@@ -9,6 +10,7 @@ export default function Speakers() {
         subtitle="Veja o perfil de cada um dos nossos especiais oradores."
         date="07 e 08 de Julho de 2026"
       />
+      <SpeakerConfirmation />
       <SpeakersList />
     </div>
   );
