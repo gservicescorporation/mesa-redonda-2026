@@ -310,7 +310,7 @@ export default function Payment() {
                 )}
 
                 <ul className="flex lg:flex-wrap max-lg:flex-row gap-4 w-full justify-start max-lg:justify-center">
-                  <li className="hover:scale-105 transition-all duration-300 text-center">
+                  {/* <li className="hover:scale-105 transition-all duration-300 text-center">
                     <label className="flex flex-col items-center w-40 max-lg:w-36 gap-2 cursor-pointer">
                       <Image
                         src="/images/express.png"
@@ -332,7 +332,7 @@ export default function Payment() {
                       </span>
                     </label>
                   </li>
-
+ */}
                   <li className="hover:scale-105 transition-all duration-300 text-center">
                     <label className="flex flex-col items-center w-40 max-lg:w-36 gap-2 cursor-pointer">
                       <Image
