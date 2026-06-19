@@ -77,22 +77,22 @@ export default function SpeakersList() {
     },
     {
       name: "Carlos Rosado",
-      title: "",
+      title: "Economista, Docente Universitário",
       image: "/images/speakers/carlos-rosado.png",
     },
     {
       name: "Berta Rodrigues Issa",
-      title: "",
+      title: "Presidente da ASSEA, Fundadora e CEO da Inga Rose",
       image: "/images/speakers/berta-rodrigues.jpeg",
     },
     {
       name: "José Serra Van-Dúnem",
-      title: "",
+      title: "Professor Catedrático, Pesquisador na Faculdade de Direito da Universidade Agostinho Neto",
       image: "/images/speakers/jose-serra.jpeg",
     },
      {
       name: "Sanção Manuel",
-      title: "",
+      title: "Director Geral Adjunto da CABSHIP",
       image: "/images/speakers/sancao-manuel.png",
     },
     {

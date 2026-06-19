@@ -43,10 +43,10 @@ const speakers = [
   {
     id: 5,
     name: "Alberto Mendes",
-    role: "CEO da Grupo Simples Oil",
+    role: "CEO da Grupo Simples",
     imageUrl: "/images/speakers/alberto-mendes.jpg",
     videoUrl: "/alberto-mendes.mp4",
-    bio: "Alberto Mendes é o CEO da Grupo Simples Oil.",
+    bio: "Alberto é um engenheiro eletroeletrônico formado nos Estados Unidos que hoje atua na área de gestão/administração em Angola, combinando competências técnicas com forte bagagem em liderança e planejamento.",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const speakers = [
     role: "Directora-Geral SEA, Lda",
     imageUrl: "/images/speakers/filipa-vilhena.jpeg",
     videoUrl: "/filipa-vilhena.mp4",
-    bio: "Filipa Vilhena é a Directora-Geral da SEA, Lda, uma empresa de tecnologia em Angola..",
+    bio: "Filipa Vilhena é a Directora-Geral da SEA, Lda, gestora jurídica experiente com histórico comprovado de atuação na indústria de petróleo e energia. Habilidades em negociação, arbitragem, resolução de disputas, redação jurídica, reestruturação de entidades jurídicas, compliance e direito societário.",
   },
 ];
 
