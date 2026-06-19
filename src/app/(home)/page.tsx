@@ -13,6 +13,7 @@ import TeaserMagazine from "./components/TeaserMagazine";
 import SponsorsVideos from "./components/SponsorsVideos";
 import Sponsors from "./components/Sponsors";
 import Partners from "./components/Partners";
+import Confirmed from "./speakers/components/Confirmed";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <TeaserPresentation />
       <Sponsors />
       <WhyParticipate />
+      <Confirmed />
       <CallToAction />
       <SponsorsVideos />
       <LaunchMagazine />

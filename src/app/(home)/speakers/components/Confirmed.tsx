@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Autoplay } from "swiper/modules";
+import { Navigation, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -32,6 +32,30 @@ const speakers = [
     videoUrl: "/edvania-carmo.mp4",
     bio: "Edvânia do Carmo é uma apresentadora de TV reconhecida por sua habilidade em comunicar informações de forma clara e envolvendo.",
   },
+  {
+    id: 4,
+    name: "Carlos de Melo",
+    role: "CEO da Sistec",
+    imageUrl: "/images/speakers/carlos-melo.jpg",
+    videoUrl: "/carlos-melo.mp4",
+    bio: "Carlos de Melo é o CEO da Sistec, uma empresa de tecnologia em Angola. Com uma visão estratégica e liderança inspiradora, ele tem desempenhado um papel fundamental no crescimento e inovação da empresa, contribuindo para o desenvolvimento do setor de tecnologia no país.",
+  },
+  {
+    id: 5,
+    name: "Alberto Mendes",
+    role: "CEO da Grupo Simples Oil",
+    imageUrl: "/images/speakers/alberto-mendes.jpg",
+    videoUrl: "/alberto-mendes.mp4",
+    bio: "Alberto Mendes é o CEO da Grupo Simples Oil.",
+  },
+  {
+    id: 6,
+    name: "Filipa Vilhena",
+    role: "Directora-Geral SEA, Lda",
+    imageUrl: "/images/speakers/filipa-vilhena.jpeg",
+    videoUrl: "/filipa-vilhena.mp4",
+    bio: "Filipa Vilhena é a Directora-Geral da SEA, Lda, uma empresa de tecnologia em Angola..",
+  },
 ];
 
 export default function SpeakerConfirmation() {
@@ -56,15 +80,11 @@ export default function SpeakerConfirmation() {
             </button>
 
             <Swiper
-              modules={[Navigation, A11y, Autoplay]}
+              modules={[Navigation, A11y]}
               spaceBetween={50}
               slidesPerView={1}
               loop
               speed={1000}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: true,
-              }}
               navigation={{
                 nextEl: ".button-next",
                 prevEl: ".button-prev",
