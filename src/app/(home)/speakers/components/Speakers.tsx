@@ -76,6 +76,26 @@ export default function SpeakersList() {
       image: "/images/speakers/osvaldo-macaia.png",
     },
     {
+      name: "Carlos Rosado",
+      title: "Economista, Docente Universitário",
+      image: "/images/speakers/carlos-rosado.png",
+    },
+    {
+      name: "Berta Rodrigues Issa",
+      title: "Presidente da ASSEA, Fundadora e CEO da Inga Rose",
+      image: "/images/speakers/berta-rodrigues.jpeg",
+    },
+    {
+      name: "José Serra Van-Dúnem",
+      title: "Professor Catedrático, Pesquisador na Faculdade de Direito da Universidade Agostinho Neto",
+      image: "/images/speakers/jose-serra.jpeg",
+    },
+     {
+      name: "Sanção Manuel",
+      title: "Director Geral Adjunto da CABSHIP",
+      image: "/images/speakers/sancao-manuel.png",
+    },
+    {
       name: "Adilson Nelumba",
       title: "PCA na Cópia Group Of",
       image: "/images/speakers/adilson-nelumba.png",
@@ -95,11 +115,11 @@ export default function SpeakersList() {
       title: "Presidente do Conselho de Administração da Vecauto",
       image: "/images/speakers/filipe-de-almeida.png",
     },
-    {
+    /* {
       name: "José de Nascimento",
       title: "Administrador BFA",
       image: "/images/speakers/jose-nascimento.png",
-    },
+    }, */
     {
       name: "Jorge Morais",
       title: "Director Geral Kaeso Energy Services",
@@ -126,6 +146,7 @@ export default function SpeakersList() {
       title: "Directora de Comunicação e Marca do Banco Sol",
       image: "/images/speakers/liudmila-valente.jpg",
     },
+
     /* {
       name: "Nardos Bekele Thomas",
       title: "Directora Executiva do AUDA-NEPAD",
