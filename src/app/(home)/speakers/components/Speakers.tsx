@@ -9,11 +9,34 @@ import "swiper/css/autoplay";
 
 export default function SpeakersList() {
   const speakers = [
-    /* {
-      name: "Nardos Bekele Thomas",
-      title: "Directora Executiva do AUDA-NEPAD",
-      image: "/images/speakers/nardo-bekele.jpg",
-    }, */
+    {
+      name: "Dr. Armando Manuel",
+      title: "Presidente do Fundo Soberano de Angola",
+      image: "/images/speakers/armando_manuel.jpeg",
+    },
+    {
+      name: "Dr. Aguinaldo Jaime",
+      title:
+        "PCA da UNITEL, Economista e antigo Ministro das Finanças de Angola",
+      image: "/images/speakers/aguinaldo-jaime.png",
+    },
+    {
+      name: "Hariana Verás",
+      title:
+        "Jornalista, Apresentadora de TV, Produtora/Correspondente Permanente da Casa Branca, Senado dos EUA, Pentágono e Departamento de Estado para a África",
+      image: "/images/speakers/hariana-veras.png",
+    },
+    {
+      name: "Dr. NJ Ayuk",
+      title:
+        "Presidente Executivo da African Energy Chamber, Advogado e Autor de Best-Sellers",
+      image: "/images/speakers/nj-ayuk.png",
+    },
+    {
+      name: "Dr. José Figueiredo",
+      title: "PCA da TELESERVICES",
+      image: "/images/speakers/jose-figueiredo.png",
+    },
     {
       name: "H.E. Gabriel Mbaga Obiang Lima",
       title:
@@ -33,12 +56,6 @@ export default function SpeakersList() {
       image: "/images/speakers/noorali-manji.png",
     },
     {
-      name: "Dr. NJ Ayuk",
-      title:
-        "Presidente Executivo da African Energy Chamber, Advogado e Autor de Best-Sellers",
-      image: "/images/speakers/nj-ayuk.png",
-    },
-    {
       name: "S.E. Dr. Pedro Passos Coelho",
       title: "Ex-Primeiro-Ministro de Portugal",
       image: "/images/speakers/pedro_coelho.png",
@@ -49,28 +66,6 @@ export default function SpeakersList() {
       image: "/images/speakers/paulo_portas.jpg",
     },
     {
-      name: "Dr. Armando Manuel",
-      title: "Presidente do Fundo Soberano de Angola",
-      image: "/images/speakers/armando_manuel.jpeg",
-    },
-    {
-      name: "Dr. Aguinaldo Jaime",
-      title:
-        "PCA da UNITEL, Economista e antigo Ministro das Finanças de Angola",
-      image: "/images/speakers/aguinaldo-jaime.png",
-    },
-    {
-      name: "Hariana Verás",
-      title:
-        "Jornalista, Apresentadora de TV, Produtora/Correspondente Permanente da Casa Branca, Senado dos EUA, Pentágono e Departamento de Estado para a África",
-      image: "/images/speakers/hariana-veras.png",
-    },
-    {
-      name: "Dr. José Figueiredo",
-      title: "PCA da TELESERVICES",
-      image: "/images/speakers/jose-figueiredo.png",
-    },
-    {
       name: "Dr. Edson dos Santos",
       title: "PCA da Etu Energias",
       image: "/images/speakers/edson-dos-santos.png",
@@ -79,6 +74,26 @@ export default function SpeakersList() {
       name: "Osvaldo Macaia",
       title: "CEO do Banco Sol",
       image: "/images/speakers/osvaldo-macaia.png",
+    },
+    {
+      name: "Carlos Rosado",
+      title: "Economista, Docente Universitário",
+      image: "/images/speakers/carlos-rosado.png",
+    },
+    {
+      name: "Berta Rodrigues Issa",
+      title: "Presidente da ASSEA, Fundadora e CEO da Inga Rose",
+      image: "/images/speakers/berta-rodrigues.jpeg",
+    },
+    {
+      name: "José Serra Van-Dúnem",
+      title: "Professor Catedrático, Pesquisador na Faculdade de Direito da Universidade Agostinho Neto",
+      image: "/images/speakers/jose-serra.jpeg",
+    },
+     {
+      name: "Sanção Manuel",
+      title: "Director Geral Adjunto da CABSHIP",
+      image: "/images/speakers/sancao-manuel.png",
     },
     {
       name: "Adilson Nelumba",
@@ -100,11 +115,11 @@ export default function SpeakersList() {
       title: "Presidente do Conselho de Administração da Vecauto",
       image: "/images/speakers/filipe-de-almeida.png",
     },
-    {
+    /* {
       name: "José de Nascimento",
       title: "Administrador BFA",
       image: "/images/speakers/jose-nascimento.png",
-    },
+    }, */
     {
       name: "Jorge Morais",
       title: "Director Geral Kaeso Energy Services",
@@ -131,7 +146,12 @@ export default function SpeakersList() {
       title: "Directora de Comunicação e Marca do Banco Sol",
       image: "/images/speakers/liudmila-valente.jpg",
     },
-    /*  
+
+    /* {
+      name: "Nardos Bekele Thomas",
+      title: "Directora Executiva do AUDA-NEPAD",
+      image: "/images/speakers/nardo-bekele.jpg",
+    },
     {
       name: "Sidi Ould Tah",
       title:
@@ -171,8 +191,8 @@ export default function SpeakersList() {
   };
 
   return (
-    <div className="w-full relative bg-[url(/logo-white.png)]">
-      <div className="flex flex-col min-h-screen items-center gap-14 px-24 py-24 max-lg:px-6 max-lg:py-16 justify-center backdrop-blur-xs w-full h-full bg-linear-to-b from-accent/75 to-accent/95 z-10">
+    <div className="w-full relative bg-[url(https://ik.imagekit.io/globalsc/mr-jul-2026/main-banner.png)]">
+      <div className="flex flex-col min-h-screen items-center gap-14 px-24 py-24 max-lg:px-6 max-lg:py-16 justify-center backdrop-blur-xs w-full h-full bg-linear-to-b from-accent/75 to-accent/55 z-10">
         <div className="max-w-7xl w-full flex flex-col gap-14">
           <div className="text-white text-center">
             <h1 className="text-3xl font-bold max-lg:text-2xl">

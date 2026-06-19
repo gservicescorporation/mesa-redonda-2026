@@ -22,6 +22,7 @@ const partners: Partner[] = [
   { id: 5, name: "sistec", logo: "/images/partners/sistec.png" },
   { id: 6, name: "fabrimetal", logo: "/images/partners/fabrimental.png" },
   { id: 7, name: "copia-group", logo: "/images/partners/copia-group.png" },
+   { id: 8, name: "deloitte", logo: "/images/partners/deloitte.png" },
   {
     id: 8,
     name: "hemera-capital",

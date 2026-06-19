@@ -28,6 +28,7 @@ export default function Header() {
     { label: "Início", href: "/" },
     { label: "Sobre", href: "/about" },
     { label: "Revista", href: "/magazine" },
+    { label: "Oradores", href: "/speakers" },
     { label: "Ingressos", href: "/tickets" },
     { label: "Contactos", href: "/contact" },
   ];
@@ -164,7 +165,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     setIsModalOpen(false);
-                    setMobileOpen(false)
+                    setMobileOpen(false);
                     router.push("/tickets");
                   }}
                   className="
@@ -184,7 +185,7 @@ export default function Header() {
               max-lg:w-28 max-lg:h-28
             "
                   />
-                </button> 
+                </button>
 
                 <button
                   onClick={() => {
