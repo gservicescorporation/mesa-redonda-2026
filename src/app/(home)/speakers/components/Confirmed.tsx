@@ -56,6 +56,14 @@ const speakers = [
     videoUrl: "/filipa-vilhena.mp4",
     bio: "Filipa Vilhena é a Directora-Geral da SEA, Lda, gestora jurídica experiente com histórico comprovado de atuação na indústria de petróleo e energia. Habilidades em negociação, arbitragem, resolução de disputas, redação jurídica, reestruturação de entidades jurídicas, compliance e direito societário.",
   },
+  {
+    id: 7,
+    name: "José Figueiredo",
+    role: "PCA da Teleservices",
+    imageUrl: "/images/speakers/jose-figueiredo.png",
+    videoUrl: "/jose-figueiredo.mp4",
+    bio: "José Figueiredo é o PCA da Teleservices, com ampla experiência em gestão e operações na indústria de Angola.",
+  },
 ];
 
 export default function SpeakerConfirmation() {
