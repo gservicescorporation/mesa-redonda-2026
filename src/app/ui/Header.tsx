@@ -25,8 +25,9 @@ export default function Header() {
   const pathname = usePathname();
 
   const navItems = [
+    { label: "Início", href: "/" },
     { label: "Sobre", href: "/about" },
-    { label: "Patrocinadores", href: "/sponsors" },
+    /*  { label: "Patrocinadores", href: "/sponsors" }, */
     { label: "Oradores", href: "/speakers" },
     { label: "Ingressos", href: "/tickets" },
     { label: "Revista", href: "/magazine" },
