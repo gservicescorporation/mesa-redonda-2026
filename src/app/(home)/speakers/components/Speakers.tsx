@@ -44,6 +44,11 @@ export default function SpeakersList() {
       image: "/images/speakers/gabriel_mbaga.jpeg",
     },
     {
+      name: "Dr. Elmer Serrão",
+      title: "PCA da Comissão do Mercado de Capitais",
+      image: "/images/speakers/elmer-serrao.png",
+    },
+    {
       name: "Dr. James Shindi",
       title:
         "Lawyer, Businessman, Advisor and Serial Entrepreneur of British/Nigerian Heritage",

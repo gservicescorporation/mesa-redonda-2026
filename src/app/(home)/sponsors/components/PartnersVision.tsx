@@ -6,21 +6,139 @@ import { SwiperSlide, Swiper } from "swiper/react";
 const featuredSponsors = [
   {
     id: 1,
-    name: "Banco Sol",
-    tier: "Patrocinador Diamante",
-    logoUrl: "/images/sponsors/banco-sol-logo.png",
-    videoUrl: "/sponsors/banco-sol-institucional.mp4",
-    description:
-      "O Banco Sol apoia ativamente as iniciativas que impulsionam o empreendedorismo e o desenvolvimento económico em Angola, fortalecendo o ecossistema de negócios nacional.",
+    name: "Etu Energies",
+    tier: "standard",
+    logoUrl: "/images/partners/etu-energias.png",
+    videoUrl: "",
+    description: "",
   },
   {
     id: 2,
-    name: "Unitel",
-    tier: "Patrocinador Platina",
-    logoUrl: "/images/sponsors/unitel-logo.png",
-    videoUrl: "/sponsors/unitel-institucional.mp4",
-    description:
-      "Líder em telecomunicações, a Unitel conecta o país ao futuro digital, apoiando a transformação tecnológica e a inovação nas grandes empresas angolanas.",
+    name: "Banco Sol",
+    tier: "standard",
+    logoUrl: "/images/partners/banco-sol.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 3,
+    name: "Teleservice",
+    tier: "standard",
+    logoUrl: "/images/partners/teleservice.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 4,
+    name: "Inovicom",
+    tier: "standard",
+    logoUrl: "/images/partners/inovicom.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 5,
+    name: "Sistec",
+    tier: "standard",
+    logoUrl: "/images/partners/sistec.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 6,
+    name: "Fabrimetal",
+    tier: "standard",
+    logoUrl: "/images/partners/fabrimental.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 7,
+    name: "Copia Group",
+    tier: "standard",
+    logoUrl: "/images/partners/copia-group.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 8,
+    name: "Deloitte",
+    tier: "standard",
+    logoUrl: "/images/partners/deloitte.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 9,
+    name: "Hemera Capital",
+    tier: "standard",
+    logoUrl: "/images/partners/hemera-capital.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 10,
+    name: "Grandes Moagens",
+    tier: "standard",
+    logoUrl: "/images/partners/grandes-moagens.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 11,
+    name: "Wiliete FC",
+    tier: "standard",
+    logoUrl: "/images/partners/wiliete-fc.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 12,
+    name: "Nossa Seguros",
+    tier: "standard",
+    logoUrl: "/images/partners/nossa-seguros.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 13,
+    name: "CABSHIP",
+    tier: "standard",
+    logoUrl: "/images/partners/cabship.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 14,
+    name: "Banco Yetu",
+    tier: "standard",
+    logoUrl: "/images/partners/banco-yetu.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 15,
+    name: "VECAUTO",
+    tier: "standard",
+    logoUrl: "/images/partners/vecauto.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 16,
+    name: "Apermotor",
+    tier: "standard",
+    logoUrl: "/images/partners/apermotor.png",
+    videoUrl: "",
+    description: "",
+  },
+  {
+    id: 17,
+    name: "HOSSIPOWER",
+    tier: "standard",
+    logoUrl: "/images/partners/hossipower.png",
+    videoUrl: "",
+    description: "",
   },
 ];
 
@@ -40,7 +158,7 @@ export default function PartnersVision() {
           </p>
         </div>
 
-        <div className="relative flex max-lg:flex-col items-center gap-8 justify-center">
+        <div className="relative flex max-lg:flex-col items-center gap-8 justify-center w-full">
           <button className="button-prev-sponsor z-20 cursor-pointer bg-secondary rounded-full min-h-12 min-w-12 flex justify-center items-center text-white max-lg:order-2 hover:scale-105 transition-transform">
             <ChevronLeft className="w-5" />
           </button>
@@ -64,8 +182,8 @@ export default function PartnersVision() {
                 <div className="flex justify-center gap-12 items-center h-full w-full max-lg:flex-col max-lg:gap-8">
                   {/* Infos do Patrocinador */}
                   <div className="flex flex-col max-w-md w-full items-center gap-6 bg-primary/5 px-6 py-8 rounded-2xl border border-white/10 backdrop-blur-sm min-h-135 max-lg:min-h-0 justify-center">
-                    <div className="bg-clip-padding p-1 border-8 border-transparent bg-gradient-to-r from-primary to-secondary rounded-full bg-white">
-                      <div className="bg-white rounded-full h-44 w-44 flex items-center justify-center p-4">
+                    <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-3xl bg-white">
+                      <div className="bg-white rounded-2xl h-44 w-44 flex items-center justify-center p-4">
                         <Image
                           src={sponsor.logoUrl}
                           alt={sponsor.name}
