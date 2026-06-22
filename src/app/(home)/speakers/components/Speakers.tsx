@@ -55,6 +55,11 @@ export default function SpeakersList() {
       image: "/images/speakers/james_shindi.jpeg",
     },
     {
+      name: "Dr. Vasco Januário",
+      title: "Administrador Executivo da Comissão do Mercado de Capitais",
+      image: "/images/speakers/vasco-januario.png",
+    },
+    {
       name: "Noorali Manji",
       title:
         "Presidente MMD Steel Group, Fundador Furniture Palace e Fundador Reliance Hotels",

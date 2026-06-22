@@ -150,7 +150,7 @@ export default function PartnersVision() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col gap-14">
         <div className="text-center max-w-3xl w-full mx-auto">
           <h2 className="text-3xl font-bold max-lg:text-2xl text-white">
-            Visão dos Nossos Parceiros
+            Visão dos Nossos Patrocinadores
           </h2>
           <p className="text-lg max-lg:text-base text-gray-400 mt-2">
             Assista aos depoimentos e vídeos institucionais dos patrocinadores
@@ -158,8 +158,9 @@ export default function PartnersVision() {
           </p>
         </div>
 
-        <div className="relative flex max-lg:flex-col items-center gap-8 justify-center w-full">
-          <button className="button-prev-sponsor z-20 cursor-pointer bg-secondary rounded-full min-h-12 min-w-12 flex justify-center items-center text-white max-lg:order-2 hover:scale-105 transition-transform">
+        <div className="relative flex items-center gap-8 justify-center w-full">
+          {/* Setas fixas nas laterais em telas grandes */}
+          <button className="button-prev-sponsor z-20 cursor-pointer bg-secondary rounded-full min-h-12 min-w-12 flex justify-center items-center text-white hover:scale-105 transition-transform max-md:hidden">
             <ChevronLeft className="w-5" />
           </button>
 
@@ -174,60 +175,70 @@ export default function PartnersVision() {
               nextEl: ".button-next-sponsor",
               prevEl: ".button-prev-sponsor",
             }}
-            className="pb-14 w-full max-lg:order-1">
+            className="pb-6 w-full max-w-5xl">
             {featuredSponsors.map((sponsor) => (
               <SwiperSlide
                 key={sponsor.id}
                 className="pb-4">
-                <div className="flex justify-center gap-12 items-center h-full w-full max-lg:flex-col max-lg:gap-8">
-                  {/* Infos do Patrocinador */}
-                  <div className="flex flex-col max-w-md w-full items-center gap-6 bg-primary/5 px-6 py-8 rounded-2xl border border-white/10 backdrop-blur-sm min-h-135 max-lg:min-h-0 justify-center">
-                    <div className="bg-clip-padding p-2 border-8 border-transparent bg-linear-to-r from-primary to-secondary rounded-3xl bg-white">
-                      <div className="bg-white rounded-2xl h-44 w-44 flex items-center justify-center p-4">
+                {/* Alterado para flex-col por padrão para alinhar verticalmente */}
+                <div className="flex flex-col items-center gap-8 h-full w-full">
+                  
+                  <div className="flex w-full items-center gap-6 bg-primary/5 px-8 py-6 rounded-2xl border border-white/10 backdrop-blur-sm max-w-2xl max-md:flex-col max-md:text-center">
+                    <div className="bg-clip-padding p-1 border-4 border-transparent bg-linear-to-r from-primary to-secondary rounded-2xl bg-white shrink-0">
+                      <div className="bg-white rounded-xl h-32 w-32 flex items-center justify-center p-2">
                         <Image
                           src={sponsor.logoUrl}
                           alt={sponsor.name}
-                          width={160}
-                          height={160}
-                          className="max-h-full max-w-full object-contain"
+                          width={150}
+                          height={150}
+                          className="max-h-full h-44 w-44  max-w-full object-contain"
                         />
                       </div>
                     </div>
 
-                    <div className="text-center flex flex-col gap-2">
-                      <h3 className="text-2xl font-bold text-white max-lg:text-xl">
+                    <div className="flex flex-col gap-1 md:text-left">
+                      <h3 className="text-6xl font-bold text-white max-lg:text-xl">
                         {sponsor.name}
                       </h3>
-                      <p className="text-secondary font-semibold text-sm tracking-widest uppercase">
-                        {sponsor.tier}
-                      </p>
-                      <p className="text-gray-300 text-sm leading-relaxed mt-2">
-                        {sponsor.description}
-                      </p>
+                  
+                     
                     </div>
                   </div>
 
-                  {/* Vídeo */}
-                  <video
-                    className="w-full object-contain h-135 max-w-sm rounded-2xl border border-white/10 backdrop-blur-sm max-lg:h-auto max-lg:max-w-md shadow-2xl"
-                    controls
-                    preload="metadata"
-                    playsInline>
-                    <source
-                      src={sponsor.videoUrl}
-                      type="video/mp4"
-                    />
-                    O seu navegador não suporta a reprodução de vídeos.
-                  </video>
+                  {/* Vídeo Horizontal (Ajustado para proporção 16:9) */}
+                  <div className="w-full max-w-4xl aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      preload="metadata"
+                      playsInline>
+                      <source
+                        src={sponsor.videoUrl}
+                        type="video/mp4"
+                      />
+                      O seu navegador não suporta a reprodução de vídeos.
+                    </video>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
-          <button className="button-next-sponsor z-20 cursor-pointer bg-secondary rounded-full min-h-12 min-w-12 flex justify-center items-center text-white max-lg:order-3 hover:scale-105 transition-transform">
+          <button className="button-next-sponsor z-20 cursor-pointer bg-secondary rounded-full min-h-12 min-w-12 flex justify-center items-center text-white hover:scale-105 transition-transform max-md:hidden">
             <ChevronRight className="w-5" />
           </button>
         </div>
+
+        {/* Setas de navegação para mobile (embaixo do carrossel) */}
+        <div className="md:hidden flex justify-center gap-4 -mt-4">
+          <button className="button-prev-sponsor z-20 cursor-pointer bg-secondary rounded-full min-h-12 min-w-12 flex justify-center items-center text-white">
+            <ChevronLeft className="w-5" />
+          </button>
+          <button className="button-next-sponsor z-20 cursor-pointer bg-secondary rounded-full min-h-12 min-w-12 flex justify-center items-center text-white">
+            <ChevronRight className="w-5" />
+          </button>
+        </div>
+
       </div>
     </section>
   );
