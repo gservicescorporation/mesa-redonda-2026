@@ -25,10 +25,10 @@ export default function Header() {
   const pathname = usePathname();
 
   const navItems = [
-    { label: "Início", href: "/" },
-    { label: "Sobre", href: "/about" },
-    /*  { label: "Patrocinadores", href: "/sponsors" }, */
+    { label: "Início", href: "/" } /* 
+    { label: "Sobre", href: "/about" }, */,
     { label: "Oradores", href: "/speakers" },
+    { label: "Patrocinadores", href: "/sponsors" },
     { label: "Ingressos", href: "/tickets" },
     { label: "Revista", href: "/magazine" },
     /*     { label: "Contactos", href: "/contact" }, */

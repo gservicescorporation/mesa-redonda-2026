@@ -14,6 +14,7 @@ import SponsorsVideos from "./components/SponsorsVideos";
 import Sponsors from "./components/Sponsors";
 import Partners from "./components/Partners";
 import Confirmed from "./speakers/components/Confirmed";
+import PartnersVision from "./sponsors/components/PartnersVision";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Confirmed />
       <CallToAction />
       <SponsorsVideos />
+      <PartnersVision />
       <LaunchMagazine />
       <TeaserMagazine />
       <SpeakersList />

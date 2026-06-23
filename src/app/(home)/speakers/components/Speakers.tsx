@@ -151,12 +151,6 @@ export default function SpeakersList() {
         "Advogado, Patrono da Sociedade de Advogados Fundador da JFaria-Advogado",
       image: "/images/speakers/jose-faria.png",
     },
-    {
-      name: "Liudmila Valente Lemos",
-      title: "Directora de Comunicação e Marca do Banco Sol",
-      image: "/images/speakers/liudmila-valente.jpg",
-    },
-
     /* {
       name: "Nardos Bekele Thomas",
       title: "Directora Executiva do AUDA-NEPAD",
