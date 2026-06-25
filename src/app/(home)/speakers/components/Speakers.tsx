@@ -76,6 +76,11 @@ export default function SpeakersList() {
       image: "/images/speakers/paulo_portas.jpg",
     },
     {
+      name: "Agostinho Kapaia",
+      title: "PCA do Grupo OPAIA",
+      image: "/images/speakers/agostinho-kapaia.jpg",
+    },
+    {
       name: "Dr. Edson dos Santos",
       title: "PCA da Etu Energias",
       image: "/images/speakers/edson-dos-santos.png",
@@ -97,10 +102,11 @@ export default function SpeakersList() {
     },
     {
       name: "José Serra Van-Dúnem",
-      title: "Professor Catedrático, Pesquisador na Faculdade de Direito da Universidade Agostinho Neto",
+      title:
+        "Professor Catedrático, Pesquisador na Faculdade de Direito da Universidade Agostinho Neto",
       image: "/images/speakers/jose-serra.jpeg",
     },
-     {
+    {
       name: "Sanção Manuel",
       title: "Director Geral Adjunto da CABSHIP",
       image: "/images/speakers/sancao-manuel.png",
@@ -125,11 +131,7 @@ export default function SpeakersList() {
       title: "Presidente do Conselho de Administração da Vecauto",
       image: "/images/speakers/filipe-de-almeida.png",
     },
-    /* {
-      name: "José de Nascimento",
-      title: "Administrador BFA",
-      image: "/images/speakers/jose-nascimento.png",
-    }, */
+
     {
       name: "Jorge Morais",
       title: "Director Geral Kaeso Energy Services",

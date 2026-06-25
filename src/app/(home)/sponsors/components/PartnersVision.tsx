@@ -86,6 +86,7 @@ export default function PartnersVision() {
           <h2 className="text-3xl font-bold max-lg:text-2xl text-white">
             Visão dos Nossos Patrocinadores
           </h2>
+          
           <p className="text-lg max-lg:text-base text-white mt-2">
             Assista aos depoimentos e vídeos institucionais dos patrocinadores
             que lideram a transformação do mercado nesta edição.
