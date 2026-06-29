@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -20,6 +21,7 @@ const partners: Partner[] = [
   { id: 3, name: "lideranca-feminina", logo: "/images/partners/lideranca-feminina.png" },
   { id: 4, name: "promomedia", logo: "/images/partners/promomedia.png" },
   { id: 5, name: "ccigpma", logo: "/images/partners/ccigpma.png" },
+  { id: 6, name: "english", logo: "/images/partners/english-academy.png" },
 ];
 
 export default function Partners() {
