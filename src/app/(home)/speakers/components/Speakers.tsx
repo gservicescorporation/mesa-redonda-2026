@@ -153,6 +153,11 @@ export default function SpeakersList() {
         "Advogado, Patrono da Sociedade de Advogados Fundador da JFaria-Advogado",
       image: "/images/speakers/jose-faria.png",
     },
+    {
+      name: "Dalila Prata",
+      title: "Apresentadora de TV / Repórter",
+      image: "/images/speakers/dalila-prata.jpeg",
+    },
     /* {
       name: "Nardos Bekele Thomas",
       title: "Directora Executiva do AUDA-NEPAD",
@@ -175,11 +180,7 @@ export default function SpeakersList() {
       title: "Ministro da Indústria e Comércio",
       image: "/images/speakers/rui_miguens.jpg",
     },
-    {
-      name: "Vera Daves de Sousa",
-      title: "Ministra Angolana das Finanças",
-      image: "/images/speakers/vera_daves.jpeg",
-    }, */
+    , */
   ];
 
   const containerVariants: Variants = {

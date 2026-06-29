@@ -26,7 +26,7 @@ export default function SponsorRanking() {
         className="py-24 bg-accent/50 border-t border-white/5 scroll-mt-20">
         <div className="max-w-5xl mx-auto px-6 flex flex-col gap-16">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-5xl font-extrabold text-white">
               Alinhamento de Marcas
             </h2>
             <p className="text-gray-400 mt-2">
