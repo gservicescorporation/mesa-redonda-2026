@@ -294,21 +294,21 @@ export default function Agenda() {
               return (
                 <div
                   key={index}
-                  className="relative pl-10 max-lg:pl-4 group">
+                  className="relative pl-10 max-lg:pl-4 group cursor-pointer">
                   
                   <div className="flex max-lg:hidden absolute -left-48 top-1.5 w-40 justify-end items-center gap-2 text-right">
                     <span
-                      className={`font-bold text-base ${isBreak ? "text-gray-500" : isSession ? "text-white" : "text-secondary"}`}>
+                      className={`font-bold text-base ${isBreak ? "text-gray-400 group-hover:text-gray-300" : isSession ? "text-white " : "text-white "} `}>
                       {item.time.split("-")[0]}
                     </span>
-                    <ChevronRight className="w-4 h-4 text-primary/30 group-hover:text-secondary transition-colors" />
+                    <ChevronRight className="w-4 h-4 text-primary/30 group-hover:text-white transition-colors" />
                   </div>
 
                   <div
                     className={`absolute -left-2.25 top-2.5 w-4 h-4 rounded-full border-2 transition-all duration-300 group-hover:scale-125 z-10
                   ${
                     isBreak
-                      ? "bg-gray-500 border-gray-500 ring-4 ring-gray-300/20"
+                      ? "bg-gray-400 border-gray-400 ring-4 ring-gray-200/20"
                       : isSession
                         ? "bg-secondary border-secondary ring-4 ring-secondary/20"
                         : isQA

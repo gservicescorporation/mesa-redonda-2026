@@ -121,6 +121,17 @@ export default function SpeakersList() {
       title: "Coordenador do Planeamento e Finanças",
       image: "/images/speakers/adilson-dala.jpeg",
     },
+     {
+      name: "Aurélio Santos Sekesseke",
+      title: "CEO na English Plus Academy e da Lello International",
+      image: "/images/speakers/aurelio-santos.jpeg",
+    },
+    {
+      name: "Dra. Djanira Alexandra",
+      title:
+        "Administradora Executiva para Administração, Finanças, Contabilidade e Comunicação e Imagem da Agência Nacional dos Recursos Minerais",
+      image: "/images/speakers/djanira-alexandra.png",
+    },
     {
       name: "Edvânia do Carmo",
       title: "Apresentadora de TV",
@@ -158,17 +169,8 @@ export default function SpeakersList() {
       title: "Apresentadora de TV / Repórter",
       image: "/images/speakers/dalila-prata.jpeg",
     },
-    /* {
-      name: "Nardos Bekele Thomas",
-      title: "Directora Executiva do AUDA-NEPAD",
-      image: "/images/speakers/nardo-bekele.jpg",
-    },
-    {
-      name: "Sidi Ould Tah",
-      title:
-        "Presidente do Banco Árabe para o Desenvolvimento Económico em África",
-      image: "/images/speakers/sidi_tah.png",
-    },
+   
+    /*
     {
       name: "George Elombi",
       title: "Presidente do Afreximbank",
