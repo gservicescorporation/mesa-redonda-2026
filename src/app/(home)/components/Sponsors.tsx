@@ -41,6 +41,10 @@ const partners: Partner[] = [
   { id: 15, name: "apermotor", logo: "/images/partners/apermotor.png" },
   { id: 16, name: "hossipower", logo: "/images/partners/hossipower.png" },
   { id: 17, name: "opaia", logo: "/images/partners/opaia.jpeg" },
+  { id: 18, name: "tis", logo: "/images/partners/tis.png" },
+  { id: 19, name: "bfa", logo: "/images/partners/bfa.png" },
+  { id: 20, name: "lello", logo: "/images/partners/lello.png" },
+  { id: 21, name: "zap-empresas", logo: "/images/partners/zap-empresas.png" },
 ];
 
 export default function Sponsors() {
