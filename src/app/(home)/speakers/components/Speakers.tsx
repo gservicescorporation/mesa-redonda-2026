@@ -76,6 +76,11 @@ export default function SpeakersList() {
       image: "/images/speakers/paulo_portas.jpg",
     },
     {
+      name: "Luís Lago de Carvalho",
+      title: "Vice-Presidente da AECIPA",
+      image: "/images/speakers/luis-lago.jpeg",
+    },
+    {
       name: "Agostinho Kapaia",
       title: "PCA do Grupo OPAIA",
       image: "/images/speakers/agostinho-kapaia.jpg",

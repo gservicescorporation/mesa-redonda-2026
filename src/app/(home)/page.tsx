@@ -10,7 +10,7 @@ import WhyParticipate from "./components/WhyParticipate";
 import Contact from "./contact/page";
 import TeaserPresentation from "./components/TeaserPresentation";
 import TeaserMagazine from "./components/TeaserMagazine";
-import SponsorsVideos from "./components/SponsorsVideos";
+import BAW from "./components/BAW";
 import Sponsors from "./components/Sponsors";
 import Partners from "./components/Partners";
 import Confirmed from "./speakers/components/Confirmed";
@@ -28,7 +28,7 @@ export default function Home() {
       <WhyParticipate />
       <Confirmed />
       <CallToAction />
-      <SponsorsVideos />
+      <BAW />
       <PartnersVision />
       <LaunchMagazine />
       <TeaserMagazine />
