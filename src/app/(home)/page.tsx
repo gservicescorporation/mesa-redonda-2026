@@ -16,6 +16,7 @@ import Partners from "./components/Partners";
 import Confirmed from "./speakers/components/Confirmed";
 import PartnersVision from "./sponsors/components/PartnersVision";
 import Agenda from "./components/Agenda";
+import PhotoGallery from "./pictures/components/PhotoGallery";
 
 export default function Home() {
   return (
@@ -27,14 +28,14 @@ export default function Home() {
       <Sponsors />
       <WhyParticipate />
       <Confirmed />
-      <CallToAction />
-      <BAW />
+     {/*  <CallToAction />
+      <BAW /> */}
       <PartnersVision />
-      <LaunchMagazine />
+      <PhotoGallery />
       <TeaserMagazine />
-      <SpeakersList />
-      <Agenda />
-      <Exhibition />
+      <SpeakersList />{/* 
+      <Agenda /> */}
+      {/* <Exhibition /> */}
       <Partners />
       <FAQ />
       <Contact />

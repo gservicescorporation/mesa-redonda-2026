@@ -22,6 +22,7 @@ const partners: Partner[] = [
   { id: 4, name: "promomedia", logo: "/images/partners/promomedia.png" },
   { id: 5, name: "ccigpma", logo: "/images/partners/ccigpma.png" },
   { id: 6, name: "english", logo: "/images/partners/english-academy.png" },
+  { id: 7, name: "unitel", logo: "/images/partners/unitel.png" },
 ];
 
 export default function Partners() {
