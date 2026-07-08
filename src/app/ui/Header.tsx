@@ -73,11 +73,11 @@ export default function Header() {
             </ul>
 
             <div className="flex items-center gap-4">
-              <button
+              {/* <button
                 onClick={() => setIsModalOpen(true)}
                 className="px-6 py-3 btn-primary w-fit">
                 Comprar Ticket
-              </button>
+              </button> */}
 
               <Link
                 href="https://api.whatsapp.com/send?phone=244941064919"
@@ -117,11 +117,11 @@ export default function Header() {
               className="text-white hover:text-green-500 hover:scale-125 transition-all duration-200">
               <FaWhatsapp size="32" />
             </Link>
-            <button
+           {/*  <button
               onClick={() => setIsModalOpen(true)}
               className="px-6 py-3 btn-primary w-fit">
               Comprar Ticket
-            </button>
+            </button> */}
           </div>
         )}
       </header>
