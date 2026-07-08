@@ -38,17 +38,17 @@ const agendaData: AgendaItem[] = [
   },
   {
     time: "09:00 - 09:10",
-    category: "Abertura",
-    title: "Hino Nacional & Mensagem Institucional",
+    category: "Momento Cultural",
+    title: "Momento Cultural & Mensagem Institucional",
     type: "session",
   },
   {
     time: "09:10 - 09:15",
     category: "Sponsor Keynote",
-    title: "Intervenção do Patrocinador Premium",
+    title: "Discurso de Abertura Patrocinador Premium",
     speakers: [
       {
-        name: "Eng. Edson Santos",
+        name: "Edson R. dos Santos",
         role: "PCA da Etu Energias",
         image: "/images/speakers/edson-dos-santos.png",
       },
@@ -64,18 +64,28 @@ const agendaData: AgendaItem[] = [
     type: "session",
   },
   {
-    time: "09:20 - 09:45",
+    time: "09:20 - 09:30",
     category: "Discurso de Abertura",
-    title: "Discurso de Abertura Oficial",
+    title: "Discurso de Abertura",
     speakers: [
-      
+      {
+        name: "Dr. José de Lima Massano",
+        role: "Ministro de Estado para a Coordenação Económica",
+        image: "/images/speakers/jose_lima_massano.png", // Altere o path se necessário
+      },
     ],
     type: "session",
   },
   {
+    time: "09:30 - 09:45",
+    category: "Momento Cultural",
+    title: "Momento Cultural com DJ Malvado",
+    type: "break",
+  },
+  {
     time: "09:45 - 10:10",
-    category: "Keynote Internacional I",
-    title: "Reformas, Disciplina Económica e Financiamento do Desenvolvimento",
+    category: "Keynote / Internacional I",
+    title: "Reformas, disciplina económicas e financiamento do desenvolvimento",
     speakers: [
       {
         name: "H.E. Dr. Pedro Passos Coelho",
@@ -83,49 +93,47 @@ const agendaData: AgendaItem[] = [
         image: "/images/speakers/pedro_coelho.png",
       },
     ],
-    type: "panel",
+    type: "session",
   },
   {
-    time: "10:05 - 10:35",
+    time: "10:10 - 10:35",
     category: "Coffee Break",
     title: "Pausa para Café e Networking",
     type: "break",
   },
   {
     time: "10:35 - 11:00",
-    category: "Conversa de Alto Nível",
+    category: "CONVERSA DE ALTO NÍVEL",
     title:
-      "O Papel do Sector dos Recursos Minerais, Petróleo & Gás na Garantia de Financiamento para a Indústria e para o Conteúdo Local",
-    moderator: "Hariana Veras",
+      "O Papel do Sector dos Recursos Minerais e Petróleo & Gás na Garantia de Financiamento para a Indústria e para o Conteúdo Local",
     speakers: [
       {
         name: "H.E. Gabriel Mbaga Obiang Lima",
-        role: "Ex-Ministro de Minas e Hidrocarbonetos (Guiné Equatorial)",
+        role: "Ex-Ministro de Minas e Hidrocarbonetos (Guiné Equatorial) e Fundador e Presidente da Bioko Consulting",
         image: "/images/speakers/gabriel_mbaga.jpeg",
       },
     ],
     type: "panel",
   },
   {
-    time: "12:00 - 13:00",
+    time: "11:00 - 11:30",
     category: "PAINEL I",
     title:
-      "Sistema Financeiro e Economia Real (Prazos, garantias, custo do capital, risco percebido vs risco real)",
-    moderator: "Dr. José Barata (PCA da Deloitte Angola)",
+      "Sistema Financeiro e Economia Real (prazos, garantias, custo do capital, risco percebido vs risco real)",
+    moderator: "Hariana Veras",
     speakers: [
       {
-        name: "H.E. Dr. Pedro Passos Coelho",
-        role: "Ex-Primeiro-Ministro de Portugal",
-        image: "/images/speakers/pedro_coelho.png",
+        name: "José Gualberto",
+        role: "PCA da EMIS",
+        image: "/images/speakers/jose-gualberto.png",
       },
-      
       {
         name: "Aguinaldo Jaime",
         role: "PCA da UNITEL",
         image: "/images/speakers/aguinaldo-jaime.png",
       },
       {
-        name: "Edson Santos",
+        name: "Edson R. dos Santos",
         role: "PCA da ETU Energias",
         image: "/images/speakers/edson-dos-santos.png",
       },
@@ -138,27 +146,32 @@ const agendaData: AgendaItem[] = [
         name: "Osvaldo Macaia",
         role: "PCA do Banco Sol",
         image: "/images/speakers/osvaldo-macaia.png",
-      }
+      },
+      {
+        name: "Mário Nascimento",
+        role: "Presidente da Abanc",
+        image: "/images/speakers/mario-nascimento.png",
+      },
     ],
     type: "panel",
   },
   {
-    time: "13:00 - 13:15",
+    time: "11:30 - 12:30",
     category: "Q&A",
-    title: "Sessão de Perguntas e Respostas",
+    title: "Perguntas e Respostas",
     type: "qa",
   },
   {
-    time: "13:15 - 14:30",
+    time: "12:30 - 12:45",
     category: "Almoço",
     title: "Almoço Institucional",
     type: "break",
   },
   {
-    time: "14:30 - 15:10",
-    category: "Painel Internacional",
+    time: "12:45 - 14:00",
+    category: "PAINEL INTERNACIONAL",
     title:
-      "Nova Configuração Geopolítica e o Seu Impacto no Sistema Financeiro Mundial: Oportunidades e Desafios para a Industrialização em Angola",
+      "Nova Configuração Geopolítica e o Seu Impacto no Sistema Financeiro Mundial, Oportunidades e Desafios para Industrialização em Angola",
     speakers: [
       {
         name: "Dr. Paulo Portas",
@@ -169,28 +182,30 @@ const agendaData: AgendaItem[] = [
     type: "panel",
   },
   {
-    time: "15:10 - 15:40",
-    category: "Especial Keynote Speaker",
-    title:
-      "Os Desafios da Industrialização em África: Oportunidades para Angola",
+    time: "14:00 - 14:30",
+    category: "Momento Cultural",
+    title: "Momento Cultural",
+    type: "break",
+  },
+  {
+    time: "14:30 - 14:45",
+    category: "ESPECIAL KEYNOTE SPEAKER",
+    title: "Os Desafios da Industrialização em África, Oportunidades para Angola",
+    moderator: "Professor Dr. José Octávio Serra Van-Dúnem",
     speakers: [
       {
         name: "H.E. Armando Manuel",
         role: "PCA do Fundo Soberano de Angola",
         image: "/images/speakers/armando_manuel.jpeg",
       },
-      {
-        name: "NJ Ayuk",
-        role: "Chairman da African Energy Chamber",
-        image: "/images/speakers/nj-ayuk.png",
-      },
     ],
-    type: "panel",
+    type: "session",
   },
   {
-    time: "15:45 - 16:25",
-    category: "A Voz da Indústria",
+    time: "14:45 - 15:15",
+    category: "A VOZ DA INDÚSTRIA",
     title: "Competitividade e Inovação",
+    moderator: "Hariana Veras",
     speakers: [
       {
         name: "Adilson Nelumba",
@@ -199,23 +214,22 @@ const agendaData: AgendaItem[] = [
       },
       {
         name: "Noorali Manji",
-        role: "Chairman do MMD Steel Group / Founder da Furniture Palace",
+        role: "Chairman do MMD Steel Group, Founder da Furniture Palace e Chairman Reliance Hotels",
         image: "/images/speakers/noorali-manji.png",
+      },
+      {
+        name: "Agostinho Kapaia",
+        role: "PCA do Grupo OPAIA",
+        image: "/images/speakers/agostinho-kapaia.png",
       },
     ],
     type: "panel",
   },
   {
-    time: "16:25 - 16:40",
-    category: "Q&A",
-    title: "Sessão de Perguntas e Respostas",
-    type: "qa",
-  },
-  {
-    time: "16:40 - 17:55",
+    time: "15:15 - 16:15",
     category: "PAINEL II",
     title:
-      "Instrumentos Financeiros para Industrialização e Conteúdo Local (SFC, Confirming/Factoring, CAPEX, Garantias, Seguros)",
+      "Instrumentos Financeiros para Industrialização e Conteúdo Local (SFC, Confirming/ Factoring, CAPEX, garantias, Seguros)",
     moderator: "Carlos Rosado de Carvalho",
     speakers: [
       {
@@ -234,34 +248,39 @@ const agendaData: AgendaItem[] = [
         image: "/images/speakers/berta-rodrigues.jpeg",
       },
       {
-        name: "Felipe Almeida",
-        role: "PCA da Vecauto",
-        image: "/images/speakers/filipe-de-almeida.png",
+        name: "Luís Lago de Carvalho",
+        role: "Vice-Presidente da AECIPA",
+        image: "/images/speakers/luis-lago.png",
       },
       {
-        name: "Jorge Morais",
+        name: "Sanção Manuel",
+        role: "Director Geral Adjunto da CABSHIP",
+        image: "/images/speakers/sancao-manuel.png",
+      },
+      {
+        name: "Jorge de Morais",
         role: "Director Geral da Kaeso Energy Services",
         image: "/images/speakers/jorge-morais.png",
       },
       {
         name: "Dr. James Shindi",
-        role: "Lawyer, Advisor & Serial Entrepreneur",
+        role: "Lawyer, Businessman, Advisor And Serial Entrepreneur of British/Nigerian heritage",
         image: "/images/speakers/james_shindi.jpeg",
       },
     ],
     type: "panel",
   },
   {
-    time: "17:55 - 18:10",
+    time: "16:15 - 17:15",
     category: "Encerramento",
     title:
-      "Conclusões do Dia e Apresentação do Relatório (Compromissos, métricas e próximos passos)",
+      "Conclusões do Dia e apresentação do Relatório (Compromissos, métricas e próximos passos)",
     type: "session",
   },
   {
-    time: "18:10 - 19:30",
+    time: "17:30 - 17:50",
     category: "Networking",
-    title: "Cocktail de Networking B2B",
+    title: "Networking and Cocktail",
     type: "break",
   },
 ];
@@ -359,7 +378,7 @@ export default function Agenda() {
                     {item.moderator && (
                       <div className="mt-3 inline-flex items-center gap-1.5 text-xs text-white bg-white/5 px-3 py-1 rounded-full border border-white/5">
                         <span className="text-secondary font-medium">
-                          Moderador:
+                          Moderador(a):
                         </span>{" "}
                         {item.moderator}
                       </div>
@@ -406,7 +425,7 @@ export default function Agenda() {
 
           <div className="mt-5 text-center">
             <p className="text-sm max-lg:text-xs text-white">
-              * O programa oficial decorre no CCTA e está sujeito a ajustes
+              * O programa oficial decorre no CCTA e está sujeito a adjustments
               pontuais de protocolo.
             </p>
           </div>
